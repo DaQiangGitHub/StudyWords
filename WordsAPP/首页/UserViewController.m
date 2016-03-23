@@ -35,7 +35,7 @@
     
 }
 
-#pragma mark - wrongQuestion
+#pragma mark - 点击事件
 - (void)wrongButtonPressed{
     WrongQuestionViewController * wrong = [[WrongQuestionViewController alloc] init];
     [self.navigationController pushViewController:wrong animated:YES];

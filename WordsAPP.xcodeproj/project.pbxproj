@@ -13,6 +13,7 @@
 		245ED6221CA2831500BE79E2 /* WrongQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED6211CA2831500BE79E2 /* WrongQuestionViewController.m */; };
 		245ED6251CA2864300BE79E2 /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED6241CA2864300BE79E2 /* recordViewController.m */; };
 		245ED6271CA286D400BE79E2 /* CEH(H_EAKND)}Z_PIJ7@(Z0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 245ED6261CA286D400BE79E2 /* CEH(H_EAKND)}Z_PIJ7@(Z0.jpg */; };
+		245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */; };
 		24DD26331C9A8BF10007997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26321C9A8BF10007997A /* main.m */; };
 		24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26351C9A8BF10007997A /* AppDelegate.m */; };
 		24DD26391C9A8BF10007997A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26381C9A8BF10007997A /* ViewController.m */; };
@@ -35,6 +36,8 @@
 		245ED6231CA2864300BE79E2 /* recordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = recordViewController.h; path = "WordsAPP/首页/recordViewController.h"; sourceTree = SOURCE_ROOT; };
 		245ED6241CA2864300BE79E2 /* recordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = recordViewController.m; path = "WordsAPP/首页/recordViewController.m"; sourceTree = SOURCE_ROOT; };
 		245ED6261CA286D400BE79E2 /* CEH(H_EAKND)}Z_PIJ7@(Z0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CEH(H_EAKND)}Z_PIJ7@(Z0.jpg"; sourceTree = "<group>"; };
+		245ED6291CA2B24B00BE79E2 /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
+		245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
 		24DD262E1C9A8BF10007997A /* WordsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD26321C9A8BF10007997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DD26341C9A8BF10007997A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +80,15 @@
 			path = "公用";
 			sourceTree = "<group>";
 		};
+		245ED6281CA2B20100BE79E2 /* 使用介绍 */ = {
+			isa = PBXGroup;
+			children = (
+				245ED6291CA2B24B00BE79E2 /* IntroduceViewController.h */,
+				245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */,
+			);
+			path = "使用介绍";
+			sourceTree = "<group>";
+		};
 		24DD26251C9A8BF10007997A = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 				24DD26351C9A8BF10007997A /* AppDelegate.m */,
 				24DD26371C9A8BF10007997A /* ViewController.h */,
 				24DD26381C9A8BF10007997A /* ViewController.m */,
+				245ED6281CA2B20100BE79E2 /* 使用介绍 */,
 				24DD26501C9A8D540007997A /* baseViewController */,
 				24DD26491C9A8D540007997A /* 首页 */,
 				24DD26481C9A8D540007997A /* 记录 */,
@@ -346,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */,
 				24DD26391C9A8BF10007997A /* ViewController.m in Sources */,
 				245ED6251CA2864300BE79E2 /* recordViewController.m in Sources */,
 				245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */,

@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "IntroduceViewController.h"
 #import "HomeViewController.h"
 #import "UserViewController.h"
-
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface ViewController ()
 
@@ -22,14 +23,30 @@
 @end
 
 @implementation ViewController
-
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initDateSource) name:@"login" object:nil];
     
-    [self initalizeInterface];
-    
+    [self initDateSource];
+}
+- (void)initDateSource{
+    AVUser *currentUser = [AVUser currentUser];
+    if (currentUser != nil) {
+        // 跳转到首页
+        [self initalizeInterface];
+    } else {
+        //缓存用户对象为空时，可打开用户注册界面…
+        [self performSelector:@selector(IntroduceVC) withObject:nil afterDelay:0.001];
+    }
+}
+- (void)IntroduceVC{
+    IntroduceViewController * introduce = [[IntroduceViewController alloc] initWithBool:YES];
+    [self presentViewController:introduce animated:YES completion:nil];
 }
 
 - (void)initalizeInterface{

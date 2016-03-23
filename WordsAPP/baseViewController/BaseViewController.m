@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface BaseViewController ()
 
@@ -36,6 +36,11 @@
 #pragma mark - 点击事件
 - (void)leftButtonPressed{
     [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)rightButtonPressed{
+    [AVUser logOut];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 #pragma mark - getter
 - (UIView *)barView{
@@ -81,7 +86,7 @@
             UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(SCREEN_W - 50, 15, 40, 40);
             button.backgroundColor = [UIColor orangeColor];
-            
+            [button addTarget:self action:@selector(rightButtonPressed) forControlEvents:UIControlEventTouchUpInside];
             button;
         });
     }
