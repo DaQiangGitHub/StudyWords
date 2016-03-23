@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view.
     
     self.barLable.text = @"题目类型";
+    NSLog(@"");
     
     
     
