@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.barView.backgroundColor = [UIColor redColor];
+    self.barLable.text = @"题目类型";
     
 }
 

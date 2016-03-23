@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245ED61A1CA2775900BE79E2 /* 首页底.png in Resources */ = {isa = PBXBuildFile; fileRef = 245ED6191CA2775900BE79E2 /* 首页底.png */; };
+		245ED61C1CA277B000BE79E2 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 245ED61B1CA277B000BE79E2 /* 返回.png */; };
 		24DD26331C9A8BF10007997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26321C9A8BF10007997A /* main.m */; };
 		24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26351C9A8BF10007997A /* AppDelegate.m */; };
 		24DD26391C9A8BF10007997A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26381C9A8BF10007997A /* ViewController.m */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		245ED6191CA2775900BE79E2 /* 首页底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页底.png"; sourceTree = "<group>"; };
+		245ED61B1CA277B000BE79E2 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
 		24DD262E1C9A8BF10007997A /* WordsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD26321C9A8BF10007997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DD26341C9A8BF10007997A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245ED6181CA2775900BE79E2 /* 公用 */ = {
+			isa = PBXGroup;
+			children = (
+				245ED6191CA2775900BE79E2 /* 首页底.png */,
+				245ED61B1CA277B000BE79E2 /* 返回.png */,
+			);
+			path = "公用";
+			sourceTree = "<group>";
+		};
 		24DD26251C9A8BF10007997A = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +133,7 @@
 		24DD264A1C9A8D540007997A /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				245ED6181CA2775900BE79E2 /* 公用 */,
 				24DD264B1C9A8D540007997A /* 交通 */,
 				24DD264C1C9A8D540007997A /* 动物 */,
 				24DD264D1C9A8D540007997A /* 工具 */,
@@ -250,8 +264,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245ED61C1CA277B000BE79E2 /* 返回.png in Resources */,
 				24DD26411C9A8BF10007997A /* LaunchScreen.storyboard in Resources */,
 				24DD263E1C9A8BF10007997A /* Assets.xcassets in Resources */,
+				245ED61A1CA2775900BE79E2 /* 首页底.png in Resources */,
 				24DD263C1C9A8BF10007997A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

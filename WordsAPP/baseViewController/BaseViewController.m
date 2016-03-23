@@ -8,11 +8,6 @@
 
 #import "BaseViewController.h"
 
-#define SCREEN_W self.view.bounds.size.width
-#define SCREEN_H self.view.bounds.size.height
-#define BAR_H self.barView.bounds.size.height
-#define COLOR(R,G,B) [UIColor colorWithRed:(R)/255.0 green:(G)/255.0 blue:(B)/255.0 alpha:1]
-
 
 @interface BaseViewController ()
 
@@ -24,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     
     self.view.backgroundColor = COLOR(233, 233, 233);
     
@@ -55,11 +49,11 @@
 - (UILabel *)barLable{
     if (!_barLable) {
         _barLable = ({
-            UILabel * lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 50)];
-            lable.center = CGPointMake(self.view.center.x, 10);
+            UILabel * lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 150, 50)];
+            lable.center = CGPointMake(self.view.center.x, 30);
             lable.backgroundColor = [UIColor blueColor];
             lable.font = [UIFont systemFontOfSize:25];
-            
+            lable.textAlignment = NSTextAlignmentCenter;
             lable;
         });
     }

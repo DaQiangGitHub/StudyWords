@@ -40,7 +40,13 @@
 }
 
 - (void)buttonInPressed{
-
+    
+    HomeViewController * home = [[HomeViewController alloc] init];
+    UserViewController * user = [[UserViewController alloc] init];
+    
+    UITabBarController * tabbar = [[UITabBarController alloc] init];
+    tabbar.viewControllers = @[home, user];
+    [self presentViewController:tabbar animated:YES completion:nil];
 }
 
 
@@ -49,7 +55,7 @@
     if (!_backImageView) {
         _backImageView = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-            
+            imageView.image = [UIImage imageNamed:@"首页底"];
             imageView;
         });
     }

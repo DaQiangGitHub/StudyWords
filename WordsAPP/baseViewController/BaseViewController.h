@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+#define BAR_H 60
+#define COLOR(R,G,B) [UIColor colorWithRed:(R)/255.0 green:(G)/255.0 blue:(B)/255.0 alpha:1]
+
 @interface BaseViewController : UIViewController
 
 

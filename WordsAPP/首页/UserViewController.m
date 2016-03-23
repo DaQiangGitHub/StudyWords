@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.barView.backgroundColor = [UIColor yellowColor];
+    self.barLable.text = @"个人";
 }
 
 #pragma mark - getter
