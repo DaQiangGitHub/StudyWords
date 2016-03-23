@@ -18,9 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    self.barView.backgroundColor = [UIColor yellowColor];
 }
 
+#pragma mark - getter
 
 
 @end

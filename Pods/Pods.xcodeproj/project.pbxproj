@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10AE04D9CB3214C45F167E8619339D5C /* Pods-WordsAPP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F317FA64515CB8B06FD91B7FCE6DA234 /* Pods-WordsAPP-dummy.m */; };
+		8E6934A560B8BDFE874F0D782A210664 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02969242B2DFA28D1D60DE6A4D713593 /* AVMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVMessage.h; sourceTree = "<group>"; };
+		06007A7FDD6E88904641873B7438B7F6 /* AVRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVRole.h; sourceTree = "<group>"; };
+		0D3D800FE2E7A20951B7111803C0AA40 /* AVAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAnalytics.h; sourceTree = "<group>"; };
+		304717178AF620D1B50FC43E236A0A97 /* AVHistoryMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVHistoryMessage.h; sourceTree = "<group>"; };
+		37E9E7BF7D34F021CB4C47F56BBD0747 /* AVSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSubclassing.h; sourceTree = "<group>"; };
+		3AA01A905711234E0988F0934F15954A /* libAVOSCloud.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libAVOSCloud.a; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F146219A860221671761F9589B375C5 /* Pods-WordsAPP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WordsAPP-acknowledgements.markdown"; sourceTree = "<group>"; };
+		402D3EB02016FC4EB24EBB8E96933F4F /* AVGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVGroup.h; sourceTree = "<group>"; };
+		4054F418FE5AAAA306AEE730EC8EB780 /* libPods-WordsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		438A3FDC12733A811A63ABCE2B0EB428 /* AVOSCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVOSCloud.h; sourceTree = "<group>"; };
+		472653B0131A9C6A6602DE673CCB813C /* AVFileQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVFileQuery.h; sourceTree = "<group>"; };
+		58413053E56D81100D9476933C4F1EF7 /* AVObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVObject.h; sourceTree = "<group>"; };
+		5AA3386330CA90C617D1508B3F7B3A7D /* AVSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSession.h; sourceTree = "<group>"; };
+		5CF3070FFDCB4EBA387084DCE51026EF /* AVAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAvailability.h; sourceTree = "<group>"; };
+		5D4799C7B23A15A4599CA6EA41DDA6E0 /* Pods-WordsAPP-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordsAPP-resources.sh"; sourceTree = "<group>"; };
+		6D99A36FD409260271747A04463C08DB /* AVUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVUser.h; sourceTree = "<group>"; };
+		77177870F64A5E0145673FED7F7C1E92 /* AVFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVFile.h; sourceTree = "<group>"; };
+		7D16B7361CB6BED672294B6FBD872A8D /* AVPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVPush.h; sourceTree = "<group>"; };
+		7E9CDB2DE1A850562481D08493D7F475 /* Pods-WordsAPP-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WordsAPP-frameworks.sh"; sourceTree = "<group>"; };
+		81B0660A292D8762808F45E06CA156AD /* AVStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVStatus.h; sourceTree = "<group>"; };
+		89C669869D3793EE03732FD5FBC05CD1 /* AVCloudQueryResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVCloudQueryResult.h; sourceTree = "<group>"; };
+		8D71200F211B0D4BBD3E11E0E1015182 /* AVConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVConstants.h; sourceTree = "<group>"; };
+		908246D24CE04E75F1E3335883EE7384 /* AVQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVQuery.h; sourceTree = "<group>"; };
+		964A12E8BE23E16EB944E44844D54197 /* AVRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVRelation.h; sourceTree = "<group>"; };
+		96AD0792707CEC843043FA43C1B8805A /* AVGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVGeoPoint.h; sourceTree = "<group>"; };
+		97922FC67ED4532473B7A3ED530AC7D9 /* AVAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAnonymousUtils.h; sourceTree = "<group>"; };
+		9C594EA76D448A7BAEAD020ABA24317C /* AVLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVLogger.h; sourceTree = "<group>"; };
+		9D67EF84750F0D9C2D6D85E14F2EE1D6 /* AVObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVObject+Subclass.h"; sourceTree = "<group>"; };
+		A11CA237ACAFFF303283F3BEED43CB03 /* AVHistoryMessageQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVHistoryMessageQuery.h; sourceTree = "<group>"; };
+		A2C0DDF1604B4B486DEB4E43C84ABBFE /* Pods-WordsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordsAPP.release.xcconfig"; sourceTree = "<group>"; };
+		BA5F3C53E61C1DD8AF6A4288DB84C8B6 /* AVSearchQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSearchQuery.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BA72864E7AB6E6E3A2FE521C809BA46B /* AVSaveOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSaveOption.h; sourceTree = "<group>"; };
+		C53B1A66CC5871970AF7A31EFF2FEDE4 /* AVInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVInstallation.h; sourceTree = "<group>"; };
+		C69F8E124115523DE2FE94D68857FD3A /* Pods-WordsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WordsAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE79EA8B028D7A121DBC23CAC529761 /* AVSignature.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSignature.h; sourceTree = "<group>"; };
+		D12A6275D55EE77F63C386C43E3EC6E7 /* AVCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVCloud.h; sourceTree = "<group>"; };
+		DD6707A237AED8C24CFE88D65EB32B13 /* AVSearchSortBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSearchSortBuilder.h; sourceTree = "<group>"; };
+		E0DAF55B69CC73CB06220B92C5C5A2C6 /* AVACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVACL.h; sourceTree = "<group>"; };
+		F069CEBBA1059A9FEF9E998053989CB9 /* Pods-WordsAPP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WordsAPP-acknowledgements.plist"; sourceTree = "<group>"; };
+		F317FA64515CB8B06FD91B7FCE6DA234 /* Pods-WordsAPP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WordsAPP-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A59CB5F91AC0535349457421A8B9E1A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E6934A560B8BDFE874F0D782A210664 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E8D9E129DA3364C79ED89877499D456 /* AVOSCloud */ = {
+			isa = PBXGroup;
+			children = (
+				E0DAF55B69CC73CB06220B92C5C5A2C6 /* AVACL.h */,
+				0D3D800FE2E7A20951B7111803C0AA40 /* AVAnalytics.h */,
+				97922FC67ED4532473B7A3ED530AC7D9 /* AVAnonymousUtils.h */,
+				5CF3070FFDCB4EBA387084DCE51026EF /* AVAvailability.h */,
+				D12A6275D55EE77F63C386C43E3EC6E7 /* AVCloud.h */,
+				89C669869D3793EE03732FD5FBC05CD1 /* AVCloudQueryResult.h */,
+				8D71200F211B0D4BBD3E11E0E1015182 /* AVConstants.h */,
+				77177870F64A5E0145673FED7F7C1E92 /* AVFile.h */,
+				472653B0131A9C6A6602DE673CCB813C /* AVFileQuery.h */,
+				96AD0792707CEC843043FA43C1B8805A /* AVGeoPoint.h */,
+				402D3EB02016FC4EB24EBB8E96933F4F /* AVGroup.h */,
+				304717178AF620D1B50FC43E236A0A97 /* AVHistoryMessage.h */,
+				A11CA237ACAFFF303283F3BEED43CB03 /* AVHistoryMessageQuery.h */,
+				C53B1A66CC5871970AF7A31EFF2FEDE4 /* AVInstallation.h */,
+				9C594EA76D448A7BAEAD020ABA24317C /* AVLogger.h */,
+				02969242B2DFA28D1D60DE6A4D713593 /* AVMessage.h */,
+				58413053E56D81100D9476933C4F1EF7 /* AVObject.h */,
+				9D67EF84750F0D9C2D6D85E14F2EE1D6 /* AVObject+Subclass.h */,
+				438A3FDC12733A811A63ABCE2B0EB428 /* AVOSCloud.h */,
+				7D16B7361CB6BED672294B6FBD872A8D /* AVPush.h */,
+				908246D24CE04E75F1E3335883EE7384 /* AVQuery.h */,
+				964A12E8BE23E16EB944E44844D54197 /* AVRelation.h */,
+				06007A7FDD6E88904641873B7438B7F6 /* AVRole.h */,
+				BA72864E7AB6E6E3A2FE521C809BA46B /* AVSaveOption.h */,
+				BA5F3C53E61C1DD8AF6A4288DB84C8B6 /* AVSearchQuery.h */,
+				DD6707A237AED8C24CFE88D65EB32B13 /* AVSearchSortBuilder.h */,
+				5AA3386330CA90C617D1508B3F7B3A7D /* AVSession.h */,
+				CAE79EA8B028D7A121DBC23CAC529761 /* AVSignature.h */,
+				81B0660A292D8762808F45E06CA156AD /* AVStatus.h */,
+				37E9E7BF7D34F021CB4C47F56BBD0747 /* AVSubclassing.h */,
+				6D99A36FD409260271747A04463C08DB /* AVUser.h */,
+				45053847162D22311638D25723FEA96B /* Frameworks */,
+			);
+			path = AVOSCloud;
+			sourceTree = "<group>";
+		};
+		1FBDC53D4BF4B62787C7CEA6F7B4618D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4054F418FE5AAAA306AEE730EC8EB780 /* libPods-WordsAPP.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35D88D1E99EB42F0AE08F3C354F73529 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E8D9E129DA3364C79ED89877499D456 /* AVOSCloud */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		45053847162D22311638D25723FEA96B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA01A905711234E0988F0934F15954A /* libAVOSCloud.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		782805E0CA5F0DCB62C649CFC76DC3FB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9458AD6C77B7278E40659DEEA7576E5 /* Pods-WordsAPP */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				35D88D1E99EB42F0AE08F3C354F73529 /* Pods */,
+				1FBDC53D4BF4B62787C7CEA6F7B4618D /* Products */,
+				782805E0CA5F0DCB62C649CFC76DC3FB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A9458AD6C77B7278E40659DEEA7576E5 /* Pods-WordsAPP */ = {
+			isa = PBXGroup;
+			children = (
+				3F146219A860221671761F9589B375C5 /* Pods-WordsAPP-acknowledgements.markdown */,
+				F069CEBBA1059A9FEF9E998053989CB9 /* Pods-WordsAPP-acknowledgements.plist */,
+				F317FA64515CB8B06FD91B7FCE6DA234 /* Pods-WordsAPP-dummy.m */,
+				7E9CDB2DE1A850562481D08493D7F475 /* Pods-WordsAPP-frameworks.sh */,
+				5D4799C7B23A15A4599CA6EA41DDA6E0 /* Pods-WordsAPP-resources.sh */,
+				C69F8E124115523DE2FE94D68857FD3A /* Pods-WordsAPP.debug.xcconfig */,
+				A2C0DDF1604B4B486DEB4E43C84ABBFE /* Pods-WordsAPP.release.xcconfig */,
+			);
+			name = "Pods-WordsAPP";
+			path = "Target Support Files/Pods-WordsAPP";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76AA2AE0E4DD956F9B3D01D1BAE7A726 /* Pods-WordsAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0390B30C3A8FEABF03ECA5A3A1240397 /* Build configuration list for PBXNativeTarget "Pods-WordsAPP" */;
+			buildPhases = (
+				2F1051854EC8164013D8218A19D589EA /* Sources */,
+				A59CB5F91AC0535349457421A8B9E1A3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WordsAPP";
+			productName = "Pods-WordsAPP";
+			productReference = 4054F418FE5AAAA306AEE730EC8EB780 /* libPods-WordsAPP.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1FBDC53D4BF4B62787C7CEA6F7B4618D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76AA2AE0E4DD956F9B3D01D1BAE7A726 /* Pods-WordsAPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F1051854EC8164013D8218A19D589EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10AE04D9CB3214C45F167E8619339D5C /* Pods-WordsAPP-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84E081C73916C2881134BC11334C8120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2C0DDF1604B4B486DEB4E43C84ABBFE /* Pods-WordsAPP.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C25AAF48D7B186187619C314BC4E59B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69F8E124115523DE2FE94D68857FD3A /* Pods-WordsAPP.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0390B30C3A8FEABF03ECA5A3A1240397 /* Build configuration list for PBXNativeTarget "Pods-WordsAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25AAF48D7B186187619C314BC4E59B8 /* Debug */,
+				84E081C73916C2881134BC11334C8120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

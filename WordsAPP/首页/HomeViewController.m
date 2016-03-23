@@ -10,6 +10,8 @@
 
 @interface HomeViewController ()
 
+
+
 @end
 
 @implementation HomeViewController
@@ -18,8 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.barView.backgroundColor = [UIColor redColor];
     
 }
+
+#pragma mark - getter
 
 
 @end
