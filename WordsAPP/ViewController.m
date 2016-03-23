@@ -43,9 +43,16 @@
     
     HomeViewController * home = [[HomeViewController alloc] init];
     UserViewController * user = [[UserViewController alloc] init];
+    user.tabBarItem.title = @"arga";
+    home.tabBarItem.title = @"rgae";
+    
+    UINavigationController * homeN = [[UINavigationController alloc] initWithRootViewController:home];
+    UINavigationController * userN = [[UINavigationController alloc] initWithRootViewController:user];
+    homeN.navigationBarHidden = YES;
+    userN.navigationBarHidden = YES;
     
     UITabBarController * tabbar = [[UITabBarController alloc] init];
-    tabbar.viewControllers = @[home, user];
+    tabbar.viewControllers = @[homeN, userN];
     [self presentViewController:tabbar animated:YES completion:nil];
 }
 

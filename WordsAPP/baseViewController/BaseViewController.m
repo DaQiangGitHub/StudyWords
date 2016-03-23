@@ -22,18 +22,21 @@
     
     self.view.backgroundColor = COLOR(233, 233, 233);
     
-    [self initalizeInterface];
+    [self initalizeBaseInterface];
     
 }
 
-- (void)initalizeInterface{
+- (void)initalizeBaseInterface{
     
     [self.view addSubview:self.barView];
     [self.view addSubview:self.barLable];
     [self.view addSubview:self.barLeftButton];
     [self.view addSubview:self.barRightButton];
 }
-
+#pragma mark - 点击事件
+- (void)leftButtonPressed{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - getter
 - (UIView *)barView{
     if (!_barView) {
@@ -50,7 +53,7 @@
     if (!_barLable) {
         _barLable = ({
             UILabel * lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 150, 50)];
-            lable.center = CGPointMake(self.view.center.x, 30);
+            lable.center = CGPointMake(self.view.center.x, 35);
             lable.backgroundColor = [UIColor blueColor];
             lable.font = [UIFont systemFontOfSize:25];
             lable.textAlignment = NSTextAlignmentCenter;
@@ -63,8 +66,9 @@
     if (!_barLeftButton) {
         _barLeftButton = ({
             UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame = CGRectMake(10, 15, 40, 40);
-            button.backgroundColor = [UIColor orangeColor];
+            button.frame = CGRectMake(10, 10, 70, 50);
+            [button setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(leftButtonPressed) forControlEvents:UIControlEventTouchUpInside];
             
             button;
         });
