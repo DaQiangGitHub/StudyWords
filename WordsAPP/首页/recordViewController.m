@@ -7,8 +7,6 @@
 //
 
 #import "recordViewController.h"
-#import "AFNetworking.h"
-#import "UIImageView+WebCache.h"
 
 #define url @"http://ac-mc2fvx3y.clouddn.com/WjJOAHRljlXqwEibBq0oJWD.png"
 
