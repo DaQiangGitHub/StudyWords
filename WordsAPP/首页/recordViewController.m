@@ -33,8 +33,6 @@
     
 }
 
-
-
 #pragma mark - getter
 - (UIImageView *)backImage{
     if (!_backImage) {
