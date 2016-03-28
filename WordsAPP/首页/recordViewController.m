@@ -7,6 +7,7 @@
 //
 
 #import "recordViewController.h"
+#import "Networking.h"
 
 #define url @"http://ac-mc2fvx3y.clouddn.com/WjJOAHRljlXqwEibBq0oJWD.png"
 
@@ -40,29 +41,13 @@
         _backImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
             imageView.image = [UIImage imageNamed:@"背景6.jpg"];
-            
-            
-           
-            
-            AVQuery *query = [AVQuery queryWithClassName:@"data"];
-            [query whereKey:@"objectId" equalTo:DATAID];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (objects) {
-                    NSArray<AVObject *> *priorityEqualsZeroTodos = objects;
-                    NSArray * images = priorityEqualsZeroTodos[0][@"sport"];
-                    NSString * imageTitle = images[1];
-                    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageTitle]];
-                    imageView.image = [UIImage imageWithData:data];
 
-                    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-                    NSArray * words = priorityEqualsZeroTodos[0][@"sportWords"];
-                    label.text = words[1];
-                    [_backImage addSubview:label];
-                }
-                
+            [[Networking alloc] getimageType:animals index:2 success:^(UIImage *image) {
+                imageView.image = image;
+            } failure:^(NSError *error) {
+                NSLog(@"%@",error);
             }];
-            
-            
+
             imageView;
         });
     }

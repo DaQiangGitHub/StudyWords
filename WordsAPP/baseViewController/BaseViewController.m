@@ -9,10 +9,14 @@
 #import "BaseViewController.h"
 
 
+
 @interface BaseViewController ()
 
 
+
 @end
+
+
 
 @implementation BaseViewController
 
@@ -22,10 +26,14 @@
     
     self.view.backgroundColor = COLOR(233, 233, 233);
     
-    [self initalizeBaseInterface];
+    [self initBaseDataSource];
     
 }
-
+- (void)initBaseDataSource{
+    
+    
+    [self initalizeBaseInterface];
+}
 - (void)initalizeBaseInterface{
     
     [self.view addSubview:self.barView];
@@ -33,6 +41,7 @@
     [self.view addSubview:self.barLeftButton];
     [self.view addSubview:self.barRightButton];
 }
+
 #pragma mark - 点击事件
 - (void)leftButtonPressed{
     [self.navigationController popViewControllerAnimated:YES];

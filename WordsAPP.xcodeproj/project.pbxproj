@@ -17,6 +17,7 @@
 		245ED6251CA2864300BE79E2 /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED6241CA2864300BE79E2 /* recordViewController.m */; };
 		245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */; };
 		247F067C1CA9127E00262684 /* 首页底.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 247F067B1CA9127E00262684 /* 首页底.jpg */; };
+		247F06831CA961A300262684 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06821CA961A300262684 /* Networking.m */; };
 		24DD26331C9A8BF10007997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26321C9A8BF10007997A /* main.m */; };
 		24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26351C9A8BF10007997A /* AppDelegate.m */; };
 		24DD26391C9A8BF10007997A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26381C9A8BF10007997A /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		245ED6291CA2B24B00BE79E2 /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
 		245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
 		247F067B1CA9127E00262684 /* 首页底.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "首页底.jpg"; sourceTree = "<group>"; };
+		247F06811CA961A300262684 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		247F06821CA961A300262684 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		24DD262E1C9A8BF10007997A /* WordsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD26321C9A8BF10007997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DD26341C9A8BF10007997A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,16 @@
 			path = "使用介绍/第三方";
 			sourceTree = "<group>";
 		};
+		247F067D1CA9605C00262684 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				247F06811CA961A300262684 /* Networking.h */,
+				247F06821CA961A300262684 /* Networking.m */,
+			);
+			name = "网络请求";
+			path = "首页/网络请求";
+			sourceTree = "<group>";
+		};
 		24DD26251C9A8BF10007997A = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +163,7 @@
 				24DD26381C9A8BF10007997A /* ViewController.m */,
 				245ED6281CA2B20100BE79E2 /* 使用介绍 */,
 				24DD26501C9A8D540007997A /* baseViewController */,
+				247F067D1CA9605C00262684 /* 网络请求 */,
 				24DD26491C9A8D540007997A /* 首页 */,
 				24DD26481C9A8D540007997A /* 记录 */,
 				247F06131CA9021500262684 /* 第三方 */,
@@ -414,6 +428,7 @@
 				245ED6251CA2864300BE79E2 /* recordViewController.m in Sources */,
 				245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */,
 				24E7A7DC1CA28F9F00A162FB /* HomePageTableViewCell.m in Sources */,
+				247F06831CA961A300262684 /* Networking.m in Sources */,
 				24DD26791C9AD4A50007997A /* BaseViewController.m in Sources */,
 				24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */,
 				245ED6221CA2831500BE79E2 /* WrongQuestionViewController.m in Sources */,
