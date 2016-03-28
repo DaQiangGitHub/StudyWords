@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import <AVOSCloud/AVOSCloud.h>
+
 
 @interface BaseViewController ()
 
@@ -38,7 +38,7 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)rightButtonPressed{
-    [AVUser logOut];
+//    [AVUser logOut];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
     [self dismissViewControllerAnimated:NO completion:nil];
 }

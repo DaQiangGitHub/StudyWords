@@ -16,7 +16,7 @@
 @property (nonatomic, retain) UIImageView * backImage;
 @property (nonatomic, retain) UIButton * recordToday;
 @property (nonatomic, retain) UIButton * wrongQuestion;
-
+@property (nonatomic, assign) AVUser * currentUser;
 
 @end
 
@@ -32,7 +32,7 @@
     [self.view addSubview:self.recordToday];
     [self.view addSubview:self.wrongQuestion];
  
-    
+    _currentUser = [AVUser currentUser];
 }
 
 #pragma mark - 点击事件
@@ -50,6 +50,7 @@
         _backImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, BAR_H, SCREEN_W, SCREEN_H - BAR_H)];
             imageView.image = [UIImage imageNamed:@"首页底"];
+            
             imageView;
         });
     }
