@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSArray * pictures;
 @property (nonatomic, strong) UIImageView * backgroundImageView;
 
+@property (nonatomic, strong) HomePageTableViewCell * cell;
+
 @end
 
 @implementation HomeViewController
@@ -25,21 +27,64 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.barLable.text = @"英语大全";
+    //    self.barLable.text = @"英语大全";
     
     [self initInterface];
+    NSLog(@"123");
     
 }
 - (void)initInterface{
     _pictures = [NSArray arrayWithObjects:@"水果",@"蔬菜",@"动物.jpg",@"生活用品.jpg",@"运动", nil];
-    self.barLeftButton.hidden = YES;
-    self.barRightButton.hidden = YES;
-    self.barView.hidden = YES;
-    self.barLable.hidden = YES;
+    //    self.barLeftButton.hidden = YES;
+    //    self.barRightButton.hidden = YES;
+    //    self.barView.hidden = YES;
+    //    self.barLable.hidden = YES;
     self.view.backgroundColor = [UIColor grayColor];
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.tableView];
+    
+}
 
+#pragma mark -- animation
+
+- (CABasicAnimation *)positionAnimation:(CGPoint)CGPoint
+{
+    CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    animation.duration = 1;
+    animation.fromValue = [NSValue valueWithCGPoint:CGPoint];
+    animation.delegate = self;
+    animation.removedOnCompletion = NO;
+    return animation;
+}
+
+- (CABasicAnimation *)scaleAnimation
+{
+    CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.duration = 1;
+    //    animation.fromValue = @3;
+    NSArray * arrar = @[@2,@1,@0.8,@0.4];
+    animation.toValue = arrar;
+    return animation;
+}
+
+- (CABasicAnimation *)rotationAnimation
+{
+    CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    animation.duration = 1;
+    animation.fromValue = @0;
+    animation.toValue = @(M_PI * 4);
+    return animation;
+}
+
+- (CAKeyframeAnimation *)shakeAnimation
+{
+    CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"position.y"];
+    animation.duration = 2;
+    animation.additive = YES;
+    animation.values = @[@600,@-600,@1];
+    animation.repeatCount = 1;
+    return animation;
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -57,6 +102,13 @@
     }
     cell.backgroundColor = [UIColor clearColor];
     cell.fruitImageView.image = [UIImage imageNamed:self.pictures[indexPath.row]];
+    NSInteger y = BAR_H + indexPath.row * (SCREEN_H - BAR_H - 50) / 5 ;
+    [cell.fruitImageView.layer addAnimation:[self positionAnimation:CGPointMake(600, y)] forKey:@"position"];
+    [cell.fruitImageView.layer addAnimation:[self scaleAnimation] forKey:@"position"];
+    [cell.fruitImageView.layer addAnimation:[self rotationAnimation] forKey:@"position"];
+    [cell.fruitImageView.layer addAnimation:[self shakeAnimation] forKey:nil];
+    
+    self.cell = cell;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -95,7 +147,7 @@
 {
     if (!_backgroundImageView) {
         _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H - 50)];
-        [_backgroundImageView setImage:[UIImage imageNamed:@"1%3O86)NSF}%0@~~J[KG@1K.jpg"]];
+        [_backgroundImageView setImage:[UIImage imageNamed:@"背景2.jpg"]];
     }
     return _backgroundImageView;
 }

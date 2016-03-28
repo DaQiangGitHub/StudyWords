@@ -79,7 +79,7 @@
     if (!_backImageView) {
         _backImageView = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-            imageView.image = [UIImage imageNamed:@"首页底"];
+            imageView.image = [UIImage imageNamed:@"首页底.jpg"];
             imageView;
         });
     }

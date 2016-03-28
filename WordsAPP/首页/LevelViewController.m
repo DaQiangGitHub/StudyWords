@@ -7,12 +7,16 @@
 //
 
 #import "LevelViewController.h"
+#import "SimpleViewController.h"
+#import "MediumViewController.h"
+#import "DifficultViewController.h"
 
 @interface LevelViewController ()
 
 @property (nonatomic, strong) UIButton * buttonSimple;
 @property (nonatomic, strong) UIButton * buttonMedium;
 @property (nonatomic, strong) UIButton * buttonDifficult;
+
 
 @end
 
@@ -33,8 +37,8 @@
 {
     self.view.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:self.buttonSimple];
-//    [self.view addSubview:self.buttonMedium];
-//    [self.view addSubview:self.buttonDifficult];
+    //    [self.view addSubview:self.buttonMedium];
+    //    [self.view addSubview:self.buttonDifficult];
 }
 
 #pragma  mark -- Animation
@@ -48,9 +52,7 @@
     animation.fromValue = [NSValue valueWithCGPoint:CGPoint];
     return animation;
 }
-
-//
-
+//动画代理
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     CAAnimation * animation = [self.buttonSimple.layer animationForKey:@"simple"];
@@ -68,19 +70,25 @@
 
 #pragma mark -- clickOnTheEvents
 
-- (void)simpleClickOnTheEvent
+- (void)simpleClickOnTheEvent:(UIButton *)sender
 {
-    
+    sender.selected = !sender.selected;
+    SimpleViewController * simpleViewController = [[SimpleViewController alloc] init];
+    [self.navigationController pushViewController:simpleViewController animated:YES];
 }
 
-- (void)mediumClickOnTheEvent
+- (void)mediumClickOnTheEvent:(UIButton *)sender
 {
-    
+    sender.selected = !sender.selected;
+    MediumViewController * mediumViewController = [[MediumViewController alloc] init];
+    [self.navigationController pushViewController:mediumViewController animated:YES];
 }
 
-- (void)difficultClickOnTheEvent
+- (void)difficultClickOnTheEvent:(UIButton *)sender
 {
-    
+    sender.selected = !sender.selected;
+    DifficultViewController * diffficultViewController = [[DifficultViewController alloc] init];
+    [self.navigationController pushViewController:diffficultViewController animated:YES];
 }
 
 #pragma  mark -- getter
@@ -89,10 +97,14 @@
 {
     if (!_buttonSimple) {
         _buttonSimple = [UIButton buttonWithType:0];
-        _buttonSimple.frame = CGRectMake(120, 160, 200, 40);
-        _buttonSimple.backgroundColor = [UIColor redColor];
+        _buttonSimple.frame = CGRectMake(120, 160, 200, 50);
+        [_buttonSimple setImage:[UIImage imageNamed:@"简单模式"] forState:0];
+        //        [_buttonSimple setImage:[UIImage imageNamed:@"简单模式点击后"] forState:UIControlStateSelected];
+        
+        [_buttonSimple addTarget:self action:@selector(simpleClickOnTheEvent:) forControlEvents:UIControlEventTouchUpInside];
+        
         [_buttonSimple.layer addAnimation:[self positionAnimation:CGPointMake(-100, -100)] forKey:@"simple"];
-        [_buttonSimple setTitle:@"简单模式" forState:0];
+        
     }
     return _buttonSimple;
 }
@@ -101,10 +113,11 @@
 {
     if (!_buttonMedium) {
         _buttonMedium = [UIButton buttonWithType:0];
-        _buttonMedium.frame = CGRectMake(120, 300, 200, 40);
-        _buttonMedium.backgroundColor = [UIColor orangeColor];
-//        [_buttonMedium.layer addAnimation:[self positionAnimation:CGPointMake(500, -100)] forKey:nil];
-        [_buttonMedium setTitle:@"中等模式" forState:0];
+        _buttonMedium.frame = CGRectMake(120, 300, 200, 50);
+        
+        [_buttonMedium addTarget:self action:@selector(mediumClickOnTheEvent:) forControlEvents:UIControlEventTouchUpInside];
+        [_buttonMedium setBackgroundImage:[[UIImage imageNamed:@"中等模式"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ] forState:0];
+        //        [_buttonMedium setImage:[UIImage imageNamed:@"中等模式点击后"] forState:UIControlStateSelected];
     }
     return _buttonMedium;
 }
@@ -113,10 +126,10 @@
 {
     if (!_buttonDifficult) {
         _buttonDifficult = [UIButton buttonWithType:0];
-        _buttonDifficult.frame = CGRectMake(120, 440, 200, 40);
-        _buttonDifficult.backgroundColor = [UIColor greenColor];
-//        [_buttonDifficult.layer addAnimation:[self positionAnimation:CGPointMake(500, 800)] forKey:nil];
-        [_buttonDifficult setTitle:@"困难模式" forState:0];;
+        _buttonDifficult.frame = CGRectMake(120, 440, 200, 50);
+        [_buttonDifficult setBackgroundImage:[[UIImage imageNamed:@"复杂模式"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ] forState:0];
+        //        [_buttonDifficult setImage:[UIImage imageNamed:@"复杂模式点击后"] forState:UIControlStateSelected];
+        [_buttonDifficult addTarget:self action:@selector(difficultClickOnTheEvent:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _buttonDifficult;
 }
