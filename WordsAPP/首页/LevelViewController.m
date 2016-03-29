@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIButton * buttonMedium;
 @property (nonatomic, strong) UIButton * buttonDifficult;
 
+@property (nonatomic, strong) UIImageView * backGroundImageView;
+
 
 @end
 
@@ -37,6 +39,7 @@
 - (void)initializeUserInterface
 {
     self.view.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:self.backGroundImageView];
     [self.view addSubview:self.buttonSimple];
     //    [self.view addSubview:self.buttonMedium];
     //    [self.view addSubview:self.buttonDifficult];
@@ -98,7 +101,7 @@
 {
     if (!_buttonSimple) {
         _buttonSimple = [UIButton buttonWithType:0];
-        _buttonSimple.frame = CGRectMake(120, 160, 200, 50);
+        _buttonSimple.frame = CGRectMake(100, 260, 200, 50);
         [_buttonSimple setImage:[UIImage imageNamed:@"简单模式"] forState:0];
         //        [_buttonSimple setImage:[UIImage imageNamed:@"简单模式点击后"] forState:UIControlStateSelected];
         
@@ -114,7 +117,7 @@
 {
     if (!_buttonMedium) {
         _buttonMedium = [UIButton buttonWithType:0];
-        _buttonMedium.frame = CGRectMake(120, 300, 200, 50);
+        _buttonMedium.frame = CGRectMake(100, 360, 200, 50);
         
         [_buttonMedium addTarget:self action:@selector(mediumClickOnTheEvent:) forControlEvents:UIControlEventTouchUpInside];
         [_buttonMedium setBackgroundImage:[[UIImage imageNamed:@"中等模式"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ] forState:0];
@@ -127,12 +130,21 @@
 {
     if (!_buttonDifficult) {
         _buttonDifficult = [UIButton buttonWithType:0];
-        _buttonDifficult.frame = CGRectMake(120, 440, 200, 50);
+        _buttonDifficult.frame = CGRectMake(100, 460, 200, 50);
         [_buttonDifficult setBackgroundImage:[[UIImage imageNamed:@"复杂模式"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal ] forState:0];
         //        [_buttonDifficult setImage:[UIImage imageNamed:@"复杂模式点击后"] forState:UIControlStateSelected];
         [_buttonDifficult addTarget:self action:@selector(difficultClickOnTheEvent:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _buttonDifficult;
+}
+
+- (UIImageView *)backGroundImageView
+{
+    if (!_backGroundImageView) {
+        _backGroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+        [_backGroundImageView setImage:[UIImage imageNamed:@"选择模式背景.jpg"]];
+    }
+    return _backGroundImageView;
 }
 
 @end

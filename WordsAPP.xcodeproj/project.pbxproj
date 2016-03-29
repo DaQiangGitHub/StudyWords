@@ -45,6 +45,8 @@
 		24EF21B11CA9554D00F1384B /* 简单模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21B01CA9554D00F1384B /* 简单模式.png */; };
 		24EF220C1CAA617400F1384B /* 对.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220B1CAA617400F1384B /* 对.png */; };
 		24EF220E1CAA617C00F1384B /* 错.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220D1CAA617C00F1384B /* 错.png */; };
+		24EF22101CAA97F800F1384B /* 选择模式背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */; };
+		24EF22141CAAA5C000F1384B /* ModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF22131CAAA5C000F1384B /* ModelView.m */; };
 		E185DBF820598A546BA4041B /* libPods-WordsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E735C076B388FE593770211B /* libPods-WordsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,9 @@
 		24EF21B01CA9554D00F1384B /* 简单模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式.png"; sourceTree = "<group>"; };
 		24EF220B1CAA617400F1384B /* 对.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对.png"; sourceTree = "<group>"; };
 		24EF220D1CAA617C00F1384B /* 错.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错.png"; sourceTree = "<group>"; };
+		24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "选择模式背景.jpg"; sourceTree = "<group>"; };
+		24EF22121CAAA5C000F1384B /* ModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelView.h; sourceTree = "<group>"; };
+		24EF22131CAAA5C000F1384B /* ModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelView.m; sourceTree = "<group>"; };
 		4AF5D6E0618807C84787B264 /* Pods-WordsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C398090B36CA83F682595D72 /* Pods-WordsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.release.xcconfig"; sourceTree = "<group>"; };
 		E735C076B388FE593770211B /* libPods-WordsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +143,7 @@
 				24EF21B01CA9554D00F1384B /* 简单模式.png */,
 				24EF21AE1CA9554800F1384B /* 中等模式.png */,
 				24EF21AC1CA954E900F1384B /* 复杂模式.png */,
+				24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 				247F067D1CA9605C00262684 /* 网络请求 */,
 				24DD26491C9A8D540007997A /* 首页 */,
 				24DD26481C9A8D540007997A /* 记录 */,
+				24EF22111CAAA55300F1384B /* Views */,
 				247F06131CA9021500262684 /* 第三方 */,
 				24DD264A1C9A8D540007997A /* 图片 */,
 				24DD263A1C9A8BF10007997A /* Main.storyboard */,
@@ -312,6 +319,16 @@
 			path = "运动";
 			sourceTree = "<group>";
 		};
+		24EF22111CAAA55300F1384B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24EF22121CAAA5C000F1384B /* ModelView.h */,
+				24EF22131CAAA5C000F1384B /* ModelView.m */,
+			);
+			name = Views;
+			path = "图片/Views";
+			sourceTree = "<group>";
+		};
 		95AF34483F7083D4A36DB04D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +417,7 @@
 				2458EEF41CA3BDB3009AF6A8 /* 背景1.jpg in Resources */,
 				24EF220C1CAA617400F1384B /* 对.png in Resources */,
 				24EF220E1CAA617C00F1384B /* 错.png in Resources */,
+				24EF22101CAA97F800F1384B /* 选择模式背景.jpg in Resources */,
 				24EF21A71CA9549A00F1384B /* 复杂模式背景.png in Resources */,
 				24E7A7DE1CA2926700A162FB /* 动物.jpg in Resources */,
 				24EF21AF1CA9554800F1384B /* 中等模式.png in Resources */,
@@ -472,6 +490,7 @@
 			files = (
 				245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */,
 				24DD26391C9A8BF10007997A /* ViewController.m in Sources */,
+				24EF22141CAAA5C000F1384B /* ModelView.m in Sources */,
 				245ED6251CA2864300BE79E2 /* recordViewController.m in Sources */,
 				245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */,
 				24E7A7DC1CA28F9F00A162FB /* HomePageTableViewCell.m in Sources */,
