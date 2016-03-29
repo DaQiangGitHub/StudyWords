@@ -29,6 +29,7 @@
     
     self.barLable.text = @"难度等级";
     [self initializeUserInterface];
+    self.tabBarController.tabBar.hidden = YES;
     
     
 }

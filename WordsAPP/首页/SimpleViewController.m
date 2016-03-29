@@ -7,6 +7,7 @@
 //
 
 #import "SimpleViewController.h"
+#import "Networking.h"
 
 @interface SimpleViewController ()
 
@@ -15,8 +16,6 @@
 @property (nonatomic, strong)UILabel * wordLable;
 @property (nonatomic, strong)UIImageView * backGroundImageView;
 
-@property (nonatomic, strong)NSArray * words;
-@property (nonatomic, strong)NSArray * images;
 @property (nonatomic, strong)NSArray * array;
 
 @property (nonatomic, assign)NSInteger currentIndex;
@@ -25,14 +24,15 @@
 @property (nonatomic, assign)NSInteger index3;
 @property (nonatomic, assign)NSInteger index;
 
-@property (nonatomic, strong)UIImageView * imageView1;
-@property (nonatomic, strong)UIImageView * imageView2;
-@property (nonatomic, strong)UIImageView * imageView3;
-@property (nonatomic, strong)UIImageView * imageView4;
+@property (nonatomic, strong)UIButton * imageView1;
+@property (nonatomic, strong)UIButton * imageView2;
+@property (nonatomic, strong)UIButton * imageView3;
+@property (nonatomic, strong)UIButton * imageView4;
 
 @property (nonatomic, strong)UIButton * backButton;
+@property (nonatomic, strong)UIButton * rightButton;
 
-@property (nonatomic, strong)UIButton * nextButton;
+@property (nonatomic, strong)UIImageView * judgleImage;
 
 @end
 
@@ -40,7 +40,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self initializeDataSource];
     [self initializeUserInterface];
     
@@ -48,10 +47,7 @@
 
 - (void)initializeDataSource
 {
-    _words = @[@"fruit",@"vegetables",@"animal",@"life",@"sports"];
-    _images = @[@"水果",@"蔬菜",@"动物.jpg",@"生活用品.jpg",@"运动"];
-    //    NSDictionary * dic =
-    self.currentIndex = arc4random() % 5;
+    self.currentIndex = arc4random() % 30;
 }
 
 - (void)initializeUserInterface
@@ -65,7 +61,7 @@
     [self.view addSubview:self.imageView4];
     
     [self.view addSubview:self.backButton];
-    [self.view addSubview:self.nextButton];
+    [self.view addSubview:self.rightButton];
     //读取单词
     _array = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
     self.index = arc4random() % 4;
@@ -79,12 +75,11 @@
 {
     
     for (int i = 0; ; i ++) {
-        NSInteger index = arc4random() % 5;
+        NSInteger index = arc4random() % 30;
         if (index != self.currentIndex) {
             return index;
         }
     }
-    //    return index;
 }
 #pragma mark -- clickOnTheEvents
 
@@ -93,10 +88,35 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)nextController:(UIButton *)sender
+- (void)rightOfTheAnswer:(UIButton *)sender
 {
-    SimpleViewController * simpleViewController = [[SimpleViewController alloc] init];
-    [self.navigationController pushViewController:simpleViewController animated:YES];
+    NSInteger i = [self.array[self.index] intValue];
+    UIButton * button = (UIButton *)[self.view viewWithTag:100 + i];
+    self.judgleImage.frame = button.frame;
+    [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
+    [self.judgleImage.layer addAnimation:[self positionOfAnimation:CGPointMake(400, -200)] forKey:nil];
+}
+
+- (void)buttonPressed_ChoiceSelection:(UIButton *)sender
+{
+    NSLog(@"sender.tag = %ld",sender.tag);
+    [[Networking alloc] getNameWithType:fruitWords index:(sender.tag - 100) successBlock:^(NSString *name) {
+        if ([self.wordLable.text isEqualToString:name]) {
+            
+            [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
+            self.judgleImage.frame = sender.frame;
+            [self.view addSubview:self.judgleImage];
+            [self.judgleImage.layer addAnimation:[self positionOfAnimation:CGPointMake(400, -200)] forKey:nil];
+        }else{
+            
+            [self.judgleImage setImage:[UIImage imageNamed:@"错"]];
+            [self.view addSubview:self.judgleImage];
+            self.judgleImage.frame = sender.frame;
+            [self.judgleImage.layer addAnimation:[self positionOfAnimation:CGPointMake(0, -200)] forKey:nil];
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 #pragma mark -- animation
@@ -193,65 +213,103 @@
 {
     if (!_wordLable) {
         _wordLable = [[UILabel alloc] initWithFrame:CGRectMake(100, 280, 180, 40)];
-        _wordLable.backgroundColor = [UIColor grayColor];
+        _wordLable.textColor = [UIColor orangeColor];
+        _wordLable.font = [UIFont systemFontOfSize:24];
         _wordLable.textAlignment = NSTextAlignmentCenter;
         NSInteger i = [self.array[self.index] intValue];
-        NSLog(@"i = %ld",i);
-        _wordLable.text = self.words[i];
+        [[Networking alloc] getNameWithType:fruitWords index:i successBlock:^(NSString *name) {
+            _wordLable.text = name;
+       } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+//        NSLog(@"i = %ld",i);
+//        _wordLable.text = self.words[i];
     }
     return _wordLable;
 }
 
-- (UIImageView *)imageView1
+- (UIButton *)imageView1
 {
     if (!_imageView1) {
-        _imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(50, 340, 80, 80)];
-        [_imageView1 setImage:[UIImage imageNamed:self.images[self.currentIndex]]];
+        _imageView1 = [UIButton buttonWithType:0];
+        _imageView1.frame = CGRectMake(50, 340, 120, 120);
+        _imageView1.center = CGPointMake(110, 400);
+        [[Networking alloc] getimageType:fruit index:self.currentIndex success:^(UIImage *image) {
+            [_imageView1 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        [_imageView1 addTarget:self action:@selector(buttonPressed_ChoiceSelection:) forControlEvents:UIControlEventTouchUpInside];
+        _imageView1.tag = 100 + self.currentIndex;
         NSLog(@"self.currentindex = %ld",self.currentIndex);
         
     }
     return _imageView1;
 }
 
-- (UIImageView *)imageView2
+- (UIButton *)imageView2
 {
     if (!_imageView2) {
-        _imageView2 = [[UIImageView alloc] initWithFrame:CGRectMake(200, 340, 80, 80)];
+        _imageView2 = [UIButton buttonWithType:0];
+        _imageView2.frame = CGRectMake(260, 340, 120, 120);
+        _imageView2.center = CGPointMake(320, 400);
         self.index1 = [self arcMethod];
-        [_imageView2 setImage:[UIImage imageNamed:self.images[self.index1]]];
-        NSLog(@"index = %ld",self.index1);
+        [[Networking alloc] getimageType:fruit index:self.index1 success:^(UIImage *image) {
+            [_imageView2 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        [_imageView2 addTarget:self action:@selector(buttonPressed_ChoiceSelection:) forControlEvents:UIControlEventTouchUpInside];
+        _imageView2.tag = 100 + self.index1;
+        NSLog(@"index1 = %ld",self.index1);
         
     }
     return _imageView2;
 }
 
-- (UIImageView *)imageView3
+- (UIButton *)imageView3
 {
     if (!_imageView3) {
-        _imageView3 = [[UIImageView alloc] initWithFrame:CGRectMake(50, 440, 80, 80)];
+        _imageView3 = [UIButton buttonWithType:0];
+        _imageView3.frame = CGRectMake(50, 480, 120, 120);
+        _imageView3.center = CGPointMake(110, 540);
         for (int i = 0; ; i ++) {
             self.index2 = [self arcMethod];
             if (self.index2 != self.index1) {
                 break;
             }
         }
-        [_imageView3 setImage:[UIImage imageNamed:self.images[self.index2]]];
+        [[Networking alloc] getimageType:fruit index:self.index2 success:^(UIImage *image) {
+            [_imageView3 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        [_imageView3 addTarget:self action:@selector(buttonPressed_ChoiceSelection:) forControlEvents:UIControlEventTouchUpInside];
+        _imageView3.tag = 100 + self.index2;
         NSLog(@"index2 = %ld",self.index2);
     }
     return _imageView3;
 }
 
--(UIImageView *)imageView4
+-(UIButton *)imageView4
 {
     if (!_imageView4) {
-        _imageView4 = [[UIImageView alloc] initWithFrame:CGRectMake(200, 440, 80, 80)];
+        _imageView4 = [UIButton buttonWithType:0];
+        _imageView4.frame = CGRectMake(260, 480, 120, 120);
+        _imageView4.center = CGPointMake(320,540);
         for (int i = 0; ; i ++) {
             self.index3 = [self arcMethod];
             if ((self.index3 != self.index1) && (self.index3 != self.index2)) {
                 break;
             }
         }
-        [_imageView4 setImage:[UIImage imageNamed:self.images[self.index3]]];
+        [[Networking alloc] getimageType:fruit index:self.index3 success:^(UIImage *image) {
+            [_imageView4 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        [_imageView4 addTarget:self action:@selector(buttonPressed_ChoiceSelection:) forControlEvents:UIControlEventTouchUpInside];
+        _imageView4.tag = 100 + self.index3;
         NSLog(@"index3 = %ld",self.index3);
     }
     return _imageView4;
@@ -269,16 +327,17 @@
     return _backButton;
 }
 
-- (UIButton *)nextButton
+- (UIButton *)rightButton
 {
-    if (!_nextButton) {
-        _nextButton = [UIButton buttonWithType:0];
-        _nextButton.frame = CGRectMake(200, 500, 100, 40);
-        _nextButton.backgroundColor = [UIColor purpleColor];
-        [_nextButton setTitle:@"下一页" forState:0];
-        [_nextButton addTarget:self action:@selector(nextController:) forControlEvents:UIControlEventTouchUpInside];
+    if (!_rightButton) {
+        _rightButton = [UIButton buttonWithType:0];
+        _rightButton.frame = CGRectMake(200, 650, 100, 40);
+        [_rightButton setTitle:@"查看\n正确答案" forState:0];
+        _rightButton.titleLabel.numberOfLines = 0;
+        _rightButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        [_rightButton addTarget:self action:@selector(rightOfTheAnswer:) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _nextButton;
+    return _rightButton;
 }
 
 - (UIImageView *)backGroundImageView
@@ -290,7 +349,13 @@
     return _backGroundImageView;
 }
 
-
+- (UIImageView *)judgleImage
+{
+    if (!_judgleImage) {
+        _judgleImage = [[UIImageView alloc] initWithFrame:CGRectMake(400, -200, 80, 80)];
+    }
+    return _judgleImage;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

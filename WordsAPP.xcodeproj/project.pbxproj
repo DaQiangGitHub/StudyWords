@@ -43,6 +43,8 @@
 		24EF21AD1CA954E900F1384B /* 复杂模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21AC1CA954E900F1384B /* 复杂模式.png */; };
 		24EF21AF1CA9554800F1384B /* 中等模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21AE1CA9554800F1384B /* 中等模式.png */; };
 		24EF21B11CA9554D00F1384B /* 简单模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21B01CA9554D00F1384B /* 简单模式.png */; };
+		24EF220C1CAA617400F1384B /* 对.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220B1CAA617400F1384B /* 对.png */; };
+		24EF220E1CAA617C00F1384B /* 错.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220D1CAA617C00F1384B /* 错.png */; };
 		E185DBF820598A546BA4041B /* libPods-WordsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E735C076B388FE593770211B /* libPods-WordsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		24EF21AC1CA954E900F1384B /* 复杂模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复杂模式.png"; sourceTree = "<group>"; };
 		24EF21AE1CA9554800F1384B /* 中等模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中等模式.png"; sourceTree = "<group>"; };
 		24EF21B01CA9554D00F1384B /* 简单模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式.png"; sourceTree = "<group>"; };
+		24EF220B1CAA617400F1384B /* 对.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对.png"; sourceTree = "<group>"; };
+		24EF220D1CAA617C00F1384B /* 错.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错.png"; sourceTree = "<group>"; };
 		4AF5D6E0618807C84787B264 /* Pods-WordsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C398090B36CA83F682595D72 /* Pods-WordsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.release.xcconfig"; sourceTree = "<group>"; };
 		E735C076B388FE593770211B /* libPods-WordsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +123,8 @@
 		245ED6181CA2775900BE79E2 /* 公用 */ = {
 			isa = PBXGroup;
 			children = (
+				24EF220D1CAA617C00F1384B /* 错.png */,
+				24EF220B1CAA617400F1384B /* 对.png */,
 				247F067B1CA9127E00262684 /* 首页底.jpg */,
 				2458EEF31CA3BDB3009AF6A8 /* 背景1.jpg */,
 				24E7A80D1CA2C8FD00A162FB /* 背景2.jpg */,
@@ -392,6 +398,8 @@
 				247F067C1CA9127E00262684 /* 首页底.jpg in Resources */,
 				24E7A8041CA2968D00A162FB /* 水果.png in Resources */,
 				2458EEF41CA3BDB3009AF6A8 /* 背景1.jpg in Resources */,
+				24EF220C1CAA617400F1384B /* 对.png in Resources */,
+				24EF220E1CAA617C00F1384B /* 错.png in Resources */,
 				24EF21A71CA9549A00F1384B /* 复杂模式背景.png in Resources */,
 				24E7A7DE1CA2926700A162FB /* 动物.jpg in Resources */,
 				24EF21AF1CA9554800F1384B /* 中等模式.png in Resources */,
