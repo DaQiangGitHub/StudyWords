@@ -22,14 +22,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.barLable.text = @"错题";
-    self.barView.hidden = YES;
-    self.barLable.hidden = YES;
+    self.barLable.text = @"错题重做";
+    self.tabBarController.tabBar.hidden = YES;
     
     [self.view addSubview:self.backImage];
+    [self.view sendSubviewToBack:self.backImage];
     
-    UIView * view =  [[UIView alloc] initWithFrame:CGRectMake(100, 100, 300, 300)];
-    [self.view addSubview:view];
     
 }
 

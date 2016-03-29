@@ -56,7 +56,7 @@
     if (!_barView) {
         _barView = ({
             UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, BAR_H)];
-            view.backgroundColor = [UIColor whiteColor];
+//            view.backgroundColor = [UIColor whiteColor];
             
             view;
         });

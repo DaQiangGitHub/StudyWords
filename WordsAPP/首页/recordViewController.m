@@ -25,11 +25,10 @@
     // Do any additional setup after loading the view.
     
     self.barLable.text = @"重新答题";
-    self.barView.hidden = YES;
-    self.barLable.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
     
     [self.view addSubview:self.backImage];
-    
+    [self.view sendSubviewToBack:self.backImage];
     
 }
 
