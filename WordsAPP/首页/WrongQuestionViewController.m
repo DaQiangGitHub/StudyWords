@@ -22,19 +22,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.barLable.text = @"错题";
-    self.barView.hidden = YES;
-    self.barLable.hidden = YES;
+    self.barLable.text = @"错题重做";
+    self.tabBarController.tabBar.hidden = YES;
     
     [self.view addSubview:self.backImage];
+    [self.view sendSubviewToBack:self.backImage];
+    
+    
 }
+
+
+
 
 #pragma mark - getter
 - (UIImageView *)backImage{
     if (!_backImage) {
         _backImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)];
-            imageView.image = [UIImage imageNamed:@"背景2.jpg"];
+            imageView.image = [UIImage imageNamed:@"背景6.jpg"];
             imageView;
         });
     }

@@ -49,7 +49,7 @@
     if (!_backImage) {
         _backImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, BAR_H, SCREEN_W, SCREEN_H - BAR_H)];
-            imageView.image = [UIImage imageNamed:@"首页底"];
+            imageView.image = [UIImage imageNamed:@"背景5.jpg"];
             
             imageView;
         });

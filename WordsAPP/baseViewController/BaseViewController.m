@@ -9,10 +9,14 @@
 #import "BaseViewController.h"
 
 
+
 @interface BaseViewController ()
 
 
+
 @end
+
+
 
 @implementation BaseViewController
 
@@ -22,10 +26,14 @@
     
     self.view.backgroundColor = COLOR(233, 233, 233);
     
-    [self initalizeBaseInterface];
+    [self initBaseDataSource];
     
 }
-
+- (void)initBaseDataSource{
+    
+    
+    [self initalizeBaseInterface];
+}
 - (void)initalizeBaseInterface{
     
     [self.view addSubview:self.barView];
@@ -33,6 +41,7 @@
     [self.view addSubview:self.barLeftButton];
     [self.view addSubview:self.barRightButton];
 }
+
 #pragma mark - 点击事件
 - (void)leftButtonPressed{
     [self.navigationController popViewControllerAnimated:YES];
@@ -47,7 +56,7 @@
     if (!_barView) {
         _barView = ({
             UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, BAR_H)];
-            view.backgroundColor = [UIColor whiteColor];
+//            view.backgroundColor = [UIColor whiteColor];
             
             view;
         });
@@ -59,7 +68,6 @@
         _barLable = ({
             UILabel * lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 150, 50)];
             lable.center = CGPointMake(self.view.center.x, 35);
-            lable.backgroundColor = [UIColor blueColor];
             lable.font = [UIFont systemFontOfSize:25];
             lable.textAlignment = NSTextAlignmentCenter;
             lable;
