@@ -58,7 +58,6 @@
     if (!_backButton) {
         _backButton = [UIButton buttonWithType:0];
         _backButton.frame = CGRectMake(100, 50, 100, 40);
-        _backButton.backgroundColor = [UIColor blueColor];
         [_backButton setTitle:@"返回上一页" forState:0];
         [_backButton addTarget:self action:@selector(returnToTheFontController:) forControlEvents:UIControlEventTouchUpInside];
     }
