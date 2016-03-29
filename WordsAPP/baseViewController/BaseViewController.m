@@ -68,7 +68,6 @@
         _barLable = ({
             UILabel * lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 150, 50)];
             lable.center = CGPointMake(self.view.center.x, 35);
-            lable.backgroundColor = [UIColor blueColor];
             lable.font = [UIFont systemFontOfSize:25];
             lable.textAlignment = NSTextAlignmentCenter;
             lable;

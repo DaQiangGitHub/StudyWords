@@ -27,14 +27,21 @@
     self.barLable.hidden = YES;
     
     [self.view addSubview:self.backImage];
+    
+    UIView * view =  [[UIView alloc] initWithFrame:CGRectMake(100, 100, 300, 300)];
+    [self.view addSubview:view];
+    
 }
+
+
+
 
 #pragma mark - getter
 - (UIImageView *)backImage{
     if (!_backImage) {
         _backImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)];
-            imageView.image = [UIImage imageNamed:@"背景2.jpg"];
+            imageView.image = [UIImage imageNamed:@"背景6.jpg"];
             imageView;
         });
     }
