@@ -52,7 +52,7 @@
 - (void)initalizeInterface{
     
     [self.view addSubview:self.backImageView];
-    [self.view addSubview:self.nameLable];
+//    [self.view addSubview:self.nameLable];
     [self.view addSubview:self.buttonIn];
 }
 
