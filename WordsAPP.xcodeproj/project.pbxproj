@@ -33,6 +33,15 @@
 		24E7A8061CA2969D00A162FB /* 运动.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A8051CA2969D00A162FB /* 运动.png */; };
 		24E7A8081CA2AAE000A162FB /* 生活用品.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A8071CA2AAE000A162FB /* 生活用品.jpg */; };
 		24E7A80E1CA2C8FD00A162FB /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A80D1CA2C8FD00A162FB /* 背景2.jpg */; };
+		24EF219B1CA9523900F1384B /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF219A1CA9523900F1384B /* SimpleViewController.m */; };
+		24EF219E1CA9525000F1384B /* MediumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF219D1CA9525000F1384B /* MediumViewController.m */; };
+		24EF21A11CA9526600F1384B /* DifficultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF21A01CA9526600F1384B /* DifficultViewController.m */; };
+		24EF21A31CA9545F00F1384B /* 简单模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21A21CA9545F00F1384B /* 简单模式背景.png */; };
+		24EF21A51CA9547200F1384B /* 中等模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21A41CA9547200F1384B /* 中等模式背景.png */; };
+		24EF21A71CA9549A00F1384B /* 复杂模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21A61CA9549A00F1384B /* 复杂模式背景.png */; };
+		24EF21AD1CA954E900F1384B /* 复杂模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21AC1CA954E900F1384B /* 复杂模式.png */; };
+		24EF21AF1CA9554800F1384B /* 中等模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21AE1CA9554800F1384B /* 中等模式.png */; };
+		24EF21B11CA9554D00F1384B /* 简单模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21B01CA9554D00F1384B /* 简单模式.png */; };
 		E185DBF820598A546BA4041B /* libPods-WordsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E735C076B388FE593770211B /* libPods-WordsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +84,18 @@
 		24E7A8051CA2969D00A162FB /* 运动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "运动.png"; sourceTree = "<group>"; };
 		24E7A8071CA2AAE000A162FB /* 生活用品.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "生活用品.jpg"; sourceTree = "<group>"; };
 		24E7A80D1CA2C8FD00A162FB /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
+		24EF21991CA9523900F1384B /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
+		24EF219A1CA9523900F1384B /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
+		24EF219C1CA9525000F1384B /* MediumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediumViewController.h; sourceTree = "<group>"; };
+		24EF219D1CA9525000F1384B /* MediumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediumViewController.m; sourceTree = "<group>"; };
+		24EF219F1CA9526600F1384B /* DifficultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultViewController.h; sourceTree = "<group>"; };
+		24EF21A01CA9526600F1384B /* DifficultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultViewController.m; sourceTree = "<group>"; };
+		24EF21A21CA9545F00F1384B /* 简单模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式背景.png"; sourceTree = "<group>"; };
+		24EF21A41CA9547200F1384B /* 中等模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中等模式背景.png"; sourceTree = "<group>"; };
+		24EF21A61CA9549A00F1384B /* 复杂模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复杂模式背景.png"; sourceTree = "<group>"; };
+		24EF21AC1CA954E900F1384B /* 复杂模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复杂模式.png"; sourceTree = "<group>"; };
+		24EF21AE1CA9554800F1384B /* 中等模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中等模式.png"; sourceTree = "<group>"; };
+		24EF21B01CA9554D00F1384B /* 简单模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式.png"; sourceTree = "<group>"; };
 		4AF5D6E0618807C84787B264 /* Pods-WordsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C398090B36CA83F682595D72 /* Pods-WordsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.release.xcconfig"; sourceTree = "<group>"; };
 		E735C076B388FE593770211B /* libPods-WordsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +123,12 @@
 				2458EEF91CA3BE10009AF6A8 /* 背景5.jpg */,
 				2458EEFB1CA3BE24009AF6A8 /* 背景6.jpg */,
 				245ED61B1CA277B000BE79E2 /* 返回.png */,
+				24EF21A21CA9545F00F1384B /* 简单模式背景.png */,
+				24EF21A41CA9547200F1384B /* 中等模式背景.png */,
+				24EF21A61CA9549A00F1384B /* 复杂模式背景.png */,
+				24EF21B01CA9554D00F1384B /* 简单模式.png */,
+				24EF21AE1CA9554800F1384B /* 中等模式.png */,
+				24EF21AC1CA954E900F1384B /* 复杂模式.png */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -193,6 +220,12 @@
 				24E7A7DB1CA28F9F00A162FB /* HomePageTableViewCell.m */,
 				245ED61D1CA2808100BE79E2 /* LevelViewController.h */,
 				245ED61E1CA2808100BE79E2 /* LevelViewController.m */,
+				24EF21991CA9523900F1384B /* SimpleViewController.h */,
+				24EF219A1CA9523900F1384B /* SimpleViewController.m */,
+				24EF219C1CA9525000F1384B /* MediumViewController.h */,
+				24EF219D1CA9525000F1384B /* MediumViewController.m */,
+				24EF219F1CA9526600F1384B /* DifficultViewController.h */,
+				24EF21A01CA9526600F1384B /* DifficultViewController.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -337,18 +370,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				2458EEF61CA3BDCC009AF6A8 /* 背景3.jpg in Resources */,
+				24EF21AD1CA954E900F1384B /* 复杂模式.png in Resources */,
 				24E7A8021CA2968500A162FB /* 蔬菜.png in Resources */,
+				24EF21B11CA9554D00F1384B /* 简单模式.png in Resources */,
 				24E7A8081CA2AAE000A162FB /* 生活用品.jpg in Resources */,
+				24EF21A51CA9547200F1384B /* 中等模式背景.png in Resources */,
 				247F067C1CA9127E00262684 /* 首页底.jpg in Resources */,
 				24E7A8041CA2968D00A162FB /* 水果.png in Resources */,
 				2458EEF41CA3BDB3009AF6A8 /* 背景1.jpg in Resources */,
+				24EF21A71CA9549A00F1384B /* 复杂模式背景.png in Resources */,
 				24E7A7DE1CA2926700A162FB /* 动物.jpg in Resources */,
+				24EF21AF1CA9554800F1384B /* 中等模式.png in Resources */,
 				245ED61C1CA277B000BE79E2 /* 返回.png in Resources */,
 				24E7A8061CA2969D00A162FB /* 运动.png in Resources */,
 				24DD26411C9A8BF10007997A /* LaunchScreen.storyboard in Resources */,
 				24DD263E1C9A8BF10007997A /* Assets.xcassets in Resources */,
 				24DD263C1C9A8BF10007997A /* Main.storyboard in Resources */,
 				24E7A80E1CA2C8FD00A162FB /* 背景2.jpg in Resources */,
+				24EF21A31CA9545F00F1384B /* 简单模式背景.png in Resources */,
 				2458EEFA1CA3BE10009AF6A8 /* 背景5.jpg in Resources */,
 				2458EEFC1CA3BE24009AF6A8 /* 背景6.jpg in Resources */,
 			);
@@ -419,7 +458,10 @@
 				245ED6221CA2831500BE79E2 /* WrongQuestionViewController.m in Sources */,
 				24DD267F1C9AD9D40007997A /* UserViewController.m in Sources */,
 				24DD267C1C9AD98D0007997A /* HomeViewController.m in Sources */,
+				24EF219B1CA9523900F1384B /* SimpleViewController.m in Sources */,
 				24DD26331C9A8BF10007997A /* main.m in Sources */,
+				24EF219E1CA9525000F1384B /* MediumViewController.m in Sources */,
+				24EF21A11CA9526600F1384B /* DifficultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
