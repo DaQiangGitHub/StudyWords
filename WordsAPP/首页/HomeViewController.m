@@ -47,6 +47,15 @@
 
 #pragma mark -- animation
 
+- (CABasicAnimation *)alphaOfAnimation
+{
+    CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"alpha"];
+    animation.duration = 0.1;
+    animation.fromValue = @1;
+    animation.toValue = @1;
+    return animation;
+}
+
 - (CABasicAnimation *)positionAnimation:(CGPoint)CGPoint
 {
     CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"position"];
