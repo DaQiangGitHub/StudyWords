@@ -23,6 +23,12 @@
 
 @implementation HomeViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -46,6 +52,15 @@
 }
 
 #pragma mark -- animation
+
+- (CABasicAnimation *)alphaOfAnimation
+{
+    CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"alpha"];
+    animation.duration = 0.1;
+    animation.fromValue = @1;
+    animation.toValue = @1;
+    return animation;
+}
 
 - (CABasicAnimation *)positionAnimation:(CGPoint)CGPoint
 {
