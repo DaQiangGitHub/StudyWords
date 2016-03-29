@@ -28,7 +28,7 @@
     self.tabBarController.tabBar.hidden = YES;
     
     [self.view addSubview:self.backImage];
-        
+    [self.view addSubview:self.tableView];
     
     [self.view sendSubviewToBack:self.backImage];
     
