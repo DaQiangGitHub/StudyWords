@@ -32,6 +32,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initDateSource) name:@"login" object:nil];
     
+    
     [self initDateSource];
 }
 - (void)initDateSource{
