@@ -85,7 +85,7 @@
 - (UIImageView *)backImage{
     if (!_backImage) {
         _backImage = ({
-            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, BAR_H, SCREEN_W, SCREEN_H)];
             imageView.image = [UIImage imageNamed:@"背景6.jpg"];
 
             [[Networking alloc] getimageType:animals index:2 success:^(UIImage *image) {
