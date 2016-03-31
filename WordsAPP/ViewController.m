@@ -44,6 +44,7 @@
         [self performSelector:@selector(IntroduceVC) withObject:nil afterDelay:0.001];
     }
 }
+
 - (void)IntroduceVC{
     IntroduceViewController * introduce = [[IntroduceViewController alloc] initWithBool:YES];
     [self presentViewController:introduce animated:YES completion:nil];

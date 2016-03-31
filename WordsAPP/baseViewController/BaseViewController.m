@@ -27,10 +27,11 @@
     self.view.backgroundColor = COLOR(233, 233, 233);
     
     [self initBaseDataSource];
-    
+
 }
 - (void)initBaseDataSource{
-    
+    _imagesType = [NSArray arrayWithObjects:[UIImage imageNamed:@"水果"],[UIImage imageNamed:@"蔬菜"],[UIImage imageNamed:@"动物"],[UIImage imageNamed:@"生活用品"],[UIImage imageNamed:@"运动"], nil];
+    _imagesLevel = [NSArray arrayWithObjects:[UIImage imageNamed:@"简单模式"],[UIImage imageNamed:@"中等模式"],[UIImage imageNamed:@"复杂模式"], nil];
     
     [self initalizeBaseInterface];
 }

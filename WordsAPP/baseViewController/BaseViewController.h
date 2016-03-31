@@ -27,7 +27,8 @@
 @property (nonatomic, strong) UIButton * barLeftButton;
 @property (nonatomic, strong) UIButton * barRightButton;
 
-
+@property (nonatomic, retain) NSArray * imagesType;
+@property (nonatomic, retain) NSArray * imagesLevel;
 
 
 @end

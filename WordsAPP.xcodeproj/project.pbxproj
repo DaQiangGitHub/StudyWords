@@ -13,13 +13,15 @@
 		2458EEFC1CA3BE24009AF6A8 /* 背景6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2458EEFB1CA3BE24009AF6A8 /* 背景6.jpg */; };
 		245ED61C1CA277B000BE79E2 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 245ED61B1CA277B000BE79E2 /* 返回.png */; };
 		245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED61E1CA2808100BE79E2 /* LevelViewController.m */; };
-		245ED6221CA2831500BE79E2 /* WrongQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED6211CA2831500BE79E2 /* WrongQuestionViewController.m */; };
-		245ED6251CA2864300BE79E2 /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED6241CA2864300BE79E2 /* recordViewController.m */; };
 		245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */; };
 		247F067C1CA9127E00262684 /* 首页底.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 247F067B1CA9127E00262684 /* 首页底.jpg */; };
-		247F06831CA961A300262684 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06821CA961A300262684 /* Networking.m */; };
-		247F06871CAA286500262684 /* QuestionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06861CAA286500262684 /* QuestionsView.m */; };
-		247F068F1CAA77A700262684 /* RecoredTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F068E1CAA77A700262684 /* RecoredTableViewCell.m */; };
+		247F06CB1CAC135800262684 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06CA1CAC135800262684 /* Networking.m */; };
+		247F06D51CAC13AF00262684 /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06CE1CAC13AF00262684 /* recordViewController.m */; };
+		247F06D61CAC13AF00262684 /* RecoredTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06D01CAC13AF00262684 /* RecoredTableViewCell.m */; };
+		247F06D71CAC13AF00262684 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06D21CAC13AF00262684 /* UserViewController.m */; };
+		247F06D81CAC13AF00262684 /* WrongQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06D41CAC13AF00262684 /* WrongQuestionViewController.m */; };
+		247F06DB1CAC140100262684 /* RecordDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DA1CAC140100262684 /* RecordDayViewController.m */; };
+		247F06DE1CACC6E100262684 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */; };
 		24DD26331C9A8BF10007997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26321C9A8BF10007997A /* main.m */; };
 		24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26351C9A8BF10007997A /* AppDelegate.m */; };
 		24DD26391C9A8BF10007997A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26381C9A8BF10007997A /* ViewController.m */; };
@@ -28,7 +30,6 @@
 		24DD26411C9A8BF10007997A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD263F1C9A8BF10007997A /* LaunchScreen.storyboard */; };
 		24DD26791C9AD4A50007997A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26781C9AD4A50007997A /* BaseViewController.m */; };
 		24DD267C1C9AD98D0007997A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD267B1C9AD98D0007997A /* HomeViewController.m */; };
-		24DD267F1C9AD9D40007997A /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD267E1C9AD9D40007997A /* UserViewController.m */; };
 		24E7A7DC1CA28F9F00A162FB /* HomePageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7A7DB1CA28F9F00A162FB /* HomePageTableViewCell.m */; };
 		24E7A7DE1CA2926700A162FB /* 动物.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A7DD1CA2926700A162FB /* 动物.jpg */; };
 		24E7A8021CA2968500A162FB /* 蔬菜.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A8011CA2968500A162FB /* 蔬菜.png */; };
@@ -60,19 +61,23 @@
 		245ED61B1CA277B000BE79E2 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
 		245ED61D1CA2808100BE79E2 /* LevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelViewController.h; sourceTree = "<group>"; };
 		245ED61E1CA2808100BE79E2 /* LevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelViewController.m; sourceTree = "<group>"; };
-		245ED6201CA2831500BE79E2 /* WrongQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WrongQuestionViewController.h; path = "WordsAPP/首页/WrongQuestionViewController.h"; sourceTree = SOURCE_ROOT; };
-		245ED6211CA2831500BE79E2 /* WrongQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WrongQuestionViewController.m; path = "WordsAPP/首页/WrongQuestionViewController.m"; sourceTree = SOURCE_ROOT; };
-		245ED6231CA2864300BE79E2 /* recordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = recordViewController.h; path = "WordsAPP/首页/recordViewController.h"; sourceTree = SOURCE_ROOT; };
-		245ED6241CA2864300BE79E2 /* recordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = recordViewController.m; path = "WordsAPP/首页/recordViewController.m"; sourceTree = SOURCE_ROOT; };
 		245ED6291CA2B24B00BE79E2 /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
 		245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
 		247F067B1CA9127E00262684 /* 首页底.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "首页底.jpg"; sourceTree = "<group>"; };
-		247F06811CA961A300262684 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		247F06821CA961A300262684 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
-		247F06851CAA286500262684 /* QuestionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsView.h; sourceTree = "<group>"; };
-		247F06861CAA286500262684 /* QuestionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsView.m; sourceTree = "<group>"; };
-		247F068D1CAA77A700262684 /* RecoredTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecoredTableViewCell.h; path = WordsAPP/views/RecoredTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		247F068E1CAA77A700262684 /* RecoredTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecoredTableViewCell.m; path = WordsAPP/views/RecoredTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		247F06C91CAC135800262684 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		247F06CA1CAC135800262684 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		247F06CD1CAC13AF00262684 /* recordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recordViewController.h; sourceTree = "<group>"; };
+		247F06CE1CAC13AF00262684 /* recordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recordViewController.m; sourceTree = "<group>"; };
+		247F06CF1CAC13AF00262684 /* RecoredTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecoredTableViewCell.h; sourceTree = "<group>"; };
+		247F06D01CAC13AF00262684 /* RecoredTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecoredTableViewCell.m; sourceTree = "<group>"; };
+		247F06D11CAC13AF00262684 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		247F06D21CAC13AF00262684 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		247F06D31CAC13AF00262684 /* WrongQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongQuestionViewController.h; sourceTree = "<group>"; };
+		247F06D41CAC13AF00262684 /* WrongQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongQuestionViewController.m; sourceTree = "<group>"; };
+		247F06D91CAC140100262684 /* RecordDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDayViewController.h; sourceTree = "<group>"; };
+		247F06DA1CAC140100262684 /* RecordDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDayViewController.m; sourceTree = "<group>"; };
+		247F06DC1CACC6E100262684 /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
+		247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
 		24DD262E1C9A8BF10007997A /* WordsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD26321C9A8BF10007997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DD26341C9A8BF10007997A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,8 +92,6 @@
 		24DD26781C9AD4A50007997A /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		24DD267A1C9AD98D0007997A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		24DD267B1C9AD98D0007997A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		24DD267D1C9AD9D40007997A /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserViewController.h; path = "WordsAPP/首页/UserViewController.h"; sourceTree = SOURCE_ROOT; };
-		24DD267E1C9AD9D40007997A /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserViewController.m; path = "WordsAPP/首页/UserViewController.m"; sourceTree = SOURCE_ROOT; };
 		24E7A7DA1CA28F9F00A162FB /* HomePageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableViewCell.h; sourceTree = "<group>"; };
 		24E7A7DB1CA28F9F00A162FB /* HomePageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableViewCell.m; sourceTree = "<group>"; };
 		24E7A7DD1CA2926700A162FB /* 动物.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "动物.jpg"; sourceTree = "<group>"; };
@@ -171,23 +174,40 @@
 			path = "使用介绍/第三方";
 			sourceTree = "<group>";
 		};
-		247F067D1CA9605C00262684 /* 网络请求 */ = {
+		247F06C81CAC135800262684 /* 网络请求 */ = {
 			isa = PBXGroup;
 			children = (
-				247F06811CA961A300262684 /* Networking.h */,
-				247F06821CA961A300262684 /* Networking.m */,
+				247F06C91CAC135800262684 /* Networking.h */,
+				247F06CA1CAC135800262684 /* Networking.m */,
 			);
-			name = "网络请求";
-			path = "首页/网络请求";
+			path = "网络请求";
 			sourceTree = "<group>";
 		};
-		247F06841CAA283A00262684 /* views */ = {
+		247F06CC1CAC13AF00262684 /* 记录 */ = {
 			isa = PBXGroup;
 			children = (
-				247F06851CAA286500262684 /* QuestionsView.h */,
-				247F06861CAA286500262684 /* QuestionsView.m */,
+				247F06D11CAC13AF00262684 /* UserViewController.h */,
+				247F06D21CAC13AF00262684 /* UserViewController.m */,
+				247F06CD1CAC13AF00262684 /* recordViewController.h */,
+				247F06CE1CAC13AF00262684 /* recordViewController.m */,
+				247F06D31CAC13AF00262684 /* WrongQuestionViewController.h */,
+				247F06D41CAC13AF00262684 /* WrongQuestionViewController.m */,
+				247F06DC1CACC6E100262684 /* QuestionTableViewCell.h */,
+				247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */,
+				247F06DF1CACC75700262684 /* record */,
 			);
-			path = views;
+			path = "记录";
+			sourceTree = "<group>";
+		};
+		247F06DF1CACC75700262684 /* record */ = {
+			isa = PBXGroup;
+			children = (
+				247F06D91CAC140100262684 /* RecordDayViewController.h */,
+				247F06DA1CAC140100262684 /* RecordDayViewController.m */,
+				247F06CF1CAC13AF00262684 /* RecoredTableViewCell.h */,
+				247F06D01CAC13AF00262684 /* RecoredTableViewCell.m */,
+			);
+			name = record;
 			sourceTree = "<group>";
 		};
 		24DD26251C9A8BF10007997A = {
@@ -217,10 +237,9 @@
 				24DD26381C9A8BF10007997A /* ViewController.m */,
 				245ED6281CA2B20100BE79E2 /* 使用介绍 */,
 				24DD26501C9A8D540007997A /* baseViewController */,
-				247F06841CAA283A00262684 /* views */,
-				247F067D1CA9605C00262684 /* 网络请求 */,
+				247F06C81CAC135800262684 /* 网络请求 */,
 				24DD26491C9A8D540007997A /* 首页 */,
-				24DD26481C9A8D540007997A /* 记录 */,
+				247F06CC1CAC13AF00262684 /* 记录 */,
 				24EF22111CAAA55300F1384B /* Views */,
 				247F06131CA9021500262684 /* 第三方 */,
 				24DD264A1C9A8D540007997A /* 图片 */,
@@ -239,21 +258,6 @@
 				24DD26321C9A8BF10007997A /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		24DD26481C9A8D540007997A /* 记录 */ = {
-			isa = PBXGroup;
-			children = (
-				24DD267D1C9AD9D40007997A /* UserViewController.h */,
-				24DD267E1C9AD9D40007997A /* UserViewController.m */,
-				245ED6231CA2864300BE79E2 /* recordViewController.h */,
-				245ED6241CA2864300BE79E2 /* recordViewController.m */,
-				247F068D1CAA77A700262684 /* RecoredTableViewCell.h */,
-				247F068E1CAA77A700262684 /* RecoredTableViewCell.m */,
-				245ED6201CA2831500BE79E2 /* WrongQuestionViewController.h */,
-				245ED6211CA2831500BE79E2 /* WrongQuestionViewController.m */,
-			);
-			path = "记录";
 			sourceTree = "<group>";
 		};
 		24DD26491C9A8D540007997A /* 首页 */ = {
@@ -506,24 +510,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				247F06871CAA286500262684 /* QuestionsView.m in Sources */,
+				247F06D81CAC13AF00262684 /* WrongQuestionViewController.m in Sources */,
+				247F06D71CAC13AF00262684 /* UserViewController.m in Sources */,
+				247F06DB1CAC140100262684 /* RecordDayViewController.m in Sources */,
+				247F06D61CAC13AF00262684 /* RecoredTableViewCell.m in Sources */,
+				247F06D51CAC13AF00262684 /* recordViewController.m in Sources */,
 				245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */,
 				24DD26391C9A8BF10007997A /* ViewController.m in Sources */,
 				24EF22141CAAA5C000F1384B /* ModelView.m in Sources */,
-				245ED6251CA2864300BE79E2 /* recordViewController.m in Sources */,
 				245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */,
 				24E7A7DC1CA28F9F00A162FB /* HomePageTableViewCell.m in Sources */,
-				247F06831CA961A300262684 /* Networking.m in Sources */,
 				24DD26791C9AD4A50007997A /* BaseViewController.m in Sources */,
 				24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */,
-				245ED6221CA2831500BE79E2 /* WrongQuestionViewController.m in Sources */,
-				24DD267F1C9AD9D40007997A /* UserViewController.m in Sources */,
-				247F068F1CAA77A700262684 /* RecoredTableViewCell.m in Sources */,
 				24DD267C1C9AD98D0007997A /* HomeViewController.m in Sources */,
+				247F06DE1CACC6E100262684 /* QuestionTableViewCell.m in Sources */,
 				24EF219B1CA9523900F1384B /* SimpleViewController.m in Sources */,
 				24DD26331C9A8BF10007997A /* main.m in Sources */,
 				24EF219E1CA9525000F1384B /* MediumViewController.m in Sources */,
 				24EF21A11CA9526600F1384B /* DifficultViewController.m in Sources */,
+				247F06CB1CAC135800262684 /* Networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

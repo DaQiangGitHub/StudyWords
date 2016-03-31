@@ -38,7 +38,7 @@
     
     
     if (_isFirst) {
-        //
+
     }
     
     [self initInterface];
@@ -51,11 +51,27 @@
 
 #pragma mark - 初始化新用户
 - (void)registered{
+    
+//    NSDate * date = [NSDate date];
+//    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"yyyy/MM/dd"];
+//    NSString * time = [formatter stringFromDate:date];
+//    
+//    NSDictionary * question = @{@"type":@"fruit",@"question":@(0),@"answer":@[@(0),@(1),@(2),@(3)]};
+//    NSArray * questions = @[];
+    NSDictionary * mistakes = [NSDictionary dictionary];
+    
+//    NSArray * group = @[question,question,question,question,question,question,question,question,question,question];
+//    NSDictionary * groups = @{@"type":@(0), @"level":@(0), @"score":@(0), @"gtoup":group};
+    NSDictionary * records = [NSDictionary dictionary];
+    
     AVUser *user = [AVUser user];           // 新建 AVUser 对象实例
     self.name = [self ret10bitString];
     self.password = [self ret10bitString];
     user.username = self.name;              // 设置用户名
     user.password = self.password;          // 设置密码
+    [user setObject:mistakes forKey:@"mistakes"];
+    [user setObject:records forKey:@"records"];
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
@@ -72,7 +88,7 @@
     [AVUser logInWithUsernameInBackground:self.name password:self.password block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self dismissViewControllerAnimated:NO completion:nil];
         } else {
             [self registered];
         }

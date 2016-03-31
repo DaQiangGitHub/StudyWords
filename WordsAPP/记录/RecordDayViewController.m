@@ -1,52 +1,59 @@
 //
-//  WrongQuestionViewController.m
+//  RecordDayViewController.m
 //  WordsAPP
 //
-//  Created by rimi on 16/3/23.
+//  Created by rimi on 16/3/30.
 //  Copyright © 2016年 zhugaoqiang. All rights reserved.
 //
 
-#import "WrongQuestionViewController.h"
+#import "RecordDayViewController.h"
+#import "Networking.h"
 #import "RecoredTableViewCell.h"
 
-@interface WrongQuestionViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@interface RecordDayViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, retain) UIImageView * backImage;
 @property (nonatomic, retain) UITableView * tableView;
+
+@property (nonatomic, retain) NSArray * array;
 
 
 @end
 
-@implementation WrongQuestionViewController
+@implementation RecordDayViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    self.barLable.text = @"错题重做";
-    self.tabBarController.tabBar.hidden = YES;
     
-    [self.view addSubview:self.backImage];
-    [self.view addSubview:self.tableView];
-    
-    [self.view sendSubviewToBack:self.backImage];
-    
+    [self initDataSource];
     
 }
+- (void)initDataSource{
+    _array = [NSArray arrayWithArray:[[Networking alloc] getRecordOfOneDayListWithDate:self.date]];
 
+    [self initInterface];
+}
+- (void)initInterface{
+    [self.view addSubview:self.tableView];
+}
 
 #pragma mark - UITableViewDelegate
 - (void)selectRowAtIndexPath:(nullable NSIndexPath *)indexPath animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition{
-    
+    //需传数据：答题记录
+//    SimpleViewController * simple = [[SimpleViewController alloc] init];
+//    [self.navigationController pushViewController:simple animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 15;
 }
 #pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return _array.count;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return 2;
+
+    return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -54,30 +61,15 @@
     if (!cell) {
         cell = [[RecoredTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    cell.imageView.image = [UIImage imageNamed:@"中等模式背景"];
-    cell.imageView.contentMode = UIViewContentModeScaleToFill;
-    cell.levelImage.image = [UIImage imageNamed:@"简单模式"];
-    cell.typeImage.image = [UIImage imageNamed:@"动物.jpg"];
-//    cell.score.text = @"100分";        //不显示
-    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy/MM/dd"];
-    cell.date.text = [formatter stringFromDate:[NSDate date]];
+    cell.levelImage.image = self.imagesLevel[[_array[indexPath.row][@"type"] intValue]];
+    cell.typeImage.image = self.imagesType[[_array[indexPath.row][@"level"] intValue]];
+    cell.score.text = _array[indexPath.section][@"score"];
+    cell.date.text = self.date;
     
     return cell;
 }
 
-
 #pragma mark - getter
-- (UIImageView *)backImage{
-    if (!_backImage) {
-        _backImage = ({
-            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)];
-            imageView.image = [UIImage imageNamed:@"背景6.jpg"];
-            imageView;
-        });
-    }
-    return _backImage;
-}
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = ({
@@ -90,4 +82,5 @@
     }
     return _tableView;
 }
+
 @end

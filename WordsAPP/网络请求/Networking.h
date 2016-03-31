@@ -30,6 +30,11 @@ typedef NS_ENUM(NSUInteger, nameType) {
 
 - (void)getimageType:(ImageType)imageType index:(NSInteger)index success:(void(^)(UIImage *image))image failure:(void(^)(NSError *error))failure;
 - (void)getNameWithType:(nameType)nameType index:(NSInteger)index successBlock:(void(^)(NSString *name))name failure:(void(^)(NSError *error))failure;
-
+- (void)addRecordWithQuestions:(NSDictionary *)questions;
+- (void)addMistakeWithQuestion:(NSDictionary *)question;
+- (void)removeMistakeWithQuestion:(NSDictionary *)question;
+- (NSDictionary *)getRecordsList;
+- (NSArray *)getRecordOfOneDayListWithDate:(NSString *)date;
+- (NSDictionary *)getMistakesList;
 
 @end
