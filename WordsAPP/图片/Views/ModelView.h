@@ -18,4 +18,19 @@
 @property (nonatomic, assign)NSInteger index3;
 @property (nonatomic, assign)NSInteger index;
 
+@property (nonatomic, strong)UILabel * wordLable;
+
+@property (nonatomic, strong)UIButton * imageView1;
+@property (nonatomic, strong)UIButton * imageView2;
+@property (nonatomic, strong)UIButton * imageView3;
+@property (nonatomic, strong)UIButton * imageView4;
+
+@property (nonatomic, strong)UILabel * countLable;
+@property (nonatomic, assign)NSInteger currentNumber;
+
+
+
+- (void)netWorkingImageType:(NSInteger)type;
+- (void)netWorkingNameType:(NSInteger)type;
+
 @end
