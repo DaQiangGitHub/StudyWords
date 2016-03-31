@@ -22,6 +22,7 @@
 		247F06D81CAC13AF00262684 /* WrongQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06D41CAC13AF00262684 /* WrongQuestionViewController.m */; };
 		247F06DB1CAC140100262684 /* RecordDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DA1CAC140100262684 /* RecordDayViewController.m */; };
 		247F06DE1CACC6E100262684 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */; };
+		247F087D1CAD27D000262684 /* ModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F087C1CAD27D000262684 /* ModelView.m */; };
 		24DD26331C9A8BF10007997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26321C9A8BF10007997A /* main.m */; };
 		24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26351C9A8BF10007997A /* AppDelegate.m */; };
 		24DD26391C9A8BF10007997A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26381C9A8BF10007997A /* ViewController.m */; };
@@ -49,7 +50,6 @@
 		24EF220C1CAA617400F1384B /* 对.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220B1CAA617400F1384B /* 对.png */; };
 		24EF220E1CAA617C00F1384B /* 错.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220D1CAA617C00F1384B /* 错.png */; };
 		24EF22101CAA97F800F1384B /* 选择模式背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */; };
-		24EF22141CAAA5C000F1384B /* ModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF22131CAAA5C000F1384B /* ModelView.m */; };
 		E185DBF820598A546BA4041B /* libPods-WordsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E735C076B388FE593770211B /* libPods-WordsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +78,8 @@
 		247F06DA1CAC140100262684 /* RecordDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDayViewController.m; sourceTree = "<group>"; };
 		247F06DC1CACC6E100262684 /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
 		247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
+		247F087B1CAD27D000262684 /* ModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelView.h; sourceTree = "<group>"; };
+		247F087C1CAD27D000262684 /* ModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelView.m; sourceTree = "<group>"; };
 		24DD262E1C9A8BF10007997A /* WordsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD26321C9A8BF10007997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DD26341C9A8BF10007997A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,8 +117,6 @@
 		24EF220B1CAA617400F1384B /* 对.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对.png"; sourceTree = "<group>"; };
 		24EF220D1CAA617C00F1384B /* 错.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错.png"; sourceTree = "<group>"; };
 		24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "选择模式背景.jpg"; sourceTree = "<group>"; };
-		24EF22121CAAA5C000F1384B /* ModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelView.h; sourceTree = "<group>"; };
-		24EF22131CAAA5C000F1384B /* ModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelView.m; sourceTree = "<group>"; };
 		4AF5D6E0618807C84787B264 /* Pods-WordsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C398090B36CA83F682595D72 /* Pods-WordsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.release.xcconfig"; sourceTree = "<group>"; };
 		E735C076B388FE593770211B /* libPods-WordsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +210,15 @@
 			name = record;
 			sourceTree = "<group>";
 		};
+		247F087A1CAD27D000262684 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				247F087B1CAD27D000262684 /* ModelView.h */,
+				247F087C1CAD27D000262684 /* ModelView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		24DD26251C9A8BF10007997A = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +249,7 @@
 				247F06C81CAC135800262684 /* 网络请求 */,
 				24DD26491C9A8D540007997A /* 首页 */,
 				247F06CC1CAC13AF00262684 /* 记录 */,
-				24EF22111CAAA55300F1384B /* Views */,
+				247F087A1CAD27D000262684 /* Views */,
 				247F06131CA9021500262684 /* 第三方 */,
 				24DD264A1C9A8D540007997A /* 图片 */,
 				24DD263A1C9A8BF10007997A /* Main.storyboard */,
@@ -339,16 +348,6 @@
 				24E7A8051CA2969D00A162FB /* 运动.png */,
 			);
 			path = "运动";
-			sourceTree = "<group>";
-		};
-		24EF22111CAAA55300F1384B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				24EF22121CAAA5C000F1384B /* ModelView.h */,
-				24EF22131CAAA5C000F1384B /* ModelView.m */,
-			);
-			name = Views;
-			path = "图片/Views";
 			sourceTree = "<group>";
 		};
 		95AF34483F7083D4A36DB04D /* Frameworks */ = {
@@ -512,12 +511,12 @@
 			files = (
 				247F06D81CAC13AF00262684 /* WrongQuestionViewController.m in Sources */,
 				247F06D71CAC13AF00262684 /* UserViewController.m in Sources */,
+				247F087D1CAD27D000262684 /* ModelView.m in Sources */,
 				247F06DB1CAC140100262684 /* RecordDayViewController.m in Sources */,
 				247F06D61CAC13AF00262684 /* RecoredTableViewCell.m in Sources */,
 				247F06D51CAC13AF00262684 /* recordViewController.m in Sources */,
 				245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */,
 				24DD26391C9A8BF10007997A /* ViewController.m in Sources */,
-				24EF22141CAAA5C000F1384B /* ModelView.m in Sources */,
 				245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */,
 				24E7A7DC1CA28F9F00A162FB /* HomePageTableViewCell.m in Sources */,
 				24DD26791C9AD4A50007997A /* BaseViewController.m in Sources */,
