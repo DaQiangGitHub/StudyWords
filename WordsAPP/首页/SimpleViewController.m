@@ -8,11 +8,12 @@
 
 #import "SimpleViewController.h"
 #import "ModelView.h"
+#import "Networking.h"
 @interface SimpleViewController ()
 
 @property (nonatomic, strong)ModelView * ModelView;
 @property (nonatomic, strong)UIButton * backButton;
-@property (nonatomic, strong)UIButton * nextButton;
+
 
 @end
 
@@ -29,7 +30,6 @@
 {
     [self.view addSubview:self.ModelView];
     [self.ModelView addSubview:self.backButton];
-    [self.ModelView addSubview:self.nextButton];
 }
 
 #pragma mark -- clickOnTheEvents
@@ -38,10 +38,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)buttonPressed_NextTopic:(UIButton *)sender
-{
-    
-}
 
 #pragma mark -- getter
 
@@ -64,15 +60,6 @@
     return _backButton;
 }
 
-- (UIButton *)nextButton
-{
-    if (!_nextButton) {
-        _nextButton = [UIButton buttonWithType:0];
-        _nextButton.frame = CGRectMake(100, 650, 100, 40);
-        [_nextButton setTitle:@"下一题" forState:0];
-        [_nextButton addTarget:self action:@selector(buttonPressed_NextTopic:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _nextButton;
-}
+
 
 @end
