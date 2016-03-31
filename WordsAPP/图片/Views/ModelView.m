@@ -20,6 +20,9 @@
 @property (nonatomic, strong)UIImageView * judgleImage;
 
 @property (nonatomic, strong)UILabel * scoreLable;
+@property (nonatomic, assign)NSInteger score;
+
+@property (nonatomic, assign)NSInteger isTure;
 
 
 
@@ -42,6 +45,8 @@
 {
     
     _words = [NSMutableArray array];
+    _score = 0;
+    _isTure = 0;
 }
 
 - (void)initializeUserInterface
@@ -161,6 +166,9 @@
 
 - (void)buttonPressed_ChoiceSelection:(UIButton *)sender
 {
+    if (self.isTure == 1) {
+        return;
+    }
     NSLog(@"sender.tag = %ld",sender.tag);
     [[Networking alloc] getNameWithType:fruitWords index:(sender.tag - 100) successBlock:^(NSString *name) {
         if ([self.wordLable.text isEqualToString:name]) {
@@ -168,10 +176,9 @@
             [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
             self.judgleImage.hidden = NO;
             self.judgleImage.center = CGPointMake(sender.center.x, sender.center.y + 90);
-            NSInteger score ;
-            score = score + 10;
+            self.score = self.score + 10;
             NSString * string = @"分数：";
-            NSString * string2 = [NSString stringWithFormat:@"%ld",score];
+            NSString * string2 = [NSString stringWithFormat:@"%ld",self.score];
             NSString * scoreString = [string stringByAppendingString:string2];
             self.scoreLable.text = scoreString;
         }else{
@@ -183,10 +190,12 @@
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
+    self.isTure = 1;
 }
 
 - (void)buttonPressed_NextTopic:(UIButton *)sender
 {
+    self.isTure = 0;
     self.currentNumber ++;
     [self netWorkingImageType:fruit];
     [self netWorkingNameType:fruit];
