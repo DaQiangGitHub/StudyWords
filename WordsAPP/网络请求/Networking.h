@@ -16,7 +16,7 @@ typedef NS_OPTIONS(NSUInteger, ImageType) {
     vegetables = 2,
     animals = 3,
     articles = 4,
-    spots = 5
+    sport = 5
 };
 typedef NS_ENUM(NSUInteger, nameType) {
     fruitWords,
