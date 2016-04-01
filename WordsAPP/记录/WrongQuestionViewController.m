@@ -16,7 +16,7 @@
 @property (nonatomic, retain) UIImageView * backImage;
 @property (nonatomic, retain) UITableView * tableView;
 @property (nonatomic, retain) NSDictionary * dictionary;
-
+@property (nonatomic, retain) UIImageView * noDataImage;
 
 @end
 
@@ -40,6 +40,7 @@
 - (void)initInterface{
     [self.view addSubview:self.backImage];
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.noDataImage];
     
     [self.view sendSubviewToBack:self.backImage];
 }
@@ -53,6 +54,10 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     if(_dictionary){
+        self.noDataImage.hidden = YES;
+        if (_dictionary[@"count"]) {
+            self.noDataImage.hidden = NO;
+        }
         return [_dictionary[@"count"] intValue];
     }
     return 0;
@@ -85,6 +90,17 @@
         });
     }
     return _backImage;
+}
+- (UIImageView *)noDataImage{
+    if (!_noDataImage) {
+        _noDataImage = ({
+            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_W/4, BAR_H * 2, SCREEN_W/2, SCREEN_H/2 - 50)];
+            imageView.image = [UIImage imageNamed:@"暂无数据"];
+            imageView.hidden = YES;
+            imageView;
+        });
+    }
+    return _noDataImage;
 }
 - (UITableView *)tableView{
     if (!_tableView) {

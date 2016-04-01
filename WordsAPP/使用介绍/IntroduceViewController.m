@@ -35,8 +35,6 @@
     
     self.view.backgroundColor = [UIColor redColor];
     
-    
-    
     if (_isFirst) {
 
     }
@@ -52,17 +50,8 @@
 #pragma mark - 初始化新用户
 - (void)registered{
     
-//    NSDate * date = [NSDate date];
-//    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"yyyy/MM/dd"];
-//    NSString * time = [formatter stringFromDate:date];
-//    
-//    NSDictionary * question = @{@"type":@"fruit",@"question":@(0),@"answer":@[@(0),@(1),@(2),@(3)]};
-//    NSArray * questions = @[];
     NSDictionary * mistakes = [NSDictionary dictionary];
     
-//    NSArray * group = @[question,question,question,question,question,question,question,question,question,question];
-//    NSDictionary * groups = @{@"type":@(0), @"level":@(0), @"score":@(0), @"gtoup":group};
     NSDictionary * records = [NSDictionary dictionary];
     
     AVUser *user = [AVUser user];           // 新建 AVUser 对象实例
@@ -87,6 +76,7 @@
     
     [AVUser logInWithUsernameInBackground:self.name password:self.password block:^(AVUser *user, NSError *error) {
         if (user != nil) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"sdudayWordsAppIsLogin"];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"login" object:nil];
             [self dismissViewControllerAnimated:NO completion:nil];
         } else {

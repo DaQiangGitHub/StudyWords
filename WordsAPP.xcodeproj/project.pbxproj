@@ -23,6 +23,7 @@
 		247F06DB1CAC140100262684 /* RecordDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DA1CAC140100262684 /* RecordDayViewController.m */; };
 		247F06DE1CACC6E100262684 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */; };
 		247F087D1CAD27D000262684 /* ModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F087C1CAD27D000262684 /* ModelView.m */; };
+		24D605321CAD500C00C237CF /* 暂无数据.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D605311CAD500C00C237CF /* 暂无数据.png */; };
 		24DD26331C9A8BF10007997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26321C9A8BF10007997A /* main.m */; };
 		24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26351C9A8BF10007997A /* AppDelegate.m */; };
 		24DD26391C9A8BF10007997A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26381C9A8BF10007997A /* ViewController.m */; };
@@ -80,6 +81,7 @@
 		247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
 		247F087B1CAD27D000262684 /* ModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelView.h; sourceTree = "<group>"; };
 		247F087C1CAD27D000262684 /* ModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelView.m; sourceTree = "<group>"; };
+		24D605311CAD500C00C237CF /* 暂无数据.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂无数据.png"; sourceTree = "<group>"; };
 		24DD262E1C9A8BF10007997A /* WordsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD26321C9A8BF10007997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DD26341C9A8BF10007997A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		245ED6181CA2775900BE79E2 /* 公用 */ = {
 			isa = PBXGroup;
 			children = (
+				24D605311CAD500C00C237CF /* 暂无数据.png */,
 				24EF220D1CAA617C00F1384B /* 错.png */,
 				24EF220B1CAA617400F1384B /* 对.png */,
 				247F067B1CA9127E00262684 /* 首页底.jpg */,
@@ -450,6 +453,7 @@
 				24E7A80E1CA2C8FD00A162FB /* 背景2.jpg in Resources */,
 				24EF21A31CA9545F00F1384B /* 简单模式背景.png in Resources */,
 				2458EEFA1CA3BE10009AF6A8 /* 背景5.jpg in Resources */,
+				24D605321CAD500C00C237CF /* 暂无数据.png in Resources */,
 				2458EEFC1CA3BE24009AF6A8 /* 背景6.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

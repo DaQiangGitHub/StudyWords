@@ -30,5 +30,6 @@
 @property (nonatomic, retain) NSArray * imagesType;
 @property (nonatomic, retain) NSArray * imagesLevel;
 
+- (void)leftButtonPressed;
 
 @end

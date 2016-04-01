@@ -16,8 +16,11 @@
 
 
 @property (nonatomic, strong) UIImageView * backImageView;
-@property (nonatomic, strong) UILabel * nameLable;
 @property (nonatomic, strong) UIButton * buttonIn;
+
+//初始化用户：
+@property (nonatomic, copy) NSString * name;
+@property (nonatomic, copy) NSString * password;
 
 
 @end
@@ -30,36 +33,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initDateSource) name:@"login" object:nil];
-    
-    
-    [self initDateSource];
-}
-- (void)initDateSource{
-    AVUser *currentUser = [AVUser currentUser];
-    if (currentUser != nil) {
-        // 跳转到首页
-        [self initalizeInterface];
-    } else {
-        //缓存用户对象为空时，可打开用户注册界面…
-        [self performSelector:@selector(IntroduceVC) withObject:nil afterDelay:0.001];
-    }
-}
+    [self initalizeInterface];
 
-- (void)IntroduceVC{
-    IntroduceViewController * introduce = [[IntroduceViewController alloc] initWithBool:YES];
-    [self presentViewController:introduce animated:YES completion:nil];
 }
-
 - (void)initalizeInterface{
     
     [self.view addSubview:self.backImageView];
-//    [self.view addSubview:self.nameLable];
     [self.view addSubview:self.buttonIn];
 }
-
 - (void)buttonInPressed{
     
+    [self islogin];
+}
+- (void)islogin{
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"sdudayWordsAppIsLogin"]) {
+        // 跳转到首页
+        [self letIn];
+    } else {
+        [self registered];
+    }
+}
+
+- (void)letIn{
     HomeViewController * home = [[HomeViewController alloc] init];
     UserViewController * user = [[UserViewController alloc] init];
     user.tabBarItem.title = @"arga";
@@ -75,8 +71,7 @@
     [self presentViewController:tabbar animated:YES completion:nil];
 }
 
-
-#pragma mark - getter
+#pragma mark -- getter
 - (UIImageView *)backImageView{
     if (!_backImageView) {
         _backImageView = ({
@@ -86,18 +81,6 @@
         });
     }
     return _backImageView;
-}
-- (UILabel *)nameLable{
-    if (!_nameLable) {
-        _nameLable = ({
-            UILabel * lable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
-            lable.center = CGPointMake(self.view.center.x, 100);
-            lable.backgroundColor = [UIColor blueColor];
-            
-            lable;
-        });
-    }
-    return _nameLable;
 }
 - (UIButton *)buttonIn{
     if (!_buttonIn) {
@@ -112,6 +95,51 @@
         });
     }
     return _buttonIn;
+}
+
+#pragma mark - 初始化新用户
+- (void)registered{
+    
+    NSDictionary * mistakes = [NSDictionary dictionary];
+    
+    NSDictionary * records = [NSDictionary dictionary];
+    
+    AVUser *user = [AVUser user];           // 新建 AVUser 对象实例
+    self.name = [self ret10bitString];
+    self.password = [self ret10bitString];
+    user.username = self.name;              // 设置用户名
+    user.password = self.password;          // 设置密码
+    [user setObject:mistakes forKey:@"mistakes"];
+    [user setObject:records forKey:@"records"];
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // 注册成功
+            [self login];
+        } else {
+            // 失败的原因可能有多种，常见的是用户名已经存在。
+            [self registered];
+        }
+    }];
+}
+- (void)login{
+    
+    [AVUser logInWithUsernameInBackground:self.name password:self.password block:^(AVUser *user, NSError *error) {
+        if (user != nil) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"sdudayWordsAppIsLogin"];
+            [self letIn];
+        } else {
+            [self registered];
+        }
+    }];
+}
+-(NSString *)ret10bitString
+{
+    char data[10];
+    
+    for (int x=0;x<10;data[x++] = (char)('A' + (arc4random_uniform(26))));
+    
+    return [[NSString alloc] initWithBytes:data length:10 encoding:NSUTF8StringEncoding];
 }
 
 @end
