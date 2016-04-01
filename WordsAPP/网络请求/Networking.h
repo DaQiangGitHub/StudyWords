@@ -27,12 +27,14 @@ typedef NS_ENUM(NSUInteger, nameType) {
 };
 
 @interface Networking : UIViewController
-
+//取
 - (void)getimageType:(ImageType)imageType index:(NSInteger)index success:(void(^)(UIImage *image))image failure:(void(^)(NSError *error))failure;
 - (void)getNameWithType:(nameType)nameType index:(NSInteger)index successBlock:(void(^)(NSString *name))name failure:(void(^)(NSError *error))failure;
-- (void)addRecordWithQuestions:(NSDictionary *)questions;
-- (void)addMistakeWithQuestion:(NSDictionary *)question;
+//加
+- (void)addRecordWithQuestions:(NSDictionary *)question successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
+- (void)addMistakeWithQuestion:(NSDictionary *)question successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
 - (void)removeMistakeWithQuestion:(NSDictionary *)question;
+//取列表
 - (NSDictionary *)getRecordsList;
 - (NSArray *)getRecordOfOneDayListWithDate:(NSString *)date;
 - (NSDictionary *)getMistakesList;
