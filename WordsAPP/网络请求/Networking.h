@@ -33,10 +33,10 @@ typedef NS_ENUM(NSUInteger, nameType) {
 //加
 - (void)addRecordWithQuestions:(NSDictionary *)question successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
 - (void)addMistakeWithQuestion:(NSDictionary *)question successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
-- (void)removeMistakeWithQuestion:(NSDictionary *)question;
+- (void)removeMistakeWithQuestion:(NSDictionary *)question successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
 //取列表
-- (NSDictionary *)getRecordsList;
-- (NSArray *)getRecordOfOneDayListWithDate:(NSString *)date;
-- (NSDictionary *)getMistakesList;
+- (NSDictionary *)getRecordsListSuccessBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
+- (NSArray *)getRecordOfOneDayListWithDate:(NSString *)date successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
+- (NSDictionary *)getMistakesListSuccessBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
 
 @end
