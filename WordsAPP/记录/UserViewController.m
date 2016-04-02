@@ -39,9 +39,8 @@
 - (void)wrongButtonPressed{
     
     
-    
-//    WrongQuestionViewController * wrong = [[WrongQuestionViewController alloc] init];
-//    [self.navigationController pushViewController:wrong animated:YES];
+    WrongQuestionViewController * wrong = [[WrongQuestionViewController alloc] init];
+    [self.navigationController pushViewController:wrong animated:YES];
 }
 - (void)recordButtonPressed{
     recordViewController * record = [[recordViewController alloc] init];
