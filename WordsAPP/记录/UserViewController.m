@@ -11,12 +11,16 @@
 #import "recordViewController.h"
 #import "Networking.h"
 
+#import "UMSocial.h"
+
 @interface UserViewController ()
 
 @property (nonatomic, retain) UIImageView * backImage;
 @property (nonatomic, retain) UIButton * recordToday;
 @property (nonatomic, retain) UIButton * wrongQuestion;
 @property (nonatomic, assign) AVUser * currentUser;
+
+
 
 @end
 
@@ -37,6 +41,14 @@
 
 #pragma mark - 点击事件
 - (void)wrongButtonPressed{
+    
+    __weak UIViewController * weakSelf = self;
+    [UMSocialSnsService presentSnsIconSheetView:weakSelf
+                                         appKey:@"56fcc34267e58ecf2c0005f1"
+                                      shareText:@"宝宝得了100分"
+                                     shareImage:[UIImage imageNamed:@"首页底.jpg"]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQzone,UMShareToQQ,UMShareToFacebook,nil]
+                                       delegate:nil];
     
     
     WrongQuestionViewController * wrong = [[WrongQuestionViewController alloc] init];

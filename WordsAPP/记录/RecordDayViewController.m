@@ -30,7 +30,13 @@
     
 }
 - (void)initDataSource{
-    _array = [NSArray arrayWithArray:[[Networking alloc] getRecordOfOneDayListWithDate:self.date]];
+    _array = [NSArray arrayWithArray:[[Networking alloc] getRecordOfOneDayListWithDate:self.date successBlock:^(BOOL succeed) {
+        if (succeed) {
+            NSLog(@"获取成功");
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }]];
 
     [self initInterface];
 }

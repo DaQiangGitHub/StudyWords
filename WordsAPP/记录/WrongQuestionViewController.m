@@ -33,7 +33,13 @@
     
 }
 - (void)initDataSource{
-    _dictionary = [NSDictionary dictionaryWithDictionary:[[Networking alloc] getMistakesList]];
+    _dictionary = [NSDictionary dictionaryWithDictionary:[[Networking alloc] getMistakesListSuccessBlock:^(BOOL succeed) {
+        if (succeed) {
+            NSLog(@"获取成功");
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }]];
     
     [self initInterface];
 }
@@ -55,10 +61,12 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     if(_dictionary){
         self.noDataImage.hidden = YES;
-        if (_dictionary[@"count"]) {
+        if (!_dictionary[@"count"]) {
             self.noDataImage.hidden = NO;
         }
         return [_dictionary[@"count"] intValue];
+    }else{
+        self.noDataImage.hidden = NO;
     }
     return 0;
 }

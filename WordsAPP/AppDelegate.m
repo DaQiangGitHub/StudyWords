@@ -9,6 +9,11 @@
 #import "AppDelegate.h"
 #import <AVOSCloud/AVOSCloud.h>
 
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialSinaSSOHandler.h"
+#import "UMSocialQQHandler.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,10 +25,20 @@
     // Override point for customization after application launch.
     
     [AVOSCloud setApplicationId:@"mc2Fvx3ysSDQPt2r1UJek8ve-gzGzoHsz" clientKey:@"BiPX27PurG4AUSb4TAe9qRa5"];
+    [UMSocialData setAppKey:@"56fcc34267e58ecf2c0005f1"];
+    
+    [UMSocialWechatHandler setWXAppId:@"wxd930ea5d5a258f4f" appSecret:@"db426a9829e4b49a0dcac7b4162da6b6" url:@"http://www.umeng.com/social"];          //微信
+    [UMSocialQQHandler setQQWithAppId:@"100424468" appKey:@"c7394704798a158208a74ab60104f0ba" url:@"http://www.umeng.com/social"];                  //qq、空间
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"3921700954"
+                                              secret:@"04b48b094faeb16683c32669824ebdad"
+                                         RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];      //新浪微博
     
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return YES;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
