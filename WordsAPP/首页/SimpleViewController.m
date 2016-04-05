@@ -9,10 +9,13 @@
 #import "SimpleViewController.h"
 #import "ModelView.h"
 #import "Networking.h"
+#import "CompleteView.h"
 @interface SimpleViewController ()
 
 @property (nonatomic, strong)ModelView * ModelView;
 @property (nonatomic, strong)UIButton * backButton;
+
+
 
 
 @end
@@ -30,6 +33,7 @@
 {
     [self.view addSubview:self.ModelView];
     [self.ModelView addSubview:self.backButton];
+    [self.ModelView.completeView addSubview:self.backButton];
 }
 
 #pragma mark -- clickOnTheEvents
@@ -44,7 +48,7 @@
 - (UIView *)ModelView
 {
     if (!_ModelView) {
-        _ModelView = [[ModelView alloc] initWithFrame:self.view.frame];
+        _ModelView = [[ModelView alloc] initWithFrame:self.view.frame imageType: self.imageType nameType:self.nameType];
     }
     return _ModelView;
 }
@@ -52,10 +56,12 @@
 - (UIButton *)backButton
 {
     if (!_backButton) {
-        _backButton = [UIButton buttonWithType:0];
-        _backButton.frame = CGRectMake(100, 50, 100, 40);
-        [_backButton setTitle:@"返回上一页" forState:0];
+        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _backButton.frame = CGRectMake(30 * MAINSCREEN_RATE, 150 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE);
+        [_backButton setImage:[UIImage imageNamed:@"返回1.png"] forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(returnToTheFontController:) forControlEvents:UIControlEventTouchUpInside];
+       
+
     }
     return _backButton;
 }

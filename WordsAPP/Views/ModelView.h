@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CompleteView.h"
 
 @interface ModelView : UIView
 
@@ -29,7 +30,13 @@
 @property (nonatomic, assign)NSInteger currentNumber;
 
 
+@property (nonatomic, strong)CompleteView * completeView;
 
+@property (nonatomic, assign)NSInteger nameType;
+@property (nonatomic, assign)NSInteger imageType;
+
+
+- (instancetype)initWithFrame:(CGRect)frame imageType:(NSInteger)imageType nameType:(NSInteger)nameType;
 - (void)netWorkingImageType:(NSInteger)type;
 - (void)netWorkingNameType:(NSInteger)type;
 

@@ -28,7 +28,7 @@
 
     self.barLable.text = @"错题重做";
     self.tabBarController.tabBar.hidden = YES;
-    
+    self.barRightButton.hidden = YES;
     [self initDataSource];
     
 }
@@ -80,9 +80,9 @@
     if (!cell) {
         cell = [[QuestionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    cell.typeImage.image = [UIImage imageNamed:@"动物.jpg"];
-    cell.groups.text = _dictionary[@"questions"][indexPath.section];
-    cell.date.text = _dictionary[@"times"][indexPath.section];
+    cell.typeImage.image = [UIImage imageNamed:@"开始答题"];
+    cell.groups.text = [NSString stringWithFormat:@"%@",_dictionary[@"questions"][indexPath.section]];
+    cell.date.text = [NSString stringWithFormat:@"共%@道错题",_dictionary[@"times"][indexPath.section]];
     
     return cell;
 }

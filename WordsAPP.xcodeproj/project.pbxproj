@@ -47,14 +47,8 @@
 		243F31781CAFFDC70018EB62 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 243F31771CAFFDC70018EB62 /* libstdc++.tbd */; };
 		243F317A1CAFFDD30018EB62 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 243F31791CAFFDD30018EB62 /* libz.tbd */; };
 		243F317C1CAFFED90018EB62 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243F317B1CAFFED90018EB62 /* ImageIO.framework */; };
-		2458EEF41CA3BDB3009AF6A8 /* 背景1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2458EEF31CA3BDB3009AF6A8 /* 背景1.jpg */; };
-		2458EEF61CA3BDCC009AF6A8 /* 背景3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2458EEF51CA3BDCC009AF6A8 /* 背景3.jpg */; };
-		2458EEFA1CA3BE10009AF6A8 /* 背景5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2458EEF91CA3BE10009AF6A8 /* 背景5.jpg */; };
-		2458EEFC1CA3BE24009AF6A8 /* 背景6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2458EEFB1CA3BE24009AF6A8 /* 背景6.jpg */; };
-		245ED61C1CA277B000BE79E2 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 245ED61B1CA277B000BE79E2 /* 返回.png */; };
 		245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED61E1CA2808100BE79E2 /* LevelViewController.m */; };
 		245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */; };
-		247F067C1CA9127E00262684 /* 首页底.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 247F067B1CA9127E00262684 /* 首页底.jpg */; };
 		247F06CB1CAC135800262684 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06CA1CAC135800262684 /* Networking.m */; };
 		247F06D51CAC13AF00262684 /* recordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06CE1CAC13AF00262684 /* recordViewController.m */; };
 		247F06D61CAC13AF00262684 /* RecoredTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06D01CAC13AF00262684 /* RecoredTableViewCell.m */; };
@@ -63,7 +57,6 @@
 		247F06DB1CAC140100262684 /* RecordDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DA1CAC140100262684 /* RecordDayViewController.m */; };
 		247F06DE1CACC6E100262684 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */; };
 		247F087D1CAD27D000262684 /* ModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F087C1CAD27D000262684 /* ModelView.m */; };
-		24D605321CAD500C00C237CF /* 暂无数据.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D605311CAD500C00C237CF /* 暂无数据.png */; };
 		24DD26331C9A8BF10007997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26321C9A8BF10007997A /* main.m */; };
 		24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26351C9A8BF10007997A /* AppDelegate.m */; };
 		24DD26391C9A8BF10007997A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26381C9A8BF10007997A /* ViewController.m */; };
@@ -72,25 +65,51 @@
 		24DD26411C9A8BF10007997A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DD263F1C9A8BF10007997A /* LaunchScreen.storyboard */; };
 		24DD26791C9AD4A50007997A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD26781C9AD4A50007997A /* BaseViewController.m */; };
 		24DD267C1C9AD98D0007997A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD267B1C9AD98D0007997A /* HomeViewController.m */; };
-		24E7A7DC1CA28F9F00A162FB /* HomePageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7A7DB1CA28F9F00A162FB /* HomePageTableViewCell.m */; };
-		24E7A7DE1CA2926700A162FB /* 动物.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A7DD1CA2926700A162FB /* 动物.jpg */; };
 		24E7A8021CA2968500A162FB /* 蔬菜.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A8011CA2968500A162FB /* 蔬菜.png */; };
 		24E7A8041CA2968D00A162FB /* 水果.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A8031CA2968D00A162FB /* 水果.png */; };
 		24E7A8061CA2969D00A162FB /* 运动.png in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A8051CA2969D00A162FB /* 运动.png */; };
-		24E7A8081CA2AAE000A162FB /* 生活用品.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A8071CA2AAE000A162FB /* 生活用品.jpg */; };
-		24E7A80E1CA2C8FD00A162FB /* 背景2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24E7A80D1CA2C8FD00A162FB /* 背景2.jpg */; };
 		24EF219B1CA9523900F1384B /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF219A1CA9523900F1384B /* SimpleViewController.m */; };
 		24EF219E1CA9525000F1384B /* MediumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF219D1CA9525000F1384B /* MediumViewController.m */; };
 		24EF21A11CA9526600F1384B /* DifficultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EF21A01CA9526600F1384B /* DifficultViewController.m */; };
-		24EF21A31CA9545F00F1384B /* 简单模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21A21CA9545F00F1384B /* 简单模式背景.png */; };
-		24EF21A51CA9547200F1384B /* 中等模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21A41CA9547200F1384B /* 中等模式背景.png */; };
-		24EF21A71CA9549A00F1384B /* 复杂模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21A61CA9549A00F1384B /* 复杂模式背景.png */; };
-		24EF21AD1CA954E900F1384B /* 复杂模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21AC1CA954E900F1384B /* 复杂模式.png */; };
-		24EF21AF1CA9554800F1384B /* 中等模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21AE1CA9554800F1384B /* 中等模式.png */; };
-		24EF21B11CA9554D00F1384B /* 简单模式.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF21B01CA9554D00F1384B /* 简单模式.png */; };
 		24EF220C1CAA617400F1384B /* 对.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220B1CAA617400F1384B /* 对.png */; };
 		24EF220E1CAA617C00F1384B /* 错.png in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220D1CAA617C00F1384B /* 错.png */; };
-		24EF22101CAA97F800F1384B /* 选择模式背景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */; };
+		CEDAC0221CB2E5680092D5B5 /* CompleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAC01D1CB2E5680092D5B5 /* CompleteView.m */; };
+		CEDAC0231CB2E5680092D5B5 /* DifficultView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAC01F1CB2E5680092D5B5 /* DifficultView.m */; };
+		CEDAC0241CB2E5680092D5B5 /* MidiumView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAC0211CB2E5680092D5B5 /* MidiumView.m */; };
+		CEDAC0491CB2E6030092D5B5 /* 复杂模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0261CB2E6020092D5B5 /* 复杂模式背景.png */; };
+		CEDAC04A1CB2E6030092D5B5 /* 提示2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0271CB2E6020092D5B5 /* 提示2.png */; };
+		CEDAC04B1CB2E6030092D5B5 /* 确定.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0281CB2E6020092D5B5 /* 确定.png */; };
+		CEDAC04C1CB2E6030092D5B5 /* 下一题.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC02A1CB2E6020092D5B5 /* 下一题.png */; };
+		CEDAC04D1CB2E6030092D5B5 /* 提示.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC02B1CB2E6020092D5B5 /* 提示.png */; };
+		CEDAC04E1CB2E6030092D5B5 /* 查看正确答案.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC02C1CB2E6020092D5B5 /* 查看正确答案.png */; };
+		CEDAC04F1CB2E6030092D5B5 /* 简单模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC02D1CB2E6020092D5B5 /* 简单模式背景.png */; };
+		CEDAC0501CB2E6030092D5B5 /* 中等模式背景.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC02F1CB2E6020092D5B5 /* 中等模式背景.png */; };
+		CEDAC0511CB2E6030092D5B5 /* 提示1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0301CB2E6020092D5B5 /* 提示1.png */; };
+		CEDAC0521CB2E6030092D5B5 /* 个人tab.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0321CB2E6020092D5B5 /* 个人tab.png */; };
+		CEDAC0531CB2E6030092D5B5 /* 个人tab点击.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0331CB2E6020092D5B5 /* 个人tab点击.png */; };
+		CEDAC0541CB2E6030092D5B5 /* 主页tab.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0341CB2E6020092D5B5 /* 主页tab.png */; };
+		CEDAC0551CB2E6030092D5B5 /* 主页tab点击.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0351CB2E6020092D5B5 /* 主页tab点击.png */; };
+		CEDAC0571CB2E6030092D5B5 /* 棒.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0371CB2E6030092D5B5 /* 棒.png */; };
+		CEDAC0581CB2E6030092D5B5 /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0381CB2E6030092D5B5 /* 背景.png */; };
+		CEDAC0591CB2E6030092D5B5 /* 错题重做.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0391CB2E6030092D5B5 /* 错题重做.png */; };
+		CEDAC05A1CB2E6030092D5B5 /* 返回1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC03A1CB2E6030092D5B5 /* 返回1.png */; };
+		CEDAC05B1CB2E6030092D5B5 /* 复杂模式1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC03B1CB2E6030092D5B5 /* 复杂模式1.png */; };
+		CEDAC05C1CB2E6030092D5B5 /* 个人.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC03C1CB2E6030092D5B5 /* 个人.png */; };
+		CEDAC05D1CB2E6030092D5B5 /* 个人记录1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC03D1CB2E6030092D5B5 /* 个人记录1.png */; };
+		CEDAC05E1CB2E6030092D5B5 /* 及格.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC03E1CB2E6030092D5B5 /* 及格.png */; };
+		CEDAC05F1CB2E6030092D5B5 /* 简单模式1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC03F1CB2E6030092D5B5 /* 简单模式1.png */; };
+		CEDAC0601CB2E6030092D5B5 /* 开始答题.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0401CB2E6030092D5B5 /* 开始答题.png */; };
+		CEDAC0611CB2E6030092D5B5 /* 首页底.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0411CB2E6030092D5B5 /* 首页底.png */; };
+		CEDAC0621CB2E6030092D5B5 /* 完成并提交.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0421CB2E6030092D5B5 /* 完成并提交.png */; };
+		CEDAC0631CB2E6030092D5B5 /* 未及格.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0431CB2E6030092D5B5 /* 未及格.png */; };
+		CEDAC0641CB2E6030092D5B5 /* 星星.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0441CB2E6030092D5B5 /* 星星.png */; };
+		CEDAC0651CB2E6030092D5B5 /* 选择背景.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0451CB2E6030092D5B5 /* 选择背景.png */; };
+		CEDAC0661CB2E6030092D5B5 /* 优秀.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0461CB2E6030092D5B5 /* 优秀.png */; };
+		CEDAC0671CB2E6030092D5B5 /* 中等模式1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0471CB2E6030092D5B5 /* 中等模式1.png */; };
+		CEDAC0681CB2E6030092D5B5 /* 重新答题.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0481CB2E6030092D5B5 /* 重新答题.png */; };
+		CEDAC06A1CB2E63D0092D5B5 /* 动物.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0691CB2E63D0092D5B5 /* 动物.png */; };
+		CEDAC06C1CB2E64A0092D5B5 /* 生活.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC06B1CB2E64A0092D5B5 /* 生活.png */; };
+		CEDAC06E1CB2EEA60092D5B5 /* 暂无数据.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC06D1CB2EEA60092D5B5 /* 暂无数据.png */; };
 		E185DBF820598A546BA4041B /* libPods-WordsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E735C076B388FE593770211B /* libPods-WordsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -163,16 +182,10 @@
 		243F31771CAFFDC70018EB62 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		243F31791CAFFDD30018EB62 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		243F317B1CAFFED90018EB62 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		2458EEF31CA3BDB3009AF6A8 /* 背景1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景1.jpg"; sourceTree = "<group>"; };
-		2458EEF51CA3BDCC009AF6A8 /* 背景3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景3.jpg"; sourceTree = "<group>"; };
-		2458EEF91CA3BE10009AF6A8 /* 背景5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景5.jpg"; sourceTree = "<group>"; };
-		2458EEFB1CA3BE24009AF6A8 /* 背景6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景6.jpg"; sourceTree = "<group>"; };
-		245ED61B1CA277B000BE79E2 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
 		245ED61D1CA2808100BE79E2 /* LevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelViewController.h; sourceTree = "<group>"; };
 		245ED61E1CA2808100BE79E2 /* LevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelViewController.m; sourceTree = "<group>"; };
 		245ED6291CA2B24B00BE79E2 /* IntroduceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceViewController.h; sourceTree = "<group>"; };
 		245ED62A1CA2B24B00BE79E2 /* IntroduceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceViewController.m; sourceTree = "<group>"; };
-		247F067B1CA9127E00262684 /* 首页底.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "首页底.jpg"; sourceTree = "<group>"; };
 		247F06C91CAC135800262684 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		247F06CA1CAC135800262684 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		247F06CD1CAC13AF00262684 /* recordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recordViewController.h; sourceTree = "<group>"; };
@@ -189,7 +202,6 @@
 		247F06DD1CACC6E100262684 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
 		247F087B1CAD27D000262684 /* ModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelView.h; sourceTree = "<group>"; };
 		247F087C1CAD27D000262684 /* ModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelView.m; sourceTree = "<group>"; };
-		24D605311CAD500C00C237CF /* 暂无数据.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂无数据.png"; sourceTree = "<group>"; };
 		24DD262E1C9A8BF10007997A /* WordsAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD26321C9A8BF10007997A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24DD26341C9A8BF10007997A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -204,31 +216,59 @@
 		24DD26781C9AD4A50007997A /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		24DD267A1C9AD98D0007997A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		24DD267B1C9AD98D0007997A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		24E7A7DA1CA28F9F00A162FB /* HomePageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableViewCell.h; sourceTree = "<group>"; };
-		24E7A7DB1CA28F9F00A162FB /* HomePageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableViewCell.m; sourceTree = "<group>"; };
-		24E7A7DD1CA2926700A162FB /* 动物.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "动物.jpg"; sourceTree = "<group>"; };
 		24E7A8011CA2968500A162FB /* 蔬菜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蔬菜.png"; sourceTree = "<group>"; };
 		24E7A8031CA2968D00A162FB /* 水果.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "水果.png"; sourceTree = "<group>"; };
 		24E7A8051CA2969D00A162FB /* 运动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "运动.png"; sourceTree = "<group>"; };
-		24E7A8071CA2AAE000A162FB /* 生活用品.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "生活用品.jpg"; sourceTree = "<group>"; };
-		24E7A80D1CA2C8FD00A162FB /* 背景2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "背景2.jpg"; sourceTree = "<group>"; };
 		24EF21991CA9523900F1384B /* SimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
 		24EF219A1CA9523900F1384B /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
 		24EF219C1CA9525000F1384B /* MediumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediumViewController.h; sourceTree = "<group>"; };
 		24EF219D1CA9525000F1384B /* MediumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediumViewController.m; sourceTree = "<group>"; };
 		24EF219F1CA9526600F1384B /* DifficultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultViewController.h; sourceTree = "<group>"; };
 		24EF21A01CA9526600F1384B /* DifficultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultViewController.m; sourceTree = "<group>"; };
-		24EF21A21CA9545F00F1384B /* 简单模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式背景.png"; sourceTree = "<group>"; };
-		24EF21A41CA9547200F1384B /* 中等模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中等模式背景.png"; sourceTree = "<group>"; };
-		24EF21A61CA9549A00F1384B /* 复杂模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复杂模式背景.png"; sourceTree = "<group>"; };
-		24EF21AC1CA954E900F1384B /* 复杂模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复杂模式.png"; sourceTree = "<group>"; };
-		24EF21AE1CA9554800F1384B /* 中等模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中等模式.png"; sourceTree = "<group>"; };
-		24EF21B01CA9554D00F1384B /* 简单模式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式.png"; sourceTree = "<group>"; };
 		24EF220B1CAA617400F1384B /* 对.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对.png"; sourceTree = "<group>"; };
 		24EF220D1CAA617C00F1384B /* 错.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错.png"; sourceTree = "<group>"; };
-		24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "选择模式背景.jpg"; sourceTree = "<group>"; };
 		4AF5D6E0618807C84787B264 /* Pods-WordsAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C398090B36CA83F682595D72 /* Pods-WordsAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordsAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordsAPP/Pods-WordsAPP.release.xcconfig"; sourceTree = "<group>"; };
+		CEDAC01C1CB2E5680092D5B5 /* CompleteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteView.h; sourceTree = "<group>"; };
+		CEDAC01D1CB2E5680092D5B5 /* CompleteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteView.m; sourceTree = "<group>"; };
+		CEDAC01E1CB2E5680092D5B5 /* DifficultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultView.h; sourceTree = "<group>"; };
+		CEDAC01F1CB2E5680092D5B5 /* DifficultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultView.m; sourceTree = "<group>"; };
+		CEDAC0201CB2E5680092D5B5 /* MidiumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidiumView.h; sourceTree = "<group>"; };
+		CEDAC0211CB2E5680092D5B5 /* MidiumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidiumView.m; sourceTree = "<group>"; };
+		CEDAC0261CB2E6020092D5B5 /* 复杂模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复杂模式背景.png"; sourceTree = "<group>"; };
+		CEDAC0271CB2E6020092D5B5 /* 提示2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示2.png"; sourceTree = "<group>"; };
+		CEDAC0281CB2E6020092D5B5 /* 确定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "确定.png"; sourceTree = "<group>"; };
+		CEDAC02A1CB2E6020092D5B5 /* 下一题.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一题.png"; sourceTree = "<group>"; };
+		CEDAC02B1CB2E6020092D5B5 /* 提示.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示.png"; sourceTree = "<group>"; };
+		CEDAC02C1CB2E6020092D5B5 /* 查看正确答案.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "查看正确答案.png"; sourceTree = "<group>"; };
+		CEDAC02D1CB2E6020092D5B5 /* 简单模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式背景.png"; sourceTree = "<group>"; };
+		CEDAC02F1CB2E6020092D5B5 /* 中等模式背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中等模式背景.png"; sourceTree = "<group>"; };
+		CEDAC0301CB2E6020092D5B5 /* 提示1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示1.png"; sourceTree = "<group>"; };
+		CEDAC0321CB2E6020092D5B5 /* 个人tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人tab.png"; sourceTree = "<group>"; };
+		CEDAC0331CB2E6020092D5B5 /* 个人tab点击.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人tab点击.png"; sourceTree = "<group>"; };
+		CEDAC0341CB2E6020092D5B5 /* 主页tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页tab.png"; sourceTree = "<group>"; };
+		CEDAC0351CB2E6020092D5B5 /* 主页tab点击.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页tab点击.png"; sourceTree = "<group>"; };
+		CEDAC0371CB2E6030092D5B5 /* 棒.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "棒.png"; sourceTree = "<group>"; };
+		CEDAC0381CB2E6030092D5B5 /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		CEDAC0391CB2E6030092D5B5 /* 错题重做.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错题重做.png"; sourceTree = "<group>"; };
+		CEDAC03A1CB2E6030092D5B5 /* 返回1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回1.png"; sourceTree = "<group>"; };
+		CEDAC03B1CB2E6030092D5B5 /* 复杂模式1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复杂模式1.png"; sourceTree = "<group>"; };
+		CEDAC03C1CB2E6030092D5B5 /* 个人.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人.png"; sourceTree = "<group>"; };
+		CEDAC03D1CB2E6030092D5B5 /* 个人记录1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人记录1.png"; sourceTree = "<group>"; };
+		CEDAC03E1CB2E6030092D5B5 /* 及格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "及格.png"; sourceTree = "<group>"; };
+		CEDAC03F1CB2E6030092D5B5 /* 简单模式1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "简单模式1.png"; sourceTree = "<group>"; };
+		CEDAC0401CB2E6030092D5B5 /* 开始答题.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始答题.png"; sourceTree = "<group>"; };
+		CEDAC0411CB2E6030092D5B5 /* 首页底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页底.png"; sourceTree = "<group>"; };
+		CEDAC0421CB2E6030092D5B5 /* 完成并提交.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成并提交.png"; sourceTree = "<group>"; };
+		CEDAC0431CB2E6030092D5B5 /* 未及格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未及格.png"; sourceTree = "<group>"; };
+		CEDAC0441CB2E6030092D5B5 /* 星星.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "星星.png"; sourceTree = "<group>"; };
+		CEDAC0451CB2E6030092D5B5 /* 选择背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择背景.png"; sourceTree = "<group>"; };
+		CEDAC0461CB2E6030092D5B5 /* 优秀.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "优秀.png"; sourceTree = "<group>"; };
+		CEDAC0471CB2E6030092D5B5 /* 中等模式1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中等模式1.png"; sourceTree = "<group>"; };
+		CEDAC0481CB2E6030092D5B5 /* 重新答题.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "重新答题.png"; sourceTree = "<group>"; };
+		CEDAC0691CB2E63D0092D5B5 /* 动物.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "动物.png"; sourceTree = "<group>"; };
+		CEDAC06B1CB2E64A0092D5B5 /* 生活.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "生活.png"; sourceTree = "<group>"; };
+		CEDAC06D1CB2EEA60092D5B5 /* 暂无数据.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂无数据.png"; sourceTree = "<group>"; };
 		E735C076B388FE593770211B /* libPods-WordsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -400,23 +440,31 @@
 		245ED6181CA2775900BE79E2 /* 公用 */ = {
 			isa = PBXGroup;
 			children = (
-				24D605311CAD500C00C237CF /* 暂无数据.png */,
+				CEDAC0251CB2E6020092D5B5 /* 复杂模式图片 */,
+				CEDAC0291CB2E6020092D5B5 /* 简单模式图片 */,
+				CEDAC02E1CB2E6020092D5B5 /* 中等模式图片 */,
+				CEDAC0311CB2E6020092D5B5 /* tab */,
+				CEDAC0371CB2E6030092D5B5 /* 棒.png */,
+				CEDAC06D1CB2EEA60092D5B5 /* 暂无数据.png */,
+				CEDAC0381CB2E6030092D5B5 /* 背景.png */,
+				CEDAC0391CB2E6030092D5B5 /* 错题重做.png */,
+				CEDAC03A1CB2E6030092D5B5 /* 返回1.png */,
+				CEDAC03B1CB2E6030092D5B5 /* 复杂模式1.png */,
+				CEDAC03C1CB2E6030092D5B5 /* 个人.png */,
+				CEDAC03D1CB2E6030092D5B5 /* 个人记录1.png */,
+				CEDAC03E1CB2E6030092D5B5 /* 及格.png */,
+				CEDAC03F1CB2E6030092D5B5 /* 简单模式1.png */,
+				CEDAC0401CB2E6030092D5B5 /* 开始答题.png */,
+				CEDAC0411CB2E6030092D5B5 /* 首页底.png */,
+				CEDAC0421CB2E6030092D5B5 /* 完成并提交.png */,
+				CEDAC0431CB2E6030092D5B5 /* 未及格.png */,
+				CEDAC0441CB2E6030092D5B5 /* 星星.png */,
+				CEDAC0451CB2E6030092D5B5 /* 选择背景.png */,
+				CEDAC0461CB2E6030092D5B5 /* 优秀.png */,
+				CEDAC0471CB2E6030092D5B5 /* 中等模式1.png */,
+				CEDAC0481CB2E6030092D5B5 /* 重新答题.png */,
 				24EF220D1CAA617C00F1384B /* 错.png */,
 				24EF220B1CAA617400F1384B /* 对.png */,
-				247F067B1CA9127E00262684 /* 首页底.jpg */,
-				2458EEF31CA3BDB3009AF6A8 /* 背景1.jpg */,
-				24E7A80D1CA2C8FD00A162FB /* 背景2.jpg */,
-				2458EEF51CA3BDCC009AF6A8 /* 背景3.jpg */,
-				2458EEF91CA3BE10009AF6A8 /* 背景5.jpg */,
-				2458EEFB1CA3BE24009AF6A8 /* 背景6.jpg */,
-				245ED61B1CA277B000BE79E2 /* 返回.png */,
-				24EF21A21CA9545F00F1384B /* 简单模式背景.png */,
-				24EF21A41CA9547200F1384B /* 中等模式背景.png */,
-				24EF21A61CA9549A00F1384B /* 复杂模式背景.png */,
-				24EF21B01CA9554D00F1384B /* 简单模式.png */,
-				24EF21AE1CA9554800F1384B /* 中等模式.png */,
-				24EF21AC1CA954E900F1384B /* 复杂模式.png */,
-				24EF220F1CAA97F800F1384B /* 选择模式背景.jpg */,
 			);
 			path = "公用";
 			sourceTree = "<group>";
@@ -471,6 +519,12 @@
 			children = (
 				247F087B1CAD27D000262684 /* ModelView.h */,
 				247F087C1CAD27D000262684 /* ModelView.m */,
+				CEDAC0201CB2E5680092D5B5 /* MidiumView.h */,
+				CEDAC0211CB2E5680092D5B5 /* MidiumView.m */,
+				CEDAC01E1CB2E5680092D5B5 /* DifficultView.h */,
+				CEDAC01F1CB2E5680092D5B5 /* DifficultView.m */,
+				CEDAC01C1CB2E5680092D5B5 /* CompleteView.h */,
+				CEDAC01D1CB2E5680092D5B5 /* CompleteView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -530,8 +584,6 @@
 			children = (
 				24DD267A1C9AD98D0007997A /* HomeViewController.h */,
 				24DD267B1C9AD98D0007997A /* HomeViewController.m */,
-				24E7A7DA1CA28F9F00A162FB /* HomePageTableViewCell.h */,
-				24E7A7DB1CA28F9F00A162FB /* HomePageTableViewCell.m */,
 				245ED61D1CA2808100BE79E2 /* LevelViewController.h */,
 				245ED61E1CA2808100BE79E2 /* LevelViewController.m */,
 				24EF21991CA9523900F1384B /* SimpleViewController.h */,
@@ -560,7 +612,7 @@
 		24DD264C1C9A8D540007997A /* 动物 */ = {
 			isa = PBXGroup;
 			children = (
-				24E7A7DD1CA2926700A162FB /* 动物.jpg */,
+				CEDAC0691CB2E63D0092D5B5 /* 动物.png */,
 			);
 			path = "动物";
 			sourceTree = "<group>";
@@ -577,7 +629,7 @@
 		24E7A7FD1CA2963200A162FB /* 生活用品 */ = {
 			isa = PBXGroup;
 			children = (
-				24E7A8071CA2AAE000A162FB /* 生活用品.jpg */,
+				CEDAC06B1CB2E64A0092D5B5 /* 生活.png */,
 			);
 			path = "生活用品";
 			sourceTree = "<group>";
@@ -630,6 +682,47 @@
 				C398090B36CA83F682595D72 /* Pods-WordsAPP.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEDAC0251CB2E6020092D5B5 /* 复杂模式图片 */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAC0261CB2E6020092D5B5 /* 复杂模式背景.png */,
+				CEDAC0271CB2E6020092D5B5 /* 提示2.png */,
+				CEDAC0281CB2E6020092D5B5 /* 确定.png */,
+			);
+			path = "复杂模式图片";
+			sourceTree = "<group>";
+		};
+		CEDAC0291CB2E6020092D5B5 /* 简单模式图片 */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAC02A1CB2E6020092D5B5 /* 下一题.png */,
+				CEDAC02B1CB2E6020092D5B5 /* 提示.png */,
+				CEDAC02C1CB2E6020092D5B5 /* 查看正确答案.png */,
+				CEDAC02D1CB2E6020092D5B5 /* 简单模式背景.png */,
+			);
+			path = "简单模式图片";
+			sourceTree = "<group>";
+		};
+		CEDAC02E1CB2E6020092D5B5 /* 中等模式图片 */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAC02F1CB2E6020092D5B5 /* 中等模式背景.png */,
+				CEDAC0301CB2E6020092D5B5 /* 提示1.png */,
+			);
+			path = "中等模式图片";
+			sourceTree = "<group>";
+		};
+		CEDAC0311CB2E6020092D5B5 /* tab */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAC0321CB2E6020092D5B5 /* 个人tab.png */,
+				CEDAC0331CB2E6020092D5B5 /* 个人tab点击.png */,
+				CEDAC0341CB2E6020092D5B5 /* 主页tab.png */,
+				CEDAC0351CB2E6020092D5B5 /* 主页tab点击.png */,
+			);
+			path = tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,55 +786,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDAC06C1CB2E64A0092D5B5 /* 生活.png in Resources */,
+				CEDAC0511CB2E6030092D5B5 /* 提示1.png in Resources */,
 				243F31681CAFFC040018EB62 /* ios-social-sdk-share-quick.html in Resources */,
-				2458EEF61CA3BDCC009AF6A8 /* 背景3.jpg in Resources */,
-				24EF21AD1CA954E900F1384B /* 复杂模式.png in Resources */,
 				24E7A8021CA2968500A162FB /* 蔬菜.png in Resources */,
-				24EF21B11CA9554D00F1384B /* 简单模式.png in Resources */,
-				24E7A8081CA2AAE000A162FB /* 生活用品.jpg in Resources */,
+				CEDAC0491CB2E6030092D5B5 /* 复杂模式背景.png in Resources */,
 				243F31521CAFFC040018EB62 /* UMShareEditViewControlleriPad.xib in Resources */,
-				24EF21A51CA9547200F1384B /* 中等模式背景.png in Resources */,
+				CEDAC0621CB2E6030092D5B5 /* 完成并提交.png in Resources */,
 				243F31601CAFFC040018EB62 /* iOS-social-releasenote.html in Resources */,
+				CEDAC0651CB2E6030092D5B5 /* 选择背景.png in Resources */,
 				243F31651CAFFC040018EB62 /* ios-social-sdk-login-quick.html in Resources */,
+				CEDAC0551CB2E6030092D5B5 /* 主页tab点击.png in Resources */,
+				CEDAC06A1CB2E63D0092D5B5 /* 动物.png in Resources */,
 				243F31661CAFFC040018EB62 /* ios-social-sdk-shake.html in Resources */,
+				CEDAC0681CB2E6030092D5B5 /* 重新答题.png in Resources */,
 				243F31621CAFFC040018EB62 /* ios-social-sdk-comment-quick.html in Resources */,
-				247F067C1CA9127E00262684 /* 首页底.jpg in Resources */,
 				24E7A8041CA2968D00A162FB /* 水果.png in Resources */,
-				2458EEF41CA3BDB3009AF6A8 /* 背景1.jpg in Resources */,
+				CEDAC04E1CB2E6030092D5B5 /* 查看正确答案.png in Resources */,
 				243F31541CAFFC040018EB62 /* UMSnsAccountViewController.xib in Resources */,
+				CEDAC0501CB2E6030092D5B5 /* 中等模式背景.png in Resources */,
+				CEDAC0661CB2E6030092D5B5 /* 优秀.png in Resources */,
 				243F314E1CAFFC040018EB62 /* UMSCommentDetailController.xib in Resources */,
 				24EF220C1CAA617400F1384B /* 对.png in Resources */,
+				CEDAC04D1CB2E6030092D5B5 /* 提示.png in Resources */,
 				24EF220E1CAA617C00F1384B /* 错.png in Resources */,
-				24EF22101CAA97F800F1384B /* 选择模式背景.jpg in Resources */,
 				243F31501CAFFC040018EB62 /* UMSCommentInputControlleriPad.xib in Resources */,
+				CEDAC0521CB2E6030092D5B5 /* 个人tab.png in Resources */,
+				CEDAC0611CB2E6030092D5B5 /* 首页底.png in Resources */,
 				243F31511CAFFC040018EB62 /* UMShareEditViewController.xib in Resources */,
-				24EF21A71CA9549A00F1384B /* 复杂模式背景.png in Resources */,
+				CEDAC05C1CB2E6030092D5B5 /* 个人.png in Resources */,
 				243F31611CAFFC040018EB62 /* ios-social-sdk-comment-detail.html in Resources */,
 				243F315C1CAFFC040018EB62 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				CEDAC0601CB2E6030092D5B5 /* 开始答题.png in Resources */,
 				243F314F1CAFFC040018EB62 /* UMSCommentInputController.xib in Resources */,
-				24E7A7DE1CA2926700A162FB /* 动物.jpg in Resources */,
+				CEDAC04F1CB2E6030092D5B5 /* 简单模式背景.png in Resources */,
+				CEDAC05F1CB2E6030092D5B5 /* 简单模式1.png in Resources */,
 				243F316A1CAFFC040018EB62 /* markdown.css in Resources */,
-				24EF21AF1CA9554800F1384B /* 中等模式.png in Resources */,
-				245ED61C1CA277B000BE79E2 /* 返回.png in Resources */,
 				243F31671CAFFC040018EB62 /* ios-social-sdk-share-detail.html in Resources */,
+				CEDAC05E1CB2E6030092D5B5 /* 及格.png in Resources */,
 				24E7A8061CA2969D00A162FB /* 运动.png in Resources */,
+				CEDAC0671CB2E6030092D5B5 /* 中等模式1.png in Resources */,
 				243F31691CAFFC040018EB62 /* ios-social-sdk-socialbar.html in Resources */,
 				243F31591CAFFC040018EB62 /* WeiboSDK.bundle in Resources */,
+				CEDAC0541CB2E6030092D5B5 /* 主页tab.png in Resources */,
 				24DD26411C9A8BF10007997A /* LaunchScreen.storyboard in Resources */,
+				CEDAC05D1CB2E6030092D5B5 /* 个人记录1.png in Resources */,
 				24DD263E1C9A8BF10007997A /* Assets.xcassets in Resources */,
+				CEDAC04C1CB2E6030092D5B5 /* 下一题.png in Resources */,
 				243F31551CAFFC040018EB62 /* UMSShareListController.xib in Resources */,
+				CEDAC0641CB2E6030092D5B5 /* 星星.png in Resources */,
+				CEDAC04B1CB2E6030092D5B5 /* 确定.png in Resources */,
 				243F31531CAFFC040018EB62 /* UMSLoginViewController.xib in Resources */,
+				CEDAC05B1CB2E6030092D5B5 /* 复杂模式1.png in Resources */,
+				CEDAC0591CB2E6030092D5B5 /* 错题重做.png in Resources */,
+				CEDAC0581CB2E6030092D5B5 /* 背景.png in Resources */,
 				24DD263C1C9A8BF10007997A /* Main.storyboard in Resources */,
+				CEDAC04A1CB2E6030092D5B5 /* 提示2.png in Resources */,
+				CEDAC0531CB2E6030092D5B5 /* 个人tab点击.png in Resources */,
 				243F31631CAFFC040018EB62 /* ios-social-sdk-like.html in Resources */,
-				24E7A80E1CA2C8FD00A162FB /* 背景2.jpg in Resources */,
-				24EF21A31CA9545F00F1384B /* 简单模式背景.png in Resources */,
 				243F314C1CAFFC040018EB62 /* UMSocialLocalizable.strings in Resources */,
-				2458EEFA1CA3BE10009AF6A8 /* 背景5.jpg in Resources */,
+				CEDAC06E1CB2EEA60092D5B5 /* 暂无数据.png in Resources */,
 				243F315F1CAFFC040018EB62 /* iOS-social-analytics-releasenote.html in Resources */,
-				24D605321CAD500C00C237CF /* 暂无数据.png in Resources */,
 				243F31641CAFFC040018EB62 /* ios-social-sdk-login-detail.html in Resources */,
-				2458EEFC1CA3BE24009AF6A8 /* 背景6.jpg in Resources */,
+				CEDAC0631CB2E6030092D5B5 /* 未及格.png in Resources */,
+				CEDAC05A1CB2E6030092D5B5 /* 返回1.png in Resources */,
 				243F31561CAFFC040018EB62 /* UMSocialSDKResourcesNew.bundle in Resources */,
+				CEDAC0571CB2E6030092D5B5 /* 棒.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,16 +919,18 @@
 				245ED62B1CA2B24B00BE79E2 /* IntroduceViewController.m in Sources */,
 				24DD26391C9A8BF10007997A /* ViewController.m in Sources */,
 				245ED61F1CA2808100BE79E2 /* LevelViewController.m in Sources */,
-				24E7A7DC1CA28F9F00A162FB /* HomePageTableViewCell.m in Sources */,
 				24DD26791C9AD4A50007997A /* BaseViewController.m in Sources */,
 				24DD26361C9A8BF10007997A /* AppDelegate.m in Sources */,
 				24DD267C1C9AD98D0007997A /* HomeViewController.m in Sources */,
 				247F06DE1CACC6E100262684 /* QuestionTableViewCell.m in Sources */,
+				CEDAC0241CB2E5680092D5B5 /* MidiumView.m in Sources */,
 				24EF219B1CA9523900F1384B /* SimpleViewController.m in Sources */,
+				CEDAC0221CB2E5680092D5B5 /* CompleteView.m in Sources */,
 				24DD26331C9A8BF10007997A /* main.m in Sources */,
 				24EF219E1CA9525000F1384B /* MediumViewController.m in Sources */,
 				24EF21A11CA9526600F1384B /* DifficultViewController.m in Sources */,
 				247F06CB1CAC135800262684 /* Networking.m in Sources */,
+				CEDAC0231CB2E5680092D5B5 /* DifficultView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,6 +1054,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WordsAPP/第三方/umeng_ios_social_sdk_5.0-3.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WordsAPP/PrefixHeader.pch";
 				INFOPLIST_FILE = WordsAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -966,6 +1079,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/WordsAPP/第三方/umeng_ios_social_sdk_5.0-3.1_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WordsAPP/PrefixHeader.pch";
 				INFOPLIST_FILE = WordsAPP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -26,6 +26,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.barLable.text = self.date;
+    self.barRightButton.hidden = YES;
     [self initDataSource];
     
 }
@@ -45,11 +47,6 @@
 }
 
 #pragma mark - UITableViewDelegate
-- (void)selectRowAtIndexPath:(nullable NSIndexPath *)indexPath animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition{
-    //需传数据：答题记录
-//    SimpleViewController * simple = [[SimpleViewController alloc] init];
-//    [self.navigationController pushViewController:simple animated:YES];
-}
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 15;
 }
@@ -67,8 +64,8 @@
     if (!cell) {
         cell = [[RecoredTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    cell.levelImage.image = self.imagesLevel[[_array[indexPath.row][@"type"] intValue]];
-    cell.typeImage.image = self.imagesType[[_array[indexPath.row][@"level"] intValue]];
+    cell.levelImage.image = self.imagesLevel[[_array[indexPath.section][@"level"] intValue]];
+    cell.typeImage.image = self.imagesType[[_array[indexPath.section][@"type"] intValue]];
     cell.score.text = _array[indexPath.section][@"score"];
     cell.date.text = self.date;
     

@@ -10,4 +10,9 @@
 
 @interface LevelViewController : BaseViewController
 
+@property (nonatomic, assign)NSInteger flag;
+
+
+- (instancetype)initWithFlag:(NSInteger)rowNumber;
+
 @end

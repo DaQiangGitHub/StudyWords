@@ -34,7 +34,7 @@
 - (UIImageView *)typeImage{
     if (!_typeImage) {
         _typeImage = ({
-            UIImageView * imageView = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
+            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 50, 200, 80)];
             imageView.contentMode = UIViewContentModeCenter;
             imageView.layer.masksToBounds = YES;
             imageView;
@@ -47,8 +47,8 @@
         _groups = ({
             UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.contentView.bounds) + 10, 30, 60, 40)];
             //            label.backgroundColor= [UIColor redColor];
-            label.font = [UIFont systemFontOfSize:20];
-            label.textColor = [UIColor greenColor];
+            label.font = [UIFont systemFontOfSize:25];
+            label.textColor = [UIColor grayColor];
             label;
         });
     }
@@ -57,8 +57,7 @@
 - (UILabel *)date{
     if (!_date) {
         _date = ({
-            UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.contentView.bounds) - 20, CGRectGetHeight(self.contentView.bounds) + 50, 120, 40)];
-            //            label.backgroundColor= [UIColor redColor];
+            UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.contentView.bounds) - 40, CGRectGetHeight(self.contentView.bounds) + 50, 120, 40)];
             label.font = [UIFont systemFontOfSize:20];
             label;
         });

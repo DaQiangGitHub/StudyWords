@@ -38,7 +38,7 @@
  
     _currentUser = [AVUser currentUser];
 }
-
+ 
 #pragma mark - 点击事件
 - (void)wrongButtonPressed{
     
@@ -63,7 +63,7 @@
     if (!_backImage) {
         _backImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H - BAR_H + 10)];
-            imageView.image = [UIImage imageNamed:@"背景5.jpg"];
+            imageView.image = [UIImage imageNamed:@"个人"];
             
             imageView;
         });
@@ -74,9 +74,10 @@
     if (!_recordToday) {
         _recordToday = ({
             UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame = CGRectMake(0, 0, 200, 40);
-            button.center = CGPointMake(self.view.center.x, 300);
+            button.frame = CGRectMake(0, 0, 280, 80);
+            button.center = CGPointMake(self.view.center.x, 240);
             button.backgroundColor = [UIColor orangeColor];
+            [button setImage:[UIImage imageNamed:@"重新答题"] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(recordButtonPressed) forControlEvents:UIControlEventTouchUpInside];
             
             button;
@@ -88,9 +89,10 @@
     if (!_wrongQuestion) {
         _wrongQuestion = ({
             UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame = CGRectMake(0, 0, 200, 40);
-            button.center = CGPointMake(self.view.center.x, 400);
+            button.frame = CGRectMake(0, 0, 280, 80);
+            button.center = CGPointMake(self.view.center.x, 430);
             button.backgroundColor = [UIColor orangeColor];
+            [button setImage:[UIImage imageNamed:@"错题重做"] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(wrongButtonPressed) forControlEvents:UIControlEventTouchUpInside];
             
             button;

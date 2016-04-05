@@ -78,25 +78,21 @@
     NSString * time = [formatter stringFromDate:date];
     
     AVUser * currentUser = [AVUser currentUser];
-    AVQuery *query = [AVQuery queryWithClassName:@"data"];
-    [query whereKey:@"objectId" equalTo:DATAID];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects) {
-            NSArray<AVObject *> *priorityEqualsZeroTodos = objects;
-            NSDictionary * dictionary = [[NSDictionary alloc] initWithDictionary:[priorityEqualsZeroTodos[0] objectForKey:@"records"]];
-            NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
+    NSMutableDictionary * dictionary = [[NSMutableDictionary alloc] initWithDictionary:[currentUser objectForKey:@"records"]];
+    
+    NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
             if (keys.count) {
                 for (int i = 0; i < keys.count; i ++) {
                     if ([keys[i] isEqualToString:time]) {
                         NSMutableArray * groups = [NSMutableArray arrayWithArray:dictionary[keys[i]]];
                         [groups addObject:questions];
-                        [dictionary setValue:groups forKey:time];
+                        [dictionary setObject:groups forKey:time];
                     }else if (i == keys.count - 1){
-                        [dictionary setValue:@[questions] forKey:time];
+                        [dictionary setObject:@[questions] forKey:time];
                     }
                 }
             }else{
-                [dictionary setValue:@[questions] forKey:time];
+                [dictionary setObject:@[questions] forKey:time];
             }
             [currentUser setObject:dictionary forKey:@"records"];
             [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -106,11 +102,6 @@
                     failure(error);
                 }
             }];
-            NSLog(@"储存成功");
-        }else{
-            succeed(error);
-        }
-    }];
 }
 - (void)addMistakeWithQuestion:(NSDictionary *)question successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure{
     //判断时间，判断是不是今天加过数据
@@ -120,25 +111,21 @@
     NSString * time = [formatter stringFromDate:date];
     
     AVUser * currentUser = [AVUser currentUser];
-    AVQuery *query = [AVQuery queryWithClassName:@"data"];
-    [query whereKey:@"objectId" equalTo:DATAID];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects) {
-            NSArray<AVObject *> *priorityEqualsZeroTodos = objects;
-            NSDictionary * dictionary = [[NSDictionary alloc] initWithDictionary:[priorityEqualsZeroTodos[0] objectForKey:@"mistakes"]];
+    NSMutableDictionary * dictionary = [[NSMutableDictionary alloc] initWithDictionary:[currentUser objectForKey:@"mistakes"]];
+
             NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
             if (keys.count) {
                 for (int i = 0; i < keys.count; i ++) {
                     if ([keys[i] isEqualToString:time]) {
                         NSMutableArray * questions = [NSMutableArray arrayWithArray:dictionary[keys[i]]];
                         [questions addObject:question];
-                        [dictionary setValue:questions forKey:time];
+                        [dictionary setObject:questions forKey:time];
                     }else if (i == keys.count - 1){
-                        [dictionary setValue:@[question] forKey:time];
+                        [dictionary setObject:@[question] forKey:time];
                     }
                 }
             }else{
-                [dictionary setValue:@[question] forKey:time];
+                [dictionary setObject:@[question] forKey:time];
             }
             [currentUser setObject:dictionary forKey:@"mistakes"];
             [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -148,11 +135,7 @@
                     failure(error);
                 }
             }];
-            NSLog(@"储存成功");
-        }else{
-            failure(error);
-        }
-    }];
+
 }
 - (void)removeMistakeWithQuestion:(NSDictionary *)question successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure{
     //判断时间，判断是不是今天加过数据
@@ -168,20 +151,21 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects) {
             NSArray<AVObject *> *priorityEqualsZeroTodos = objects;
-            NSDictionary * dictionary = [[NSDictionary alloc] initWithDictionary:[priorityEqualsZeroTodos[0] objectForKey:@"mistakes"]];
+            NSMutableDictionary * dictionary = [[NSMutableDictionary alloc] initWithDictionary:[priorityEqualsZeroTodos[0] objectForKey:@"mistakes"]];
             NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
             if (keys.count) {
                 for (int i = 0; i < keys.count; i ++) {
                     if ([keys[i] isEqualToString:time]) {
                         NSMutableArray * questions = [NSMutableArray arrayWithArray:dictionary[keys[i]]];
                         [questions removeObject:question];
-                        [dictionary setValue:questions forKey:time];
+                        [dictionary setObject:questions forKey:time];
                     }else if (i == keys.count - 1){
-                        [dictionary setValue:@[question] forKey:time];
+                        [dictionary setObject:@[question] forKey:time];
                     }
                 }
             }else{
-                [dictionary setValue:@[question] forKey:time];
+                [dictionary setObject:@[question] forKey:time];
+//                [dictionary setObject:@[question] forKey:time];
             }
             [currentUser setObject:dictionary forKey:@"mistakes"];
             [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -205,44 +189,31 @@
     NSMutableArray * arrayGroups = [NSMutableArray array];
     NSMutableDictionary * dic = [NSMutableDictionary dictionary];
     
-    AVQuery *query = [AVQuery queryWithClassName:@"data"];
-    [query whereKey:@"objectId" equalTo:DATAID];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects) {
-            NSArray<AVObject *> *priorityEqualsZeroTodos = objects;
-            NSDictionary * dictionary = [[NSDictionary alloc] initWithDictionary:[priorityEqualsZeroTodos[0] objectForKey:@"records"]];
+    AVUser * currentUser = [AVUser currentUser];
+    NSMutableDictionary * dictionary = [[NSMutableDictionary alloc] initWithDictionary:[currentUser objectForKey:@"records"]];
+    
             NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
             for (int i = 0; i < keys.count; i ++) {
                 [arrayTimes addObject:keys[i]];
                 [arrayGroups addObject:[NSNumber numberWithLong:[dictionary[keys[i]] count]]];
             }
             [dic setDictionary:@{@"count":[NSNumber numberWithLong:keys.count], @"times":arrayTimes, @"groups":arrayGroups}];
-        }else{
-            failure(error);
-        }
-    }];
+
     return dic;
 }
 - (NSArray *)getRecordOfOneDayListWithDate:(NSString *)date successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure{
     
     NSMutableArray * array = [NSMutableArray array];
     
-    AVQuery *query = [AVQuery queryWithClassName:@"data"];
-    [query whereKey:@"objectId" equalTo:DATAID];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects) {
-            NSArray<AVObject *> *priorityEqualsZeroTodos = objects;
-            NSDictionary * dictionary = [[NSDictionary alloc] initWithDictionary:[priorityEqualsZeroTodos[0] objectForKey:@"records"]];
+    AVUser * currentUser = [AVUser currentUser];
+    NSMutableDictionary * dictionary = [[NSMutableDictionary alloc] initWithDictionary:[currentUser objectForKey:@"records"]];
             NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
             for (int i = 0; i < keys.count; i ++) {
                 if ([date isEqualToString:keys[i]]) {
-                    [array addObject:dictionary[keys[i]]];
+                    [array arrayByAddingObjectsFromArray:dictionary[keys[i]]];
                 }
             }
-        }else{
-            failure(error);
-        }
-    }];
+
     return array;
 }
 - (NSDictionary *)getMistakesListSuccessBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure{
@@ -251,22 +222,15 @@
     NSMutableArray * arrayQuestions = [NSMutableArray array];
     NSMutableDictionary * dic = [NSMutableDictionary dictionary];
     
-    AVQuery *query = [AVQuery queryWithClassName:@"data"];
-    [query whereKey:@"objectId" equalTo:DATAID];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects) {
-            NSArray<AVObject *> *priorityEqualsZeroTodos = objects;
-            NSDictionary * dictionary = [[NSDictionary alloc] initWithDictionary:[priorityEqualsZeroTodos[0] objectForKey:@"mistakes"]];
+    AVUser * currentUser = [AVUser currentUser];
+    NSMutableDictionary * dictionary = [[NSMutableDictionary alloc] initWithDictionary:[currentUser objectForKey:@"mistakes"]];
             NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
             for (int i = 0; i < keys.count; i ++) {
                 [arrayTimes addObject:keys[i]];
                 [arrayQuestions addObject:[NSNumber numberWithLong:[dictionary[keys[i]] count]]];
             }
             [dic setDictionary:@{@"count":[NSNumber numberWithLong:keys.count], @"times":arrayTimes, @"questions":arrayQuestions}];
-        }else{
-            failure(error);
-        }
-    }];
+    
     return dic;
 }
 

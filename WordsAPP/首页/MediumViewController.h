@@ -10,4 +10,6 @@
 
 @interface MediumViewController : UIViewController
 
+@property (nonatomic, assign)NSInteger imageType;
+@property (nonatomic, assign)NSInteger nameType;
 @end

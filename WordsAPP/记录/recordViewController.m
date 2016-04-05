@@ -31,19 +31,13 @@
     
     self.barLable.text = @"重新答题";
     self.tabBarController.tabBar.hidden = YES;
-    
+    self.barRightButton.hidden = YES;
     [self initDataSource];
 }
 
 - (void)initDataSource{
     
-    _dictionary = [NSDictionary dictionaryWithDictionary:[[Networking alloc] getRecordsListSuccessBlock:^(BOOL succeed) {
-        if (succeed) {
-            NSLog(@"获取成功");
-        }
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }]];
+    _dictionary = [NSDictionary dictionaryWithDictionary:[[Networking alloc] getRecordsListSuccessBlock:nil failure:nil]];
     
     [self initInterface];
 }
@@ -54,11 +48,17 @@
     
     [self.view sendSubviewToBack:self.backImage];
 }
+
+#pragma mark - 父类方法
+- (void)leftButtonPressed{
+    [super leftButtonPressed];
+    self.tabBarController.tabBar.hidden = NO;
+}
 #pragma mark - UITableViewDelegate
-- (void)selectRowAtIndexPath:(nullable NSIndexPath *)indexPath animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //需传数据：答题记录
     RecordDayViewController * record = [[RecordDayViewController alloc] init];
-    record.date = _dictionary[@"times"][indexPath.row];
+    record.date = _dictionary[@"times"][indexPath.section];
     [self.navigationController pushViewController:record animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -87,9 +87,9 @@
     if (!cell) {
         cell = [[QuestionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    cell.typeImage.image = [UIImage imageNamed:@"动物.jpg"];
-    cell.groups.text = _dictionary[@"groups"][indexPath.row];
-    cell.date.text = _dictionary[@"times"][indexPath.row];
+    cell.typeImage.image = [UIImage imageNamed:@"开始答题"];
+    cell.groups.text = [NSString stringWithFormat:@"%@",_dictionary[@"groups"][indexPath.section]];
+    cell.date.text = _dictionary[@"times"][indexPath.section];
     
     return cell;
 }
