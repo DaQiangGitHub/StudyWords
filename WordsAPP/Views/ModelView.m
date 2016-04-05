@@ -187,9 +187,9 @@
     
     //数据处理
     self.answerArray1 = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
-    self.dictionary1 = @{@(self.i):self.answerArray1};
+    self.dictionary1 = @{self.stringIndex:self.answerArray1};
     [self.answerArray addObject:self.dictionary1];
-    self.dictionary = @{@"type":@(self.nameType),@"level":@(0),@"score":self.stringIndex,@"questions":self.answerArray};
+    self.dictionary = @{@"type":@(self.nameType),@"level":@(0),@"score":@(self.score),@"questions":self.answerArray};
     NSLog(@"dictionary = %@",self.dictionary);
     
 }
@@ -490,15 +490,15 @@
     return _completeView;
 }
 
-- (UIButton *)returnButton{
-    if (!_returnButton) {
-        _returnButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _returnButton.frame = CGRectMake(30 * MAINSCREEN_RATE, 60 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE);
-        [_returnButton setImage:[UIImage imageNamed:@"返回1"] forState:UIControlStateNormal];
-        [_returnButton addTarget:self action:@selector(returnButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _returnButton;
-}
+//- (UIButton *)returnButton{
+//    if (!_returnButton) {
+//        _returnButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        _returnButton.frame = CGRectMake(30 * MAINSCREEN_RATE, 60 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE);
+//        [_returnButton setImage:[UIImage imageNamed:@"返回1"] forState:UIControlStateNormal];
+//        [_returnButton addTarget:self action:@selector(returnButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+//    }
+//    return _returnButton;
+//}
 @end
 
 

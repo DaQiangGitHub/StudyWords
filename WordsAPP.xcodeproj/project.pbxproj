@@ -110,6 +110,13 @@
 		CEDAC06A1CB2E63D0092D5B5 /* 动物.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC0691CB2E63D0092D5B5 /* 动物.png */; };
 		CEDAC06C1CB2E64A0092D5B5 /* 生活.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC06B1CB2E64A0092D5B5 /* 生活.png */; };
 		CEDAC06E1CB2EEA60092D5B5 /* 暂无数据.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAC06D1CB2EEA60092D5B5 /* 暂无数据.png */; };
+		CEF23E2E1CB3480F006D1727 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF23E271CB3480F006D1727 /* 1.png */; };
+		CEF23E2F1CB3480F006D1727 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF23E281CB3480F006D1727 /* 2.png */; };
+		CEF23E301CB3480F006D1727 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF23E291CB3480F006D1727 /* 3.png */; };
+		CEF23E311CB3480F006D1727 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF23E2A1CB3480F006D1727 /* 4.png */; };
+		CEF23E321CB3480F006D1727 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF23E2B1CB3480F006D1727 /* 5.png */; };
+		CEF23E331CB3480F006D1727 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF23E2C1CB3480F006D1727 /* 6.png */; };
+		CEF23E341CB3480F006D1727 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF23E2D1CB3480F006D1727 /* 7.png */; };
 		E185DBF820598A546BA4041B /* libPods-WordsAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E735C076B388FE593770211B /* libPods-WordsAPP.a */; };
 /* End PBXBuildFile section */
 
@@ -269,6 +276,13 @@
 		CEDAC0691CB2E63D0092D5B5 /* 动物.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "动物.png"; sourceTree = "<group>"; };
 		CEDAC06B1CB2E64A0092D5B5 /* 生活.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "生活.png"; sourceTree = "<group>"; };
 		CEDAC06D1CB2EEA60092D5B5 /* 暂无数据.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂无数据.png"; sourceTree = "<group>"; };
+		CEF23E271CB3480F006D1727 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		CEF23E281CB3480F006D1727 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		CEF23E291CB3480F006D1727 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		CEF23E2A1CB3480F006D1727 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		CEF23E2B1CB3480F006D1727 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		CEF23E2C1CB3480F006D1727 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		CEF23E2D1CB3480F006D1727 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		E735C076B388FE593770211B /* libPods-WordsAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordsAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -599,6 +613,7 @@
 		24DD264A1C9A8D540007997A /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				CEF23E261CB3480F006D1727 /* 动画 */,
 				245ED6181CA2775900BE79E2 /* 公用 */,
 				24E7A7FF1CA2963200A162FB /* 水果 */,
 				24E7A7FE1CA2963200A162FB /* 蔬菜 */,
@@ -725,6 +740,20 @@
 			path = tab;
 			sourceTree = "<group>";
 		};
+		CEF23E261CB3480F006D1727 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				CEF23E271CB3480F006D1727 /* 1.png */,
+				CEF23E281CB3480F006D1727 /* 2.png */,
+				CEF23E291CB3480F006D1727 /* 3.png */,
+				CEF23E2A1CB3480F006D1727 /* 4.png */,
+				CEF23E2B1CB3480F006D1727 /* 5.png */,
+				CEF23E2C1CB3480F006D1727 /* 6.png */,
+				CEF23E2D1CB3480F006D1727 /* 7.png */,
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -788,10 +817,13 @@
 			files = (
 				CEDAC06C1CB2E64A0092D5B5 /* 生活.png in Resources */,
 				CEDAC0511CB2E6030092D5B5 /* 提示1.png in Resources */,
+				CEF23E2F1CB3480F006D1727 /* 2.png in Resources */,
 				243F31681CAFFC040018EB62 /* ios-social-sdk-share-quick.html in Resources */,
 				24E7A8021CA2968500A162FB /* 蔬菜.png in Resources */,
+				CEF23E2E1CB3480F006D1727 /* 1.png in Resources */,
 				CEDAC0491CB2E6030092D5B5 /* 复杂模式背景.png in Resources */,
 				243F31521CAFFC040018EB62 /* UMShareEditViewControlleriPad.xib in Resources */,
+				CEF23E311CB3480F006D1727 /* 4.png in Resources */,
 				CEDAC0621CB2E6030092D5B5 /* 完成并提交.png in Resources */,
 				243F31601CAFFC040018EB62 /* iOS-social-releasenote.html in Resources */,
 				CEDAC0651CB2E6030092D5B5 /* 选择背景.png in Resources */,
@@ -811,12 +843,15 @@
 				CEDAC04D1CB2E6030092D5B5 /* 提示.png in Resources */,
 				24EF220E1CAA617C00F1384B /* 错.png in Resources */,
 				243F31501CAFFC040018EB62 /* UMSCommentInputControlleriPad.xib in Resources */,
+				CEF23E341CB3480F006D1727 /* 7.png in Resources */,
 				CEDAC0521CB2E6030092D5B5 /* 个人tab.png in Resources */,
 				CEDAC0611CB2E6030092D5B5 /* 首页底.png in Resources */,
+				CEF23E331CB3480F006D1727 /* 6.png in Resources */,
 				243F31511CAFFC040018EB62 /* UMShareEditViewController.xib in Resources */,
 				CEDAC05C1CB2E6030092D5B5 /* 个人.png in Resources */,
 				243F31611CAFFC040018EB62 /* ios-social-sdk-comment-detail.html in Resources */,
 				243F315C1CAFFC040018EB62 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				CEF23E321CB3480F006D1727 /* 5.png in Resources */,
 				CEDAC0601CB2E6030092D5B5 /* 开始答题.png in Resources */,
 				243F314F1CAFFC040018EB62 /* UMSCommentInputController.xib in Resources */,
 				CEDAC04F1CB2E6030092D5B5 /* 简单模式背景.png in Resources */,
@@ -841,6 +876,7 @@
 				CEDAC0591CB2E6030092D5B5 /* 错题重做.png in Resources */,
 				CEDAC0581CB2E6030092D5B5 /* 背景.png in Resources */,
 				24DD263C1C9A8BF10007997A /* Main.storyboard in Resources */,
+				CEF23E301CB3480F006D1727 /* 3.png in Resources */,
 				CEDAC04A1CB2E6030092D5B5 /* 提示2.png in Resources */,
 				CEDAC0531CB2E6030092D5B5 /* 个人tab点击.png in Resources */,
 				243F31631CAFFC040018EB62 /* ios-social-sdk-like.html in Resources */,
