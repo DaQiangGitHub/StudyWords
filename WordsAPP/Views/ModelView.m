@@ -48,7 +48,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _nameType = nameType;
-        _imageType = imageType;
+        _imageType = imageType + 1;
         self.isRecord = isRecord;
         [self initializeDataSource];
         _dictionary = [NSDictionary dictionaryWithDictionary:dic];
@@ -260,6 +260,8 @@
     }else if (_isRecord == 1){
         //读取单词
         NSInteger index = [[_dictionary[@"questions"][_recordIndex] allKeys][0] integerValue];
+        self.index = index;
+        self.i = index;
         NSLog(@"i = %ld",(long)index);
         [[Networking alloc] getNameWithType:type index:index successBlock:^(NSString *name) {
             self.wordLable.text = name;
@@ -292,22 +294,29 @@
         
         //数据处理
         self.answerArray1 = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
-        self.dictionary1 = @{@(self.i):self.answerArray1};
+        self.dictionary1 = @{self.stringIndex:self.answerArray1};
         [self.answerArray addObject:self.dictionary1];
         self.dictionary = @{@"type":@(self.nameType),@"level":@(0),@"score":self.stringIndex,@"questions":self.answerArray};
         NSLog(@"dictionary = %@",self.dictionary);
     }
-    
+
 }
 #pragma mark -- clickOnTheEvents
 
 - (void)rightOfTheAnswer:(UIButton *)sender
 {
+    if (_recordIndex) {
+        UIButton * button = (UIButton *)[self viewWithTag:100 + _i];
+        self.judgleImage.center = CGPointMake(button.center.x + 55 * MAINSCREEN_RATE, button.center.y + 30 * MAINSCREEN_RATE);
+        [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
+        self.judgleImage.hidden = NO;
+    }else{
     NSInteger i = [self.array[self.index] intValue];
     UIButton * button = (UIButton *)[self viewWithTag:100 + i];
     self.judgleImage.center = CGPointMake(button.center.x + 55 * MAINSCREEN_RATE, button.center.y + 30 * MAINSCREEN_RATE);
     [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
     self.judgleImage.hidden = NO;
+    }
 }
 
 - (void)buttonPressed_ChoiceSelection:(UIButton *)sender
@@ -421,12 +430,12 @@
         [self netWorkingImageType:self.imageType];
         [self netWorkingNameType:self.nameType];
         NSLog(@"currentIndex = %ld",(long)self.currentNumber);
-        NSString * number = [NSString stringWithFormat:@"%ld",(long)self.currentNumber];
+        NSString * number = [NSString stringWithFormat:@"%ld",(long)self.recordIndex + 1];
         NSString * string = [number stringByAppendingString:@"   题"];
         self.countLable.text = string;
         self.judgleImage.hidden = YES;
         [self begainAnimatinon];
-        if (self.recordIndex == 10) {
+        if (self.recordIndex == 9) {
             self.nextButton.hidden = YES;
             self.completeButton.hidden = NO;
         }
@@ -673,15 +682,15 @@
     return _completeView;
 }
 
-- (UIButton *)returnButton{
-    if (!_returnButton) {
-        _returnButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _returnButton.frame = CGRectMake(30 * MAINSCREEN_RATE, 60 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE);
-        [_returnButton setImage:[UIImage imageNamed:@"返回1"] forState:UIControlStateNormal];
+//- (UIButton *)returnButton{
+//    if (!_returnButton) {
+//        _returnButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        _returnButton.frame = CGRectMake(30 * MAINSCREEN_RATE, 60 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE);
+//        [_returnButton setImage:[UIImage imageNamed:@"返回1"] forState:UIControlStateNormal];
 //        [_returnButton addTarget:self action:@selector(returnButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _returnButton;
-}
+//    }
+//    return _returnButton;
+//}
 @end
 
 
