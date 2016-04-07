@@ -88,7 +88,7 @@
         cell = [[QuestionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     cell.typeImage.image = [UIImage imageNamed:@"开始答题"];
-    cell.groups.text = [NSString stringWithFormat:@"%@",_dictionary[@"groups"][indexPath.section]];
+    cell.groups.text = [NSString stringWithFormat:@"共%@组",_dictionary[@"groups"][indexPath.section]];
     cell.date.text = _dictionary[@"times"][indexPath.section];
     
     return cell;

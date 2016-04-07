@@ -165,19 +165,16 @@
                 }
             }else{
                 [dictionary setObject:@[question] forKey:time];
-//                [dictionary setObject:@[question] forKey:time];
             }
             [currentUser setObject:dictionary forKey:@"mistakes"];
             [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if (succeeded) {
-                    succeed(succeeded);
-                }else{
-                    failure(error);
-                }
+//                if (succeeded) {
+//                    succeed(succeeded);
+//                }else{
+//                    failure(error);
+//                }
             }];
             NSLog(@"储存成功");
-        }else{
-            failure(error);
         }
     }];
 }
@@ -210,7 +207,7 @@
             NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
             for (int i = 0; i < keys.count; i ++) {
                 if ([date isEqualToString:keys[i]]) {
-                    [array arrayByAddingObjectsFromArray:dictionary[keys[i]]];
+                    [array addObjectsFromArray:dictionary[keys[i]]];
                 }
             }
 
@@ -232,6 +229,20 @@
             [dic setDictionary:@{@"count":[NSNumber numberWithLong:keys.count], @"times":arrayTimes, @"questions":arrayQuestions}];
     
     return dic;
+}
+- (NSArray *)getMistakesWithDate:(NSString *)date{
+    
+    NSMutableArray * array = [NSMutableArray array];
+    
+    AVUser * currentUser = [AVUser currentUser];
+    NSMutableDictionary * dictionary = [[NSMutableDictionary alloc] initWithDictionary:[currentUser objectForKey:@"mistakes"]];
+    NSArray * keys = [NSArray arrayWithArray:dictionary.allKeys];
+    for (int i = 0; i < keys.count; i ++) {
+        if ([keys[i] isEqualToString:date]) {
+            [array addObjectsFromArray:dictionary[keys[i]]];
+        }
+    }
+    return array;
 }
 
 @end

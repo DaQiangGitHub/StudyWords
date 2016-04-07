@@ -13,7 +13,7 @@
 
 @property (nonatomic, retain) UIImageView * typeImage;
 @property (nonatomic, retain) UIImageView * levelImage;
-@property (nonatomic, retain) UIButton * beginButton;
+@property (nonatomic, retain) UILabel * beginButton;
 @property (nonatomic, retain) UILabel * score;
 @property (nonatomic, retain) UILabel * date;
 

@@ -38,5 +38,6 @@ typedef NS_ENUM(NSUInteger, nameType) {
 - (NSDictionary *)getRecordsListSuccessBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
 - (NSArray *)getRecordOfOneDayListWithDate:(NSString *)date successBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
 - (NSDictionary *)getMistakesListSuccessBlock:(void(^)(BOOL succeed))succeed failure:(void(^)(NSError * error))failure;
-
+//答题
+- (NSArray *)getMistakesWithDate:(NSString *)date;
 @end

@@ -23,7 +23,7 @@
 
 
 -(void)layoutSubviews{
-    
+    self.contentView.backgroundColor = [UIColor colorWithRed:0.5 green:0.2 blue:0.6 alpha:1];
     [self.contentView addSubview:self.typeImage];
     [self.contentView addSubview:self.groups];
     [self.contentView addSubview:self.date];
@@ -34,7 +34,7 @@
 - (UIImageView *)typeImage{
     if (!_typeImage) {
         _typeImage = ({
-            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 50, 200, 80)];
+            UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 30, 240, 80)];
             imageView.contentMode = UIViewContentModeCenter;
             imageView.layer.masksToBounds = YES;
             imageView;
@@ -45,7 +45,7 @@
 - (UILabel *)groups{
     if (!_groups) {
         _groups = ({
-            UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.contentView.bounds) + 10, 30, 60, 40)];
+            UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.contentView.bounds) - 40, 30, 120, 40)];
             //            label.backgroundColor= [UIColor redColor];
             label.font = [UIFont systemFontOfSize:25];
             label.textColor = [UIColor grayColor];

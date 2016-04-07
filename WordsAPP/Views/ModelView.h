@@ -35,7 +35,9 @@
 @property (nonatomic, assign)NSInteger nameType;
 @property (nonatomic, assign)NSInteger imageType;
 
+@property (nonatomic, assign)NSInteger isRecord;
 
+- (instancetype)initWithFrame:(CGRect)frame imageType:(NSInteger)imageType nameType:(NSInteger)nameType isRecord:(NSInteger)isRecord dic:(NSDictionary *)dic;
 - (instancetype)initWithFrame:(CGRect)frame imageType:(NSInteger)imageType nameType:(NSInteger)nameType;
 - (void)netWorkingImageType:(NSInteger)type;
 - (void)netWorkingNameType:(NSInteger)type;

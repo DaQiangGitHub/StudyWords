@@ -20,6 +20,9 @@
 @property (nonatomic, retain) UIButton * wrongQuestion;
 @property (nonatomic, assign) AVUser * currentUser;
 
+@property (nonatomic,retain)NSMutableArray *images;
+@property (nonatomic,retain)UIImageView *imageview;
+
 
 
 @end
@@ -35,20 +38,26 @@
     [self.view addSubview:self.backImage];
     [self.view addSubview:self.recordToday];
     [self.view addSubview:self.wrongQuestion];
+    [self.view addSubview:self.imageview];
  
     _currentUser = [AVUser currentUser];
+    
+    [self initDateSourse];
+    [self initLizeUserInterface];
+    
+
 }
  
 #pragma mark - 点击事件
 - (void)wrongButtonPressed{
     
-    __weak UIViewController * weakSelf = self;
-    [UMSocialSnsService presentSnsIconSheetView:weakSelf
-                                         appKey:@"56fcc34267e58ecf2c0005f1"
-                                      shareText:@"宝宝得了100分"
-                                     shareImage:[UIImage imageNamed:@"首页底.jpg"]
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQzone,UMShareToQQ,UMShareToFacebook,nil]
-                                       delegate:nil];
+//    __weak UIViewController * weakSelf = self;
+//    [UMSocialSnsService presentSnsIconSheetView:weakSelf
+//                                         appKey:@"56fcc34267e58ecf2c0005f1"
+//                                      shareText:@"宝宝得了100分"
+//                                     shareImage:[UIImage imageNamed:@"首页底.jpg"]
+//                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQzone,UMShareToQQ,UMShareToFacebook,nil]
+//                                       delegate:nil];
     
     
     WrongQuestionViewController * wrong = [[WrongQuestionViewController alloc] init];
@@ -57,6 +66,55 @@
 - (void)recordButtonPressed{
     recordViewController * record = [[recordViewController alloc] init];
     [self.navigationController pushViewController:record animated:YES];
+}
+//动画
+-(void)initDateSourse{
+    for (int i = 1; i < 8; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"%d",i];
+        
+        UIImage *image = [UIImage imageNamed:imageName];
+        [self.images addObject:image];
+        
+    }
+    self.imageview.animationImages = self.images;
+    //图片播放速度
+    self.imageview.animationDuration = 1;
+    //0表示无限
+    self.imageview.animationRepeatCount = 0;
+    
+    
+}
+- (void)initLizeUserInterface{
+    [self.imageview startAnimating];
+    [self.view addSubview:self.imageview];
+    
+    
+}
+#pragma mark -- setter
+//重写setter && getter
+- (NSMutableArray *)images{
+    if (!_images) {
+        //便利构造器方法
+        _images = [NSMutableArray array];
+        
+    }
+    return _images;
+}
+#pragma mark - getter
+
+-(UIImageView *)imageview{
+    if (!_imageview) {
+        _imageview = ({
+            UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(220, 460, 220, 220)];
+            imageview.contentMode = UIViewContentModeScaleAspectFit;
+            
+            //用户交互
+            imageview.userInteractionEnabled = YES;
+            imageview;
+        });
+    }
+    
+    return _imageview;
 }
 #pragma mark - getter
 - (UIImageView *)backImage{
@@ -74,9 +132,9 @@
     if (!_recordToday) {
         _recordToday = ({
             UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame = CGRectMake(0, 0, 280, 80);
+            button.frame = CGRectMake(0, 0, 280, 70);
             button.center = CGPointMake(self.view.center.x, 240);
-            button.backgroundColor = [UIColor orangeColor];
+//            button.backgroundColor = [UIColor orangeColor];
             [button setImage:[UIImage imageNamed:@"重新答题"] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(recordButtonPressed) forControlEvents:UIControlEventTouchUpInside];
             
@@ -89,9 +147,9 @@
     if (!_wrongQuestion) {
         _wrongQuestion = ({
             UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.frame = CGRectMake(0, 0, 280, 80);
+            button.frame = CGRectMake(0, 0, 280, 70);
             button.center = CGPointMake(self.view.center.x, 430);
-            button.backgroundColor = [UIColor orangeColor];
+//            button.backgroundColor = [UIColor orangeColor];
             [button setImage:[UIImage imageNamed:@"错题重做"] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(wrongButtonPressed) forControlEvents:UIControlEventTouchUpInside];
             

@@ -31,18 +31,12 @@
     [self.contentView addSubview:self.date];
     
 }
-
-#pragma mark - 点击事件
-- (void)beginButtonPressed{
-    
-}
-
 #pragma mark - getter 
 - (UIImageView *)typeImage{
     if (!_typeImage) {
         _typeImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 140, 60)];
-            imageView.contentMode = UIViewContentModeCenter;
+            imageView.contentMode = UIViewContentModeScaleAspectFit;
             imageView.layer.masksToBounds = YES;
             imageView;
         });
@@ -53,24 +47,23 @@
     if (!_levelImage) {
         _levelImage = ({
             UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 80, 140, 60)];
-            imageView.contentMode = UIViewContentModeScaleAspectFill;
+            imageView.contentMode = UIViewContentModeScaleAspectFit;
             imageView.layer.masksToBounds = YES;
             imageView;
         });
     }
     return _levelImage;
 }
-- (UIButton *)beginButton{
+- (UILabel *)beginButton{
     if (!_beginButton) {
         _beginButton = ({
-            UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+            UILabel * button = [[UILabel alloc] init];
             button.frame = CGRectMake(0, 0, 150, 150);
             button.center = self.contentView.center;
-            [button addTarget:self action:@selector(beginButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-            [button setTitle:@"开始\n答题" forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-            button.titleLabel.font = [UIFont systemFontOfSize:30];
-            button.titleLabel.numberOfLines = 2;
+            button.text = @"开始\n答题";
+            button.textColor = [UIColor redColor];
+            button.font = [UIFont systemFontOfSize:30];
+            button.numberOfLines = 2;
             button;
         });
     }

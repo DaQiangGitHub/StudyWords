@@ -10,6 +10,10 @@
 #import "Networking.h"
 #import "RecoredTableViewCell.h"
 
+#import "ModelView.h"
+#import "MidiumView.h"
+#import "DifficultView.h"
+#import "CompleteView.h"
 
 @interface RecordDayViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -17,6 +21,7 @@
 
 @property (nonatomic, retain) NSArray * array;
 
+@property (nonatomic, assign) NSInteger i;
 
 @end
 
@@ -28,6 +33,7 @@
     
     self.barLable.text = self.date;
     self.barRightButton.hidden = YES;
+    self.barLeftButton.hidden = NO;
     [self initDataSource];
     
 }
@@ -45,8 +51,32 @@
 - (void)initInterface{
     [self.view addSubview:self.tableView];
 }
-
+- (void)addViewsForQuestionWithIndexPath:(NSIndexPath *)indexPath{
+    switch ([_array[indexPath.section][@"level"] intValue]) {
+        case 0:{
+            ModelView * modelView =[[ModelView alloc] initWithFrame:self.view.frame imageType:[_array[indexPath.section][@"type"] integerValue] nameType:[_array[indexPath.section][@"level"] integerValue] isRecord:1 dic:_array[indexPath.section]];
+            [self.view addSubview:modelView];
+        }
+            break;
+        case 1:{
+            MidiumView * midiumView = [[MidiumView alloc] initWithFrame:[UIScreen mainScreen].bounds nameType:[_array[indexPath.section][@"type"] integerValue] imageType:[_array[indexPath.section][@"level"] integerValue] isRecord:1 dic:_array[indexPath.section]];
+            [self.view addSubview:midiumView];
+        }
+            break;
+        case 2:{
+            DifficultView * difficultView = [[DifficultView alloc] initWithFrame:[UIScreen mainScreen].bounds imageType:[_array[indexPath.section][@"type"] integerValue] nameType:[_array[indexPath.section][@"level"] integerValue]isRecord:1 dic:_array[indexPath.section]];
+            [self.view addSubview:difficultView];
+        }
+            break;
+        default:
+            break;
+    }
+}
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self addViewsForQuestionWithIndexPath:indexPath];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 15;
 }

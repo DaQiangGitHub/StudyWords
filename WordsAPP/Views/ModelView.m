@@ -36,14 +36,26 @@
 @property (nonatomic, strong)NSArray * wrongArray;
 @property (nonatomic, assign)NSInteger i;
 @property (nonatomic, strong)NSString * stringIndex;
-
+@property (nonatomic, assign)NSInteger recordIndex;
 
 
 
 @end
 
 @implementation ModelView
-
+- (instancetype)initWithFrame:(CGRect)frame imageType:(NSInteger)imageType nameType:(NSInteger)nameType isRecord:(NSInteger)isRecord dic:(NSDictionary *)dic
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _nameType = nameType;
+        _imageType = imageType;
+        self.isRecord = isRecord;
+        [self initializeDataSource];
+        _dictionary = [NSDictionary dictionaryWithDictionary:dic];
+        [self initializeUserInterface];
+    }
+    return self;
+}
 - (instancetype)initWithFrame:(CGRect)frame imageType:(NSInteger)imageType nameType:(NSInteger)nameType
 {
     self = [super initWithFrame:frame];
@@ -64,7 +76,8 @@
     _score = 0;
     _isTure = 0;
     _currentNumber = 1;
-    
+    _recordIndex = 0;
+
     _dictionary = [NSDictionary dictionary];
     _dictionary1 = [NSDictionary dictionary];
     _answerArray = [NSMutableArray array];
@@ -112,85 +125,178 @@
 
 - (void)netWorkingImageType:(NSInteger)type
 {
-    self.currentIndex = arc4random() % 30;
-    self.imageView1.tag = 100 + self.currentIndex;
-    NSLog(@"self.currentindex = %ld",(long)self.currentIndex);
-    [[Networking alloc] getimageType:self.imageType index:self.currentIndex success:^(UIImage *image) {
-        [self.imageView1 setImage:image forState:0];
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-    
-    self.index1 = [self arcMethod];
-    NSLog(@"index1 = %ld",(long)self.index1);
-    self.imageView2.tag = 100 + self.index1;
-    [[Networking alloc] getimageType:self.imageType index:self.index1 success:^(UIImage *image) {
-        [self.imageView2 setImage:image forState:0];
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-    
-    self.index2 = [self arcMethod];
-    for (int i = 0; ; i ++) {
+    if (_isRecord == 2) {
+        self.currentIndex = [_dictionary.allKeys[2] integerValue];
+        NSString * stringIndex = [NSString stringWithFormat:@"%ld",(long)self.currentIndex];
+        self.currentIndex = [_dictionary[stringIndex][0] integerValue];
+        self.imageView1.tag = 100 + self.currentIndex;
+        NSLog(@"self.currentindex = %ld",(long)self.currentIndex);
+        [[Networking alloc] getimageType:self.imageType index:self.currentIndex success:^(UIImage *image) {
+            [self.imageView1 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.index1 = [_dictionary[stringIndex][1] integerValue];
+        NSLog(@"index1 = %ld",(long)self.index1);
+        self.imageView2.tag = 100 + self.index1;
+        [[Networking alloc] getimageType:self.imageType index:self.index1 success:^(UIImage *image) {
+            [self.imageView2 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.index2 = [_dictionary[stringIndex][2] integerValue];
+        NSLog(@"index2 = %ld",(long)self.index2);
+        self.imageView3.tag = 100 + self.index2;
+        [[Networking alloc] getimageType:self.imageType index:self.index2 success:^(UIImage *image) {
+            [self.imageView3 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.index3 = [_dictionary[stringIndex][3] integerValue];
+        NSLog(@"index3 = %ld",(long)self.index3);
+        self.imageView4.tag = 100 + self.index3;
+        [[Networking alloc] getimageType:self.imageType index:self.index3 success:^(UIImage *image) {
+            [self.imageView4 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+    }else if (_isRecord == 1){
+        NSArray * arrayRecord = _dictionary[@"questions"];
+        NSDictionary * dicRecord = arrayRecord[_recordIndex];
+        NSString * questionRecord = dicRecord.allKeys[0];
+        self.currentIndex = [dicRecord[questionRecord][0] integerValue];
+        self.imageView1.tag = 100 + self.currentIndex;
+        NSLog(@"self.currentindex = %ld",(long)self.currentIndex);
+        [[Networking alloc] getimageType:self.imageType index:self.currentIndex success:^(UIImage *image) {
+            [self.imageView1 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.index1 = [dicRecord[questionRecord][1] integerValue];
+        NSLog(@"index1 = %ld",(long)self.index1);
+        self.imageView2.tag = 100 + self.index1;
+        [[Networking alloc] getimageType:self.imageType index:self.index1 success:^(UIImage *image) {
+            [self.imageView2 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.index2 = [dicRecord[questionRecord][2] integerValue];
+        NSLog(@"index2 = %ld",(long)self.index2);
+        self.imageView3.tag = 100 + self.index2;
+        [[Networking alloc] getimageType:self.imageType index:self.index2 success:^(UIImage *image) {
+            [self.imageView3 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.index3 = [dicRecord[questionRecord][3] integerValue];
+        NSLog(@"index3 = %ld",(long)self.index3);
+        self.imageView4.tag = 100 + self.index3;
+        [[Networking alloc] getimageType:self.imageType index:self.index3 success:^(UIImage *image) {
+            [self.imageView4 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+    }else{
+        self.currentIndex = arc4random() % 30;
+        self.imageView1.tag = 100 + self.currentIndex;
+        NSLog(@"self.currentindex = %ld",(long)self.currentIndex);
+        [[Networking alloc] getimageType:self.imageType index:self.currentIndex success:^(UIImage *image) {
+            [self.imageView1 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        
+        self.index1 = [self arcMethod];
+        NSLog(@"index1 = %ld",(long)self.index1);
+        self.imageView2.tag = 100 + self.index1;
+        [[Networking alloc] getimageType:self.imageType index:self.index1 success:^(UIImage *image) {
+            [self.imageView2 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        
         self.index2 = [self arcMethod];
-        if (self.index2 != self.index1) {
-            break;
+        for (int i = 0; ; i ++) {
+            self.index2 = [self arcMethod];
+            if (self.index2 != self.index1) {
+                break;
+            }
         }
-    }
-    NSLog(@"index2 = %ld",(long)self.index2);
-    self.imageView3.tag = 100 + self.index2;
-    [[Networking alloc] getimageType:self.imageType index:self.index2 success:^(UIImage *image) {
-        [self.imageView3 setImage:image forState:0];
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-    
-    for (int i = 0; ; i ++) {
-        self.index3 = [self arcMethod];
-        if ((self.index3 != self.index1) && (self.index3 != self.index2)) {
-            break;
+        NSLog(@"index2 = %ld",(long)self.index2);
+        self.imageView3.tag = 100 + self.index2;
+        [[Networking alloc] getimageType:self.imageType index:self.index2 success:^(UIImage *image) {
+            [self.imageView3 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        
+        for (int i = 0; ; i ++) {
+            self.index3 = [self arcMethod];
+            if ((self.index3 != self.index1) && (self.index3 != self.index2)) {
+                break;
+            }
         }
+        NSLog(@"index3 = %ld",(long)self.index3);
+        self.imageView4.tag = 100 + self.index3;
+        [[Networking alloc] getimageType:self.imageType index:self.index3 success:^(UIImage *image) {
+            [self.imageView4 setImage:image forState:0];
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
     }
-    NSLog(@"index3 = %ld",(long)self.index3);
-    self.imageView4.tag = 100 + self.index3;
-    [[Networking alloc] getimageType:self.imageType index:self.index3 success:^(UIImage *image) {
-        [self.imageView4 setImage:image forState:0];
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
 }
 
 - (void)netWorkingNameType:(NSInteger)type
 {
-    //读取单词
-    _array = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
-    self.index = arc4random() % 4;
-    NSLog(@"index = %ld",(long)self.index);
-    NSInteger index = [self.array[self.index] intValue];
-    self.i = index;
-    self.stringIndex = [NSString stringWithFormat:@"%ld",index];
-    for (int i = 0; i < _words.count; i ++) {
-        if (index  == [_words[i] intValue]) {
-            self.currentNumber --;
-            [self buttonPressed_NextTopic:nil];
-            return;
+    if (_isRecord == 2) {
+        //读取单词
+        NSInteger index = [_dictionary[@"question"] integerValue];
+        NSLog(@"i = %ld",(long)index);
+        [[Networking alloc] getNameWithType:type index:index successBlock:^(NSString *name) {
+            self.wordLable.text = name;
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+    }else if (_isRecord == 1){
+        //读取单词
+        NSInteger index = [[_dictionary[@"questions"][_recordIndex] allKeys][0] integerValue];
+        NSLog(@"i = %ld",(long)index);
+        [[Networking alloc] getNameWithType:type index:index successBlock:^(NSString *name) {
+            self.wordLable.text = name;
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+    }else{
+        //读取单词
+        _array = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
+        self.index = arc4random() % 4;
+        NSLog(@"index = %ld",(long)self.index);
+        NSInteger index = [self.array[self.index] intValue];
+        self.i = index;
+        self.stringIndex = [NSString stringWithFormat:@"%ld",index];
+        for (int i = 0; i < _words.count; i ++) {
+            if (index  == [_words[i] intValue]) {
+                self.currentNumber --;
+                [self buttonPressed_NextTopic:nil];
+                return;
+            }
         }
+        [_words addObject:@(index)];
+        NSLog(@"_words = %@",_words);
+        NSLog(@"i = %ld",(long)index);
+        [[Networking alloc] getNameWithType:type index:index successBlock:^(NSString *name) {
+            self.wordLable.text = name;
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        
+        //数据处理
+        self.answerArray1 = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
+        self.dictionary1 = @{@(self.i):self.answerArray1};
+        [self.answerArray addObject:self.dictionary1];
+        self.dictionary = @{@"type":@(self.nameType),@"level":@(0),@"score":self.stringIndex,@"questions":self.answerArray};
+        NSLog(@"dictionary = %@",self.dictionary);
     }
-    [_words addObject:@(index)];
-    NSLog(@"_words = %@",_words);
-    NSLog(@"i = %ld",(long)index);
-    [[Networking alloc] getNameWithType:type index:index successBlock:^(NSString *name) {
-        self.wordLable.text = name;
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-    
-    //数据处理
-    self.answerArray1 = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
-    self.dictionary1 = @{@(self.i):self.answerArray1};
-    [self.answerArray addObject:self.dictionary1];
-    self.dictionary = @{@"type":@(self.nameType),@"level":@(0),@"score":self.stringIndex,@"questions":self.answerArray};
-    NSLog(@"dictionary = %@",self.dictionary);
     
 }
 #pragma mark -- clickOnTheEvents
@@ -206,74 +312,151 @@
 
 - (void)buttonPressed_ChoiceSelection:(UIButton *)sender
 {
-    if (self.isTure == 1) {
-        return;
-    }
-    NSLog(@"sender.tag = %ld",(long)sender.tag);
-    [[Networking alloc] getNameWithType:self.nameType index:(sender.tag - 100) successBlock:^(NSString *name) {
-        if ([self.wordLable.text isEqualToString:name]) {
-            
-            [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
-            self.judgleImage.hidden = NO;
-            self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
-            self.score = self.score + 10;
-            NSString * string = @"分数：";
-            NSString * string2 = [NSString stringWithFormat:@"%ld",(long)self.score];
-            NSString * scoreString = [string stringByAppendingString:string2];
-            self.scoreLable.text = scoreString;
-            if (self.currentNumber != 10) {
-                [self performSelector:@selector(buttonPressed_NextTopic:) withObject:nil afterDelay:1];
+    if (_isRecord == 2) {
+        if (self.isTure == 1) {
+            return;
+        }
+        NSLog(@"sender.tag = %ld",(long)sender.tag);
+        [[Networking alloc] getNameWithType:self.nameType index:(sender.tag - 100) successBlock:^(NSString *name) {
+            if ([self.wordLable.text isEqualToString:name]) {
+                [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
+                self.judgleImage.hidden = NO;
+                self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
+                if (self.currentNumber != 10) {
+                    [self performSelector:@selector(buttonPressed_NextTopic:) withObject:nil afterDelay:1];
+                }
+            }else{
+                [self.judgleImage setImage:[UIImage imageNamed:@"错"]];
+                self.judgleImage.hidden = NO;
+                self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
             }
-        }else{
-            
-            [self.judgleImage setImage:[UIImage imageNamed:@"错"]];
-            self.judgleImage.hidden = NO;
-            self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
-            
-            //数据处理
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.isTure = 1;
+    }else if(_isRecord == 1){
+        if (self.isTure == 1) {
+            return;
+        }
+        NSLog(@"sender.tag = %ld",(long)sender.tag);
+        [[Networking alloc] getNameWithType:self.nameType index:(sender.tag - 100) successBlock:^(NSString *name) {
+            if ([self.wordLable.text isEqualToString:name]) {
+                
+                [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
+                self.judgleImage.hidden = NO;
+                self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
+                self.score = self.score + 10;
+                NSString * string = @"分数：";
+                NSString * string2 = [NSString stringWithFormat:@"%ld",(long)self.score];
+                NSString * scoreString = [string stringByAppendingString:string2];
+                self.scoreLable.text = scoreString;
+                if (self.recordIndex != 10) {
+                    [self performSelector:@selector(buttonPressed_NextTopic:) withObject:nil afterDelay:1];
+                }
+            }else{
+                
+                [self.judgleImage setImage:[UIImage imageNamed:@"错"]];
+                self.judgleImage.hidden = NO;
+                self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
+            }
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.isTure = 1;
+    }else{
+        if (self.isTure == 1) {
+            return;
+        }
+        NSLog(@"sender.tag = %ld",(long)sender.tag);
+        [[Networking alloc] getNameWithType:self.nameType index:(sender.tag - 100) successBlock:^(NSString *name) {
+            if ([self.wordLable.text isEqualToString:name]) {
+                
+                [self.judgleImage setImage:[UIImage imageNamed:@"对"]];
+                self.judgleImage.hidden = NO;
+                self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
+                self.score = self.score + 10;
+                NSString * string = @"分数：";
+                NSString * string2 = [NSString stringWithFormat:@"%ld",(long)self.score];
+                NSString * scoreString = [string stringByAppendingString:string2];
+                self.scoreLable.text = scoreString;
+                if (self.recordIndex != 10) {
+                    [self performSelector:@selector(buttonPressed_NextTopic:) withObject:nil afterDelay:1];
+                }
+            }else{
+                
+                [self.judgleImage setImage:[UIImage imageNamed:@"错"]];
+                self.judgleImage.hidden = NO;
+                self.judgleImage.center = CGPointMake(sender.center.x + 55 * MAINSCREEN_RATE, sender.center.y + 30 * MAINSCREEN_RATE);
+                
+                //数据处理
+                self.wrongArray = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
+                self.wrongDictionary = @{@"type":@(self.nameType),@"level":@(0),self.stringIndex:self.wrongDictionary};
+                NSLog(@"wrongArray = %@",self.wrongDictionary);
+                [[Networking alloc] addMistakeWithQuestion:self.wrongDictionary successBlock:^(BOOL succeed) {
+                    NSLog(@"succeed!");
+                } failure:^(NSError *error) {
+                    NSLog(@"ERROR!");
+                }];
+                
+            }
+        } failure:^(NSError *error) {
+            NSLog(@"%@",error);
+        }];
+        self.isTure = 1;
+    }
+    
+}
+
+- (void)buttonPressed_NextTopic:(UIButton *)sender
+{
+    if (_isRecord == 2) {
+        if (self.isTure != 0) {
+            [[Networking alloc] removeMistakeWithQuestion:_dictionary successBlock:nil failure:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"Next" object:nil];
+            [self removeFromSuperview];
+        }
+    }else if (_isRecord == 1){
+        self.isTure = 0;
+        self.recordIndex ++;
+        [self netWorkingImageType:self.imageType];
+        [self netWorkingNameType:self.nameType];
+        NSLog(@"currentIndex = %ld",(long)self.currentNumber);
+        NSString * number = [NSString stringWithFormat:@"%ld",(long)self.currentNumber];
+        NSString * string = [number stringByAppendingString:@"   题"];
+        self.countLable.text = string;
+        self.judgleImage.hidden = YES;
+        [self begainAnimatinon];
+        if (self.recordIndex == 10) {
+            self.nextButton.hidden = YES;
+            self.completeButton.hidden = NO;
+        }
+    }else{
+        if (self.isTure == 0) {
+            //保存数据
             self.wrongArray = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
-            self.wrongDictionary = @{@"type":@(self.nameType),@"level":@(0),self.stringIndex:self.wrongDictionary};
-            NSLog(@"wrongArray = %@",self.wrongDictionary);
+            self.wrongDictionary = @{@"type":@(self.nameType),@"level":@(0),self.stringIndex:self.wrongArray};
+            NSLog(@"wrongArray = %@",self.wrongArray);
             [[Networking alloc] addMistakeWithQuestion:self.wrongDictionary successBlock:^(BOOL succeed) {
                 NSLog(@"succeed!");
             } failure:^(NSError *error) {
                 NSLog(@"ERROR!");
             }];
-            
         }
-    } failure:^(NSError *error) {
-        NSLog(@"%@",error);
-    }];
-    self.isTure = 1;
-}
-
-- (void)buttonPressed_NextTopic:(UIButton *)sender
-{
-    if (self.isTure == 0) {
-        //保存数据
-        self.wrongArray = @[@(self.currentIndex),@(self.index1),@(self.index2),@(self.index3)];
-        self.wrongDictionary = @{@"type":@(self.nameType),@"level":@(0),self.stringIndex:self.wrongArray};
-        NSLog(@"wrongArray = %@",self.wrongArray);
-        [[Networking alloc] addMistakeWithQuestion:self.wrongDictionary successBlock:^(BOOL succeed) {
-            NSLog(@"succeed!");
-        } failure:^(NSError *error) {
-            NSLog(@"ERROR!");
-        }];
-    }
-    self.isTure = 0;
-    self.currentNumber ++;
-    [self netWorkingImageType:self.imageType];
-    [self netWorkingNameType:self.nameType];
-    NSLog(@"currentIndex = %ld",(long)self.currentNumber);
-    NSString * number = [NSString stringWithFormat:@"%ld",(long)self.currentNumber];
-    NSString * string = [number stringByAppendingString:@"   题"];
-    self.countLable.text = string;
-    self.judgleImage.hidden = YES;
-    [self begainAnimatinon];
-    if (self.currentNumber == 10) {
-        
-        self.nextButton.hidden = YES;
-        self.completeButton.hidden = NO;
+        self.isTure = 0;
+        self.currentNumber ++;
+        [self netWorkingImageType:self.imageType];
+        [self netWorkingNameType:self.nameType];
+        NSLog(@"currentIndex = %ld",(long)self.currentNumber);
+        NSString * number = [NSString stringWithFormat:@"%ld",(long)self.currentNumber];
+        NSString * string = [number stringByAppendingString:@"   题"];
+        self.countLable.text = string;
+        self.judgleImage.hidden = YES;
+        [self begainAnimatinon];
+        if (self.currentNumber == 10) {
+            
+            self.nextButton.hidden = YES;
+            self.completeButton.hidden = NO;
+        }
     }
     
 }
@@ -495,7 +678,7 @@
         _returnButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _returnButton.frame = CGRectMake(30 * MAINSCREEN_RATE, 60 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE, 70 * MAINSCREEN_RATE);
         [_returnButton setImage:[UIImage imageNamed:@"返回1"] forState:UIControlStateNormal];
-        [_returnButton addTarget:self action:@selector(returnButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+//        [_returnButton addTarget:self action:@selector(returnButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _returnButton;
 }
