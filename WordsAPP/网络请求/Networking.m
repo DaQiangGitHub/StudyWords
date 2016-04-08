@@ -85,14 +85,7 @@
                 for (int i = 0; i < keys.count; i ++) {
                     if ([keys[i] isEqualToString:time]) {
                         NSMutableArray * groups = [NSMutableArray arrayWithArray:dictionary[keys[i]]];
-                        for (int j = 0; j < groups.count; j ++) {
-                            if (groups[j][@"type"] == questions[@"type"] && groups[j][@"level"] == questions[@"level"]) {
-                                [groups replaceObjectAtIndex:j withObject:questions];
-                                return;
-                            }else if (j == groups.count - 1){
-                                [groups addObject:questions];
-                            }
-                        }
+                        [groups addObject:questions];
                         [dictionary setObject:groups forKey:time];
                     }else if (i == keys.count - 1){
                         [dictionary setObject:@[questions] forKey:time];
